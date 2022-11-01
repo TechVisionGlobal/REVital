@@ -1,0 +1,9 @@
+<div class="md:flex grid gap-4">
+    <ul class="flex w-full text-sm font-medium text-center text-gray-500 rounded-lg border border-[#3a414a] divide-x divide-[#3a414a] custom-tab-parent">
+        <li class="w-full custom-tab" *ngFor="let item of items">
+            <a [routerLink]="item.routerLink" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: !!item.exactPath }" #active="routerLinkActive" class="inline-block md:p-2 p-1 w-full bg-[#afbdcf] text-[#3a414a] hover:text-gray-700 hover:bg-gray-50" aria-current="page">{{ item.text }}</a>
+        </li>
+    </ul>
+    
+    <button class="max-w-fit w-full bg-[#afbdcf] border border-[#3a414a] font-medium rounded-lg text-sm px-5 py-1.5 text-center self-center hover" (click)="logout()">Logout</button>
+</div>

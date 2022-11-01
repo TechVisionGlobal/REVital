@@ -1,0 +1,56 @@
+<div class="md:grid md:grid-cols-4 flex items-start justify-between bg-[#d2dce8] p-3 md:gap-6 lg:px-6">
+    <!-- user mobile -->
+    <div class="sm:hidden gap-3 items-center">
+        <button
+          mat-ripple
+          [mat-menu-trigger-for]="nameMenu"
+          class="rounded-full md:w-14 w-8 md:h-14 h-8"
+        >
+          <img
+            [src]="'assets/images/default_profile.jpg'"
+            class="h-full w-full object-cover"
+          />
+        </button>
+
+        <mat-menu #nameMenu>
+            <button mat-menu-item class="text-sky-300">GP M. D. Try Hope</button>
+        </mat-menu>
+    </div>
+    <!-- user mobile -->
+    
+    <!-- user web and tablet -->
+    <div class="hidden md:flex gap-3 items-center bg-white lg:w-64 w-full h-32 p-2 lg:mx-20 mx-0">
+        <button
+          mat-ripple
+          class="md:w-28 w-8 md:h-28 h-8"
+        >
+          <img
+            [src]="'assets/images/user.svg'"
+            class="h-full w-full object-contain"
+          />
+        </button>
+    
+        <div class="grid w-full gap-5">
+          <span class="metropolis text-[#14C1E8] lg:text-[2rem]">GP M. D.</span>
+          <span class="metropolis text-[#14C1E8] lg:text-[2rem]">Try Hope</span>
+        </div>
+    </div>
+    <!-- user web and tablet -->
+
+    <div class="col-span-2 flex">
+      <!-- nav -->
+      <admin-nav class="w-full"></admin-nav>
+      <!-- nav -->
+      
+    </div>
+
+    <div
+      class="md:h-28 h-8"
+    >
+      <img
+        [src]="'assets/images/revital_logo.png'"
+        class="h-full w-full object-contain"
+      />
+    </div>
+  </div>
+  

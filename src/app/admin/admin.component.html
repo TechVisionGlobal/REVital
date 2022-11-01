@@ -1,0 +1,22 @@
+<mat-sidenav-container autosize class="h-screen">
+  <mat-sidenav
+    #sidenav
+    [disableClose]="!isHandset"
+    [mode]="isHandset ? 'over' : 'side'"
+    [opened]="!isHandset"
+  >
+    <!-- <admin-nav></admin-nav> -->
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div class="flex h-full flex-col">
+      <!-- header -->
+      <admin-header class="z-10" (menuclick)="sidenav.toggle()"></admin-header>
+      <!-- header -->
+      
+      <div class="grid min-h-0 flex-1 overflow-y-scroll">
+        <router-outlet class="hidden"></router-outlet>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

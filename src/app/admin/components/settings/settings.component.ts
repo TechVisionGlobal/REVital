@@ -1,0 +1,48 @@
+import { Component, OnInit, ViewChild } from '@angular/core';
+import LoadStatus from 'src/_core/components/utils/LoadStatus';
+
+@Component({
+  selector: 'app-settings',
+  templateUrl: './settings.component.html',
+  styleUrls: ['./settings.component.css']
+})
+export class SettingsComponent implements OnInit {
+  loadStatus: LoadStatus = 'loading';
+  timeRange: any[] = [
+    { text: '48 hours', isActive: true },
+    { text: '14 days', isActive: false },
+  ]
+  activeRange: any = this.timeRange[0];
+
+  constructor() { }
+
+  ngOnInit(): void {
+    this.loadData();
+  }
+
+  loadData() {
+    this.loadStatus = 'loading';
+
+    setTimeout(() => {
+      this.loadStatus = 'success';
+    }, 2000);
+  }
+
+  changeLogo() {
+
+  }
+
+  changeRange(range: any) {
+    this.loadStatus = 'loading';
+
+    setTimeout(() => {
+      this.activeRange = range; 
+      this.loadStatus = 'success';
+    }, 2000);
+  }
+
+  exportCSV() {
+    
+  }
+
+}

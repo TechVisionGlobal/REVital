@@ -1,0 +1,131 @@
+<div [ngSwitch]="loadStatus" class="grid h-full bg-[#d2dce8]">
+    <svg *ngSwitchCase="'loading'" role="status" class="m-auto h-8 w-8 animate-spin fill-[#FAAF40] text-[#F1F1F1]"
+        viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+            d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+            fill="currentColor" />
+        <path
+            d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+            fill="currentFill" />
+    </svg>
+
+    <div *ngSwitchCase="'error'" class="m-auto flex flex-col gap-4">
+        <span class="text-center text-xl">Something went wrong. Please check your internet connection and try
+            again.</span>
+        <button class="primary mx-auto" (click)="loadData()">Retry</button>
+    </div>
+
+    <div *ngSwitchCase="'success'" class="flex h-full min-h-0 flex-col md:pt-0 pt-2 md:px-10 px-2">
+        <div class="grid grid-cols-2 divide-x divide-black pt-5">
+            <div class="flex flex-col px-40 gap-20">
+                <p class="text-4xl">Communication</p>
+
+                <div class="flex flex-col">
+                    <p>Events Severity</p>
+                    
+                    <div class="md:grid md:grid-cols-3 flex flex-col w-full space-y-2">
+                        <div class="flex items-center mr-4">
+                            <input type="checkbox" class="w-7 h-7 accent-[#b3e6bc]">
+                            <label class="ml-2 text-sm font-medium text-[#3a414a]">Low</label>
+                        </div>
+                        <div class="flex items-center mr-4">
+                            <input type="checkbox" class="w-7 h-7 accent-[#f3f3b5]" checked>
+                            <label class="ml-2 text-sm font-medium text-[#3a414a]">Med</label>
+                        </div>
+                        <div class="flex items-center mr-4">
+                            <input type="checkbox" class="w-7 h-7 accent-[#e9aaaa]" checked>
+                            <label class="ml-2 text-sm font-medium text-[#3a414a]">High</label>
+                        </div>
+                        <div class="flex items-center mr-4">
+                            <input type="checkbox" class="w-7 h-7 accent-slate-50" checked>
+                            <label class="ml-2 text-sm font-medium text-[#3a414a]">No Data</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col">                    
+                    <div class="flex flex-col gap-5 w-full">
+                        <div class="grid grid-cols-3 gap-5">
+                            <div class="col-span-2">
+                                <input placeholder="Notification Email" class="h-8 bg-gray-50 border border-[#3a414a] text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" required>
+                            </div>
+
+                            <div class="flex items-center mr-4">
+                                <input type="checkbox" class="w-7 h-7 accent-slate-50" checked>
+                                <label class="ml-2 text-sm font-medium text-[#3a414a]">Send Email</label>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-3 gap-5">
+                            <div class="col-span-2">
+                                <input placeholder="Notification Mobile" class="h-8 bg-gray-50 border border-[#3a414a] text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" required>
+                            </div>
+
+                            <div class="flex items-center mr-4">
+                                <input type="checkbox" class="w-7 h-7 accent-slate-50" checked>
+                                <label class="ml-2 text-sm font-medium text-[#3a414a]">Send SMS</label>
+                            </div>
+                        </div>
+                        <div class="flex items-center mr-4">
+                            <input type="checkbox" class="w-7 h-7 accent-slate-50" checked>
+                            <label class="ml-2 text-sm font-medium text-[#3a414a]">Desktop Notifications</label>
+                        </div>
+                        <div class="flex items-center mr-4">
+                            <input type="checkbox" class="w-7 h-7 accent-slate-50" checked>
+                            <label class="ml-2 text-sm font-medium text-[#3a414a]">Notify Next of Kin</label>
+                        </div>
+                        <div class="flex items-center mr-4">
+                            <input type="checkbox" class="w-7 h-7 accent-slate-50" checked>
+                            <label class="ml-2 text-sm font-medium text-[#3a414a]">Out of Office</label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="flex flex-col gap-5 divide-y divide-black px-40">
+                <div class="flex flex-col gap-10 text-center">
+                    <p class="text-4xl">Customisation</p>
+
+                    <div class="flex flex-col gap-5 text-center items-center">
+                        <button class="w-[200px] bg-[#8FDAEB] hover:bg-cyan-100 border border-[#3a414a] font-medium rounded-lg text-sm px-8 py-1.5 text-center self-center" (click)="changeLogo()">Change Logo</button>
+
+                        <div class="group exmp-wrp flex bg-white border border-[#3a414a] rounded-lg items-center">
+                            <div class="btn-wrp">
+                                <select class="h-8 btn-clck text-[#3a414a] px-10 hover:border-gray-400 focus:outline-none appearance-none rounded-l-lg">
+                                    <option>English</option>
+                                </select>
+                            </div>
+                            <button class="h-8 btn bg-[#AFBDCF] group-hover:bg-gray-300 text-lg rounded-r-lg">
+                                <span class="m-2 text-lg">▾</span>
+                            </button>
+                        </div>
+                        <div class="group exmp-wrp flex bg-white border border-[#3a414a] rounded-lg items-center">
+                            <div class="btn-wrp">
+                                <select class="h-8 btn-clck text-[#3a414a] px-10 hover:border-gray-400 focus:outline-none appearance-none rounded-l-lg">
+                                    <option>Czechia</option>
+                                </select>
+                            </div>
+                            <button class="h-8 btn bg-[#AFBDCF] group-hover:bg-gray-300 text-lg rounded-r-lg">
+                                <span class="m-2 text-lg">▾</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col gap-10 text-center">
+                    <p class="!mt-10 text-4xl">Reports</p>
+
+                    <div class="flex flex-col gap-5 text-center items-center">
+                        <ul class="flex text-sm font-medium text-center text-gray-500 rounded-lg border border-[#3a414a] divide-x divide-[#3a414a] custom-tab-parent">
+                            <li class="w-fit custom-tab" *ngFor="let range of timeRange">
+                                <a [ngClass]="{'active': activeRange.text == range.text}" class="cursor-pointer inline-block md:!px-10 md:!py-2 p-1 w-full bg-[#afbdcf] text-[#3a414a] hover" aria-current="page" (click)="changeRange(range)">{{ range.text }}</a>
+                            </li>
+                        </ul>
+
+                        <button class="w-[200px] bg-[#8FDAEB] hover:bg-cyan-100 border border-[#3a414a] font-medium rounded-lg text-sm px-8 py-1.5 text-center self-center" (click)="exportCSV()">Export CSV</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
