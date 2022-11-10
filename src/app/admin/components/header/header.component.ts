@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit {
   logout() {
     setTimeout(() => {
       this.router.navigateByUrl('');
-    }, 2000);
+    }, 1000);
   }
 
 }

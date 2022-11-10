@@ -22,7 +22,7 @@ export class PairDeviceDialogComponent implements OnInit {
 
     setTimeout(() => {
       this.loadStatus = 'success';
-    }, 2000);
+    }, 1000);
   }
 
 }

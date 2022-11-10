@@ -10,6 +10,7 @@ import LoadStatus from '../utils/LoadStatus';
   styleUrls: ['./new-patient-dialog.component.css']
 })
 export class NewPatientDialogComponent implements OnInit {
+  page = 1;
   loadStatus: LoadStatus = 'loading';
   submitting: boolean = false;
 
@@ -26,7 +27,7 @@ export class NewPatientDialogComponent implements OnInit {
 
     setTimeout(() => {
       this.loadStatus = 'success';
-    }, 2000);
+    }, 1000);
   }
 
   increase(element: HTMLInputElement) {
@@ -54,7 +55,7 @@ export class NewPatientDialogComponent implements OnInit {
       this.submitting = false;
       this.snackBar.open('Changes were saved', 'Close')
       this.dialog.closeAll();
-    }, 3000);
+    }, 1000);
   }
 
 }

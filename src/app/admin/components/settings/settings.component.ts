@@ -25,7 +25,7 @@ export class SettingsComponent implements OnInit {
 
     setTimeout(() => {
       this.loadStatus = 'success';
-    }, 2000);
+    }, 1000);
   }
 
   changeLogo() {
@@ -38,7 +38,7 @@ export class SettingsComponent implements OnInit {
     setTimeout(() => {
       this.activeRange = range; 
       this.loadStatus = 'success';
-    }, 2000);
+    }, 1000);
   }
 
   exportCSV() {

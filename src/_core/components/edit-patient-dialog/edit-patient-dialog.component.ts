@@ -13,6 +13,7 @@ import LoadStatus from '../utils/LoadStatus';
   styleUrls: ['./edit-patient-dialog.component.css']
 })
 export class EditPatientDialogComponent implements OnInit {
+  page = 1;
   loadStatus: LoadStatus = 'loading';
   isEdit: boolean = false;
   label: string = 'Edit Patient';
@@ -32,7 +33,7 @@ export class EditPatientDialogComponent implements OnInit {
 
     setTimeout(() => {
       this.loadStatus = 'success';
-    }, 2000);
+    }, 1000);
   }
 
   increase(element: HTMLInputElement) {
@@ -68,7 +69,7 @@ export class EditPatientDialogComponent implements OnInit {
       this.submitting = false;
       this.snackBar.open('Changes were saved', 'Close')
       this.dialog.closeAll();
-    }, 3000);
+    }, 1000);
   }
 
   cancel() {

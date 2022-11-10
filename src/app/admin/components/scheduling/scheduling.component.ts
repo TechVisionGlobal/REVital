@@ -1,90 +1,3 @@
-// import { HttpClient } from '@angular/common/http';
-// import { Component, OnInit, ViewChild } from '@angular/core';
-// import { CalendarEvent, CalendarView } from 'angular-calendar';
-// import { startOfYear, subYears } from 'date-fns';
-// import { environment } from 'src/environments/environment';
-// import LoadStatus from 'src/_core/components/utils/LoadStatus';
-// import { AdminService } from '../../services/admin.service';
-
-// const HOLIDAY_API_KEY = environment.holidayApiKey;
-
-// interface Holiday {
-//   date: string;
-//   name: string;
-// }
-
-// type CalendarEventWithMeta = CalendarEvent<{ type: 'holiday'; holiday: Holiday } | { type: 'normal' }>;
-
-// @Component({
-//   selector: 'app-scheduling',
-//   templateUrl: './scheduling.component.html',
-//   styleUrls: ['./scheduling.component.css']
-// })
-// export class SchedulingComponent implements OnInit {
-//   loadStatus: LoadStatus = 'loading';
-//   view: CalendarView = CalendarView.Month;
-//   viewDate = startOfYear(subYears(new Date(), 1));
-//   events: CalendarEventWithMeta[] = [];
-//   countryCode: any;
-
-//   constructor(
-//     private httpClient: HttpClient,
-//     private adminService: AdminService,
-//   ) { }
-
-//   ngOnInit(): void {
-//     this.getIPAddress();
-//     this.loadData();
-//   }
-
-//   loadData() {
-//     this.loadStatus = 'loading';
-
-//     setTimeout(() => {
-//       this.loadStatus = 'success';
-//     }, 2000);
-//   }
-
-//   getIPAddress() {
-//     this.adminService.getIPAddress().subscribe((result: any) => {
-//       this.getHolidays(result.countryCode);
-//     })
-//   }
-
-//   getHolidays(countryCode: string) {
-//     this.adminService.getHolidays(countryCode).subscribe((holidays) => {
-//         this.events = holidays.map((holiday) => {
-//           return {
-//             start: new Date(holiday.date),
-//             title: holiday.name,
-//             allDay: true,
-//             meta: {
-//               type: 'holiday',
-//               holiday,
-//             },
-//           };
-//         });
-//         // this.cdr.markForCheck();
-//       });
-//   }
-
-//   increase(element: HTMLInputElement) {
-//     if (element.valueAsNumber)
-//       element.valueAsNumber = element.valueAsNumber + 1;
-//     else
-//       element.valueAsNumber = 1;
-//   }
-  
-//   decrease(element: HTMLInputElement) {
-//     if (element.valueAsNumber && element.valueAsNumber > 1)
-//       element.valueAsNumber = element.valueAsNumber - 1;
-//     else
-//       element.valueAsNumber = 1;
-//   }
-
-// }
-
-
 import {
   Component,
   ChangeDetectionStrategy,
@@ -112,6 +25,8 @@ import {
 import { EventColor } from 'calendar-utils';
 import { AdminService } from '../../services/admin.service';
 import LoadStatus from 'src/_core/components/utils/LoadStatus';
+import { MatDialog } from '@angular/material/dialog';
+import { AddDatesDialogComponent } from 'src/_core/components/add-dates-dialog/add-dates-dialog.component';
 
 const colors: Record<string, EventColor> = {
   red: {
@@ -147,6 +62,22 @@ const colors: Record<string, EventColor> = {
   styleUrls: ['./scheduling.component.css']
 })
 export class SchedulingComponent implements OnInit {
+  start = { hour: 8, minute: 0 };
+  end = { hour: 16, minute: 0 };
+  size = 'small';
+  dates = [
+    { dateString: '04/11/2022', selected: false, isHoliday: false },
+    { dateString: '17/11/2022', selected: false, isHoliday: true },
+    { dateString: '05/12/2022', selected: false, isHoliday: false },
+    { dateString: '24/12/2022', selected: false, isHoliday: true },
+    { dateString: '25/12/2022', selected: false, isHoliday: true },
+    { dateString: '26/12/2022', selected: false, isHoliday: true },
+    { dateString: '27/12/2022', selected: false, isHoliday: false },
+    { dateString: '28/12/2022', selected: false, isHoliday: false },
+    { dateString: '29/12/2022', selected: false, isHoliday: false },
+    { dateString: '01/01/2023', selected: false, isHoliday: true },
+    { dateString: '02/01/2023', selected: false, isHoliday: false },
+  ]
   loadStatus: LoadStatus = 'success';
   // @ViewChild('modalContent', { static: true }) modalContent: TemplateRef<any>;
 
@@ -223,14 +154,12 @@ export class SchedulingComponent implements OnInit {
   ];
 
   activeDayIsOpen: boolean = true;
-
-  // constructor(
-  //   private modal: NgbModal
-  // ) {}
-
+    
   constructor(
+    //   private modal: NgbModal
     private adminService: AdminService,
     private cdr: ChangeDetectorRef,
+    public dialog: MatDialog,
   ) { }
 
   ngOnInit(): void {
@@ -243,7 +172,7 @@ export class SchedulingComponent implements OnInit {
 
     setTimeout(() => {
       this.loadStatus = 'success';
-    }, 2000);
+    }, 1000);
   }
 
   getIPAddress() {
@@ -350,6 +279,6 @@ export class SchedulingComponent implements OnInit {
   }
 
   addDate() {
-    
+    this.dialog.open(AddDatesDialogComponent, { panelClass: 'app-full-dialog'});
   }
 }

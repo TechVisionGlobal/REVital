@@ -10,6 +10,7 @@ import LoadStatus from 'src/_core/components/utils/LoadStatus';
   styleUrls: ['./patients.component.css']
 })
 export class PatientsComponent implements OnInit {
+  page = 1;
   loadStatus: LoadStatus = 'loading';
   patients = [
     {fullName: 'Karel Novak', firstName: 'Karel', middleName: null, surName: 'Novak', patientId: '655dfn4ds554', age: 69, avgFalls: 1, avgHR: 68, avg02: 98, lastEventDate: '05.10.2022', lastEventType: 'Fall'  },
@@ -30,7 +31,7 @@ export class PatientsComponent implements OnInit {
 
     setTimeout(() => {
       this.loadStatus = 'success';
-    }, 2000);
+    }, 1000);
   }
 
   increase(element: HTMLInputElement) {

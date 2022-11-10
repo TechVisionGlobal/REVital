@@ -1,55 +1,55 @@
-<div class="md:grid md:grid-cols-4 flex items-start justify-between bg-[#d2dce8] p-3 md:gap-6 lg:px-6">
+<div class="md:tw-grid md:tw-grid-cols-4 tw-flex tw-items-start tw-justify-between tw-bg-[#d2dce8] tw-p-3 md:tw-gap-6 lg:tw-px-6">
     <!-- user mobile -->
-    <div class="sm:hidden gap-3 items-center">
+    <div class="sm:tw-hidden tw-gap-3 tw-items-center">
         <button
           mat-ripple
           [mat-menu-trigger-for]="nameMenu"
-          class="rounded-full md:w-14 w-8 md:h-14 h-8"
+          class="tw-rounded-full md:tw-w-14 tw-w-8 md:tw-h-14 tw-h-8"
         >
           <img
             [src]="'assets/images/default_profile.jpg'"
-            class="h-full w-full object-cover"
+            class="tw-h-full tw-w-full tw-object-cover"
           />
         </button>
 
         <mat-menu #nameMenu>
-            <button mat-menu-item class="text-sky-300">GP M. D. Try Hope</button>
+            <button mat-menu-item class="tw-text-sky-300">GP M. D. Try Hope</button>
         </mat-menu>
     </div>
     <!-- user mobile -->
     
     <!-- user web and tablet -->
-    <div class="hidden md:flex gap-3 items-center bg-white lg:w-64 w-full h-32 p-2 lg:mx-20 mx-0">
+    <div class="tw-hidden md:tw-flex tw-gap-3 tw-items-center tw-bg-white lg:tw-w-64 tw-w-full tw-h-32 tw-p-2 lg:tw-mx-20 tw-mx-0">
         <button
           mat-ripple
-          class="md:w-28 w-8 md:h-28 h-8"
+          class="md:tw-w-28 tw-w-8 md:tw-h-28 tw-h-8"
         >
           <img
             [src]="'assets/images/user.svg'"
-            class="h-full w-full object-contain"
+            class="tw-h-full tw-w-full tw-object-contain"
           />
         </button>
     
-        <div class="grid w-full gap-5">
-          <span class="metropolis text-[#14C1E8] lg:text-[2rem]">GP M. D.</span>
-          <span class="metropolis text-[#14C1E8] lg:text-[2rem]">Try Hope</span>
+        <div class="tw-grid tw-w-full tw-gap-5">
+          <span class="metropolis tw-text-[#14C1E8] lg:tw-text-[2rem]">GP M. D.</span>
+          <span class="metropolis tw-text-[#14C1E8] lg:tw-text-[2rem]">Try Hope</span>
         </div>
     </div>
     <!-- user web and tablet -->
 
-    <div class="col-span-2 flex">
+    <div class="tw-col-span-2 tw-flex">
       <!-- nav -->
-      <admin-nav class="w-full"></admin-nav>
+      <admin-nav class="tw-w-full"></admin-nav>
       <!-- nav -->
       
     </div>
 
     <div
-      class="md:h-28 h-8"
+      class="md:tw-h-28 tw-h-8"
     >
       <img
         [src]="'assets/images/revital_logo.png'"
-        class="h-full w-full object-contain"
+        class="tw-h-full tw-w-full tw-object-contain"
       />
     </div>
   </div>

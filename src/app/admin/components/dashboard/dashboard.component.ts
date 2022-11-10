@@ -8,6 +8,7 @@ import LoadStatus from 'src/_core/components/utils/LoadStatus';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  page = 1;
   loadStatus: LoadStatus = 'loading';
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   timeRange: any[] = [
@@ -27,7 +28,7 @@ export class DashboardComponent implements OnInit {
 
     setTimeout(() => {
       this.loadStatus = 'success';
-    }, 2000);
+    }, 1000);
   }
 
   changeRange(range: any) {
@@ -36,7 +37,7 @@ export class DashboardComponent implements OnInit {
     setTimeout(() => {
       this.activeRange = range; 
       this.loadStatus = 'success';
-    }, 2000);
+    }, 1000);
   }
 
 }

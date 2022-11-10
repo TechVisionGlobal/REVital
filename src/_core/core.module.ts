@@ -11,6 +11,8 @@ import { EditPatientDialogComponent } from './components/edit-patient-dialog/edi
 import { RemoveDeviceDialogComponent } from './components/remove-device-dialog/remove-device-dialog.component';
 import { DeleteRecordDialogComponent } from './components/delete-record-dialog/delete-record-dialog.component';
 import { CancelDialogComponent } from './components/cancel-dialog/cancel-dialog.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AddDatesDialogComponent } from './components/add-dates-dialog/add-dates-dialog.component';
 
 
 
@@ -23,13 +25,15 @@ import { CancelDialogComponent } from './components/cancel-dialog/cancel-dialog.
     EditPatientDialogComponent,
     RemoveDeviceDialogComponent,
     DeleteRecordDialogComponent,
-    CancelDialogComponent
+    CancelDialogComponent,
+    AddDatesDialogComponent
   ],
   imports: [
     CommonModule,
     MaterialModule,
     FormsModule,
-    RouterModule
+    RouterModule,
+    NgbModule,
   ],
   exports: [
     LoginComponent
