@@ -15,6 +15,7 @@ import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { AdminService } from './services/admin.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
+import { NgApexchartsModule } from 'ng-apexcharts';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { FormsModule } from '@angular/forms';
       useFactory: adapterFactory,
     }),
     NgbModule,
+    NgApexchartsModule,
   ],
   providers: [
     AdminService

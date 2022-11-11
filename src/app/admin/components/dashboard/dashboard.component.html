@@ -19,8 +19,8 @@
 
         <div class="md:tw-grid md:tw-grid-cols-4 tw-flex tw-flex-col tw-justify-center tw-gap-4">
             <div>&nbsp;</div>
-            
-            <ul class="tw-flex tw-text-sm tw-font-medium tw-text-center tw-text-gray-500 tw-rounded-lg tw-border tw-border-[#3a414a] tw-divide-x tw-divide-[#3a414a] custom-tab-parent">
+
+            <ul id="dashIntervalGroup" class="tw-flex tw-text-sm tw-font-medium tw-text-center tw-text-gray-500 tw-rounded-lg tw-border tw-border-[#3a414a] tw-divide-x tw-divide-[#3a414a] custom-tab-parent">
                 <li class="tw-w-full custom-tab" *ngFor="let range of timeRange">
                     <a [ngClass]="{'active': activeRange.text == range.text}" class="tw-cursor-pointer tw-inline-block md:tw-p-2 tw-p-1 tw-w-full tw-bg-[#afbdcf] tw-text-[#3a414a] hover custom-tab-item" aria-current="page" (click)="changeRange(range)">{{ range.text }}</a>
                 </li>
@@ -29,28 +29,28 @@
             <div class="tw-flex tw-justify-between tw-w-full">
                 <div class="tw-flex tw-items-center tw-mr-4">
                     <label class="custom-check">
-                        <input type="checkbox" checked>
+                        <input id="dashSeverityLow" name="sevLow" type="checkbox" checked>
                         <span class="checkmark checkmark-low"></span>
                     </label>
                     <label class="tw-ml-2 tw-text-sm tw-font-medium tw-text-[#3a414a]">Low</label>
                 </div>
                 <div class="tw-flex tw-items-center tw-mr-4">
                     <label class="custom-check">
-                        <input type="checkbox" checked>
+                        <input id="dashSeverityMed" name="sevMed" type="checkbox" checked>
                         <span class="checkmark checkmark-medium"></span>
                     </label>
                     <label class="tw-ml-2 tw-text-sm tw-font-medium tw-text-[#3a414a]">Med</label>
                 </div>
                 <div class="tw-flex tw-items-center tw-mr-4">
                     <label class="custom-check">
-                        <input type="checkbox" checked>
+                        <input id="dashSeverityHigh" name="sevHigh" type="checkbox" checked>
                         <span class="checkmark checkmark-high"></span>
                     </label>
                     <label class="tw-ml-2 tw-text-sm tw-font-medium tw-text-[#3a414a]">High</label>
                 </div>
                 <div class="tw-flex tw-items-center tw-mr-4">
                     <label class="custom-check">
-                        <input type="checkbox" checked>
+                        <input id="dashSeverityNA" name="sevNA" type="checkbox" checked>
                         <span class="checkmark checkmark-default"></span>
                     </label>
                     <label class="tw-ml-2 tw-text-sm tw-font-medium tw-text-[#3a414a]">No Data</label>
@@ -60,7 +60,7 @@
 
         <div class="tw-mt-5 tw-grid">
             <div class="tw-relative tw-h-[15rem] tw-overflow-x-auto">
-                <table class="tw-table-fixed tw-w-full tw-border tw-border-[#3a414a] tw-bg-white tw-text-sm tw-shadow-sm tw-rounded-lg">
+                <table id="dashTable" class="tw-table-fixed tw-w-full tw-border tw-border-[#3a414a] tw-bg-white tw-text-sm tw-shadow-sm tw-rounded-lg">
                     <thead class="tw-bg-[#afbdcf]">
                         <tr>
                             <th class="lg:tw-w-auto tw-w-80 tw-font-semibold tw-px-4 tw-py-2 tw-text-slate-900 tw-flex tw-justify-between">Full Name <span>▾</span></th>
@@ -117,10 +117,10 @@
             </div>
         
             <div class="tw-flex md:tw-flex-row md:tw-justify-between md:tw-gap-0 tw-flex-col tw-gap-4">
-                <button class="tw-w-fit tw-bg-[#8FDAEB] hover:tw-bg-cyan-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-sm tw-px-8 tw-py-1.5 tw-text-center tw-self-center" (click)="loadData()">Refresh</button>
+                <button id="dashTableRefresh" class="tw-w-fit tw-bg-[#8FDAEB] hover:tw-bg-cyan-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-sm tw-px-8 tw-py-1.5 tw-text-center tw-self-center" (click)="loadData()">Refresh</button>
                 
                 <div>
-                    <ngb-pagination [collectionSize]="50" [(page)]="page" [boundaryLinks]="true" aria-label="Custom pagination">
+                    <ngb-pagination id="dashTablePgn" [collectionSize]="50" [(page)]="page" [boundaryLinks]="true" aria-label="Custom pagination">
                         <ng-template ngbPaginationFirst>First</ng-template>
                         <ng-template ngbPaginationLast>Last</ng-template>
                         <ng-template ngbPaginationPrevious>Prev</ng-template>
@@ -133,15 +133,31 @@
 
         <div class="tw-mt-5 tw-grid md:tw-grid-cols-2 tw-grid-cols-1 tw-gap-5 tw-h-[25rem]">
             <div class="tw-bg-white tw-border tw-border-[#3a414a] tw-h-full tw-flex tw-items-center tw-justify-center tw-rounded-lg">
-                <span class="tw-text-center tw-text-[#898989] tw-text-4xl">
-                    Fall Statistics <br> Graph
-                </span>
+                <div id="chart" class="tw-w-full tw-p-5">
+                    <apx-chart
+                      [series]="fallChartOptions.series"
+                      [chart]="fallChartOptions.chart"
+                      [xaxis]="fallChartOptions.xaxis"
+                      [dataLabels]="fallChartOptions.dataLabels"
+                      [grid]="fallChartOptions.grid"
+                      [stroke]="fallChartOptions.stroke"
+                      [title]="fallChartOptions.title"
+                    ></apx-chart>
+                </div>
             </div>
-
+            
             <div class="tw-bg-white tw-border tw-border-[#3a414a] tw-h-full tw-flex tw-items-center tw-justify-center tw-rounded-lg">
-                <span class="tw-text-center tw-text-[#898989] tw-text-4xl">
-                    Heart Problems <br> Graph
-                </span>
+                <div id="chart" class="tw-w-full tw-p-5">
+                    <apx-chart
+                      [series]="heartProblemsChartOptions.series"
+                      [chart]="heartProblemsChartOptions.chart"
+                      [xaxis]="heartProblemsChartOptions.xaxis"
+                      [dataLabels]="heartProblemsChartOptions.dataLabels"
+                      [grid]="heartProblemsChartOptions.grid"
+                      [stroke]="heartProblemsChartOptions.stroke"
+                      [title]="heartProblemsChartOptions.title"
+                    ></apx-chart>
+                </div>
             </div>
         </div>
     </div>
