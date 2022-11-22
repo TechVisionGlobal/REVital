@@ -1,5 +1,5 @@
 <div class="tw-min-h-[761px] tw-bg-[#D2DCE8]">
-    <div class="tw-bg-[#AFBDCF] tw-flex tw-justify-between tw-w-full tw-text-center tw-items-center">
+    <div class="tw-bg-[#AFBDCF] tw-flex tw-justify-between tw-w-full tw-text-center tw-items-center tw-px-4">
         <div>&nbsp;</div>
 
         <p class="tw-pt-2">{{isEdit ? label + ' | ' + data.patientId : data.fullName + ' | ' + data.patientId }}</p>
@@ -58,7 +58,7 @@
                 </div>
                 <div class="tw-relative tw-w-full tw-flex tw-bg-white tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center" title="DOB">
                     <div class="btn-wrp">
-                        <input placeholder="DOB" onfocus="(this.type='date')" onblur="(this.type='text')" class="tw-h-8 btn-clck">
+                        <input #dateOfBirth placeholder="DOB" (focus)="onDateFocus(dateOfBirth)" (blur)="onDateBlur(dateOfBirth)" class="tw-h-8 btn-clck">
                     </div>
                     <button class="tw-h-8 custom-btn">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" class="tw-h-8">
@@ -91,14 +91,14 @@
                     </button>
                 </div>
                 <div class="tw-flex tw-divide-x tw-divide-black tw-bg-white tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center">
-                    <input #height type="number" min="1" placeholder="Height cm" class="tw-h-8 tw-bg-gray-50 tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5" required>
+                    <input #height type="number" min="1" max="999" placeholder="Height cm" class="tw-h-8 tw-bg-gray-50 tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5" (keydown)="validateAge($event, height)" required>
                     <div class="tw-flex tw-flex-col tw-gap-1 tw-bg-[#AFBDCF] tw-h-8 tw-rounded-r-lg hover">
                         <span class="tw-cursor-pointer tw-mx-2 tw-h-2 noselect" (click)="increase(height)">▲</span>
                         <span class="tw-cursor-pointer tw-mx-2 tw-h-2 noselect" (click)="decrease(height)">▼</span>
                     </div>
                 </div>
                 <div class="tw-flex tw-divide-x tw-divide-black tw-bg-white tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center">
-                    <input #weight type="number" min="1" placeholder="Weight kg" class="tw-h-8 tw-bg-gray-50 tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5" required>
+                    <input #weight type="number" min="1" max="999" placeholder="Weight kg" class="tw-h-8 tw-bg-gray-50 tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5" (keydown)="validateAge($event, weight)" required>
                     <div class="tw-flex tw-flex-col tw-gap-1 tw-bg-[#AFBDCF] tw-h-8 tw-rounded-r-lg hover">
                         <span class="tw-cursor-pointer tw-mx-2 tw-h-2 noselect" (click)="increase(weight)">▲</span>
                         <span class="tw-cursor-pointer tw-mx-2 tw-h-2 noselect" (click)="decrease(weight)">▼</span>
