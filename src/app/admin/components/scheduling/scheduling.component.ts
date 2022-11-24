@@ -78,6 +78,15 @@ export class SchedulingComponent implements OnInit {
     { dateString: '01/01/2023', selected: false, isHoliday: true },
     { dateString: '02/01/2023', selected: false, isHoliday: false },
   ]
+  days = [
+    { name: 'Mon', start: { hour: 8, minute: 0 }, end: { hour: 16, minute: 0 }, isActive: true },
+    { name: 'Tue', start: { hour: 8, minute: 0 }, end: { hour: 16, minute: 0 }, isActive: true },
+    { name: 'Wed', start: { hour: 8, minute: 0 }, end: { hour: 16, minute: 0 }, isActive: true },
+    { name: 'Thu', start: { hour: 8, minute: 0 }, end: { hour: 16, minute: 0 }, isActive: true },
+    { name: 'Fri', start: { hour: 8, minute: 0 }, end: { hour: 16, minute: 0 }, isActive: true },
+    { name: 'Sat', start: { hour: 8, minute: 0 }, end: { hour: 16, minute: 0 }, isActive: true },
+    { name: 'Sun', start: { hour: 8, minute: 0 }, end: { hour: 16, minute: 0 }, isActive: true },
+  ]
   loadStatus: LoadStatus = 'success';
   // @ViewChild('modalContent', { static: true }) modalContent: TemplateRef<any>;
 

@@ -45,7 +45,7 @@
         <div *ngIf="!isRange">
             <div class="tw-relative tw-w-[150px] tw-flex tw-bg-white tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center" title="Date">
                 <div class="btn-wrp">
-                    <input placeholder="Date" onfocus="(this.type='date')" onblur="(this.type='text')" class="tw-h-8 btn-clck">
+                    <input #date placeholder="Date" (focus)="onDateFocus(date)" (blur)="onDateBlur(date)" class="tw-h-8 btn-clck">
                 </div>
                 <button class="tw-h-8 custom-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" class="tw-h-8">
@@ -82,7 +82,7 @@
         <div class="tw-flex tw-gap-2" *ngIf="isRange">
             <div class="tw-relative tw-w-[150px] tw-flex tw-bg-white tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center" title="From">
                 <div class="btn-wrp">
-                    <input placeholder="from" onfocus="(this.type='date')" onblur="(this.type='text')" class="tw-h-8 btn-clck">
+                    <input #fromDate placeholder="from" (focus)="onDateFocus(fromDate)" (blur)="onDateBlur(fromDate)" class="tw-h-8 btn-clck">
                 </div>
                 <button class="tw-h-8 custom-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" class="tw-h-8">
@@ -119,7 +119,7 @@
 
             <div class="tw-relative tw-w-[150px] tw-flex tw-bg-white tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center" title="To">
                 <div class="btn-wrp">
-                    <input placeholder="to" onfocus="(this.type='date')" onblur="(this.type='text')" class="tw-h-8 btn-clck">
+                    <input #toDate placeholder="to" (focus)="onDateFocus(toDate)" (blur)="onDateBlur(toDate)" class="tw-h-8 btn-clck">
                 </div>
                 <button class="tw-h-8 custom-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" class="tw-h-8">

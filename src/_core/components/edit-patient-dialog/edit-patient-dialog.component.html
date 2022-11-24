@@ -36,13 +36,13 @@
         <div class="tw-py-4 tw-px-6 lg:tw-grid lg:tw-grid-cols-5 tw-flex tw-flex-col tw-gap-5 tw-w-full">
             <form class="tw-flex tw-flex-col tw-gap-4">
                 <div>
-                    <input placeholder="First Name" class="tw-h-8 tw-bg-gray-50 tw-border tw-border-[#3a414a] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5" required>
+                    <input type="text" trim="blur" placeholder="First Name" class="tw-h-8 tw-bg-gray-50 tw-border tw-border-[#3a414a] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5" required>
                 </div>
                 <div>
-                    <input placeholder="Middle Name(s)" class="tw-h-8 tw-bg-gray-50 tw-border tw-border-[#3a414a] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5" required>
+                    <input type="text" trim="blur" placeholder="Middle Name(s)" class="tw-h-8 tw-bg-gray-50 tw-border tw-border-[#3a414a] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5" required>
                 </div>
                 <div>
-                    <input placeholder="Surname" class="tw-h-8 tw-bg-gray-50 tw-border tw-border-[#3a414a] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5" required>
+                    <input type="text" trim="blur" placeholder="Surname" class="tw-h-8 tw-bg-gray-50 tw-border tw-border-[#3a414a] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5" required>
                 </div>
                 <div class="tw-flex tw-gap-5 options tw-h-8">
                     <label title="Male">
@@ -58,7 +58,7 @@
                 </div>
                 <div class="tw-relative tw-w-full tw-flex tw-bg-white tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center" title="DOB">
                     <div class="btn-wrp">
-                        <input #dateOfBirth placeholder="DOB" (focus)="onDateFocus(dateOfBirth)" (blur)="onDateBlur(dateOfBirth)" class="tw-h-8 btn-clck">
+                        <input #dateOfBirth type="text" trim="blur" placeholder="DOB" (focus)="onDateFocus(dateOfBirth)" (blur)="onDateBlur(dateOfBirth)" class="tw-h-8 btn-clck">
                     </div>
                     <button class="tw-h-8 custom-btn">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" class="tw-h-8">
@@ -105,19 +105,39 @@
                     </div>
                 </div>
                 <div>
-                    <input placeholder="Email" class="tw-h-8 tw-bg-gray-50 tw-border tw-border-[#3a414a] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5" required>
+                    <input type="text" trim="blur" placeholder="Email" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" name="email" [(ngModel)]="patient.email" #email="ngModel" class="tw-h-8 tw-bg-gray-50 tw-border tw-border-[#3a414a] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5" required>
+                    <div *ngIf="email.invalid && (email.dirty || email.touched)" class="validation-message">
+                        <div *ngIf="email.errors?.['pattern']">
+                            Email is invalid.
+                        </div>
+                    </div>
+                </div>
+                <div class="tw-relative tw-divide-black tw-bg-white tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center">
+                    <div class="tw-absolute tw-inset-y-0 tw-left-0 tw-flex tw-items-center">
+                        <select class="tel-select" [ngModel]="patient.phone.code" [ngModelOptions]="{standalone: true}">
+                            <option *ngFor="let country of countries" [value]="country.code">+{{country.code}}</option>
+                        </select>
+                    </div>
+                    <input type="text" trim="blur" maxlength="10" placeholder="Phone" class="tel-input" (keydown)="validatePhone($event)" required>
                 </div>
                 <div>
-                    <input placeholder="Phone" class="tw-h-8 tw-bg-gray-50 tw-border tw-border-[#3a414a] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5" required>
+                    <input type="text" trim="blur" placeholder="Next of Kin Name" class="tw-h-8 tw-bg-gray-50 tw-border tw-border-[#3a414a] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5" required>
+                </div>
+                <div class="tw-relative tw-divide-black tw-bg-white tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center">
+                    <div class="tw-absolute tw-inset-y-0 tw-left-0 tw-flex tw-items-center">
+                        <select class="tel-select" [ngModel]="patient.nextOfKinPhone.code" [ngModelOptions]="{standalone: true}">
+                            <option *ngFor="let country of countries" [value]="country.code">+{{country.code}}</option>
+                        </select>
+                    </div>
+                    <input type="text" trim="blur" maxlength="10" placeholder="Next of Kin Phone" class="tel-input" (keydown)="validatePhone($event)" required>
                 </div>
                 <div>
-                    <input placeholder="Next of Kin Name" class="tw-h-8 tw-bg-gray-50 tw-border tw-border-[#3a414a] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5" required>
-                </div>
-                <div>
-                    <input placeholder="Next of Kin Phone" class="tw-h-8 tw-bg-gray-50 tw-border tw-border-[#3a414a] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5" required>
-                </div>
-                <div>
-                    <input placeholder="Next of Kin Email" class="tw-h-8 tw-bg-gray-50 tw-border tw-border-[#3a414a] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5" required>
+                    <input type="text" trim="blur" placeholder="Next of Kin Email" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" name="nextOfKinEmail" [(ngModel)]="patient.nextOfKinEmail" #nextOfKinEmail="ngModel" class="tw-h-8 tw-bg-gray-50 tw-border tw-border-[#3a414a] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5" required>
+                    <div *ngIf="nextOfKinEmail.invalid && (nextOfKinEmail.dirty || nextOfKinEmail.touched)" class="validation-message">
+                        <div *ngIf="nextOfKinEmail.errors?.['pattern']">
+                            Email is invalid.
+                        </div>
+                    </div>
                 </div>
             </form>
             <div class="tw-col-span-4 tw-flex tw-flex-col tw-text-center">

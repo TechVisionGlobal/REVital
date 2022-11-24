@@ -19,6 +19,17 @@ export class AddDatesDialogComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onDateFocus(element: HTMLInputElement) {
+    element.type ='date';
+  }
+  
+  onDateBlur(element: HTMLInputElement) {
+    if(element.value)
+      element.type ='date';
+    else
+      element.type='text';
+  }
+
   save() {
     this.submitting = true;
     

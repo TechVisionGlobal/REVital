@@ -19,7 +19,7 @@
         <div class="tw-max-w-xs tw-w-full tw-p-6 tw-space-y-4 md:tw-space-y-6 sm:tw-p-8">
             <form id="loginForm" name="loginForm" #loginForm="ngForm" class="tw-flex tw-flex-col tw-items-center tw-justify-center tw-space-y-4 md:tw-space-y-6">
                 <div class="tw-w-full">
-                    <input id="loginEmail" type="email" name="loginEmail" [(ngModel)]="user.email" #email="ngModel" id="email" placeholder="Email"
+                    <input id="loginEmail" type="email" name="loginEmail" [(ngModel)]="user.email" #email="ngModel" placeholder="Email"
                         class="tw-bg-gray-50 tw-border tw-border-[#3a414a] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5" required>
                     <div *ngIf="email.invalid && (email.dirty || email.touched)" class="validation-message">
                         <div *ngIf="email.errors?.['required']">

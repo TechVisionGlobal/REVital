@@ -1,4 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { constants } from 'src/_core/components/utils/consts';
+import { countries } from 'src/_core/components/utils/countries';
 import LoadStatus from 'src/_core/components/utils/LoadStatus';
 
 @Component({
@@ -13,6 +15,11 @@ export class SettingsComponent implements OnInit {
     { text: '14 days', isActive: false },
   ]
   activeRange: any = this.timeRange[0];
+  user = {
+    email: '',
+    phone: { code: '420', value: '' },
+  }
+  countries = countries;
 
   constructor() { }
 
@@ -43,6 +50,21 @@ export class SettingsComponent implements OnInit {
 
   exportCSV() {
     
+  }
+
+  validatePhone(event: KeyboardEvent) {
+    const key = parseInt(event.key);
+
+    const isNumber = isFinite(key);
+    const isBackspace = event.key === constants.BACKSPACE;
+
+    if(isBackspace)
+      return;
+      
+    if(!isNumber)
+      return false;
+
+    return;
   }
 
 }

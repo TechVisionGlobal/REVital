@@ -16,6 +16,7 @@ import { AdminService } from './services/admin.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { NgApexchartsModule } from 'ng-apexcharts';
+import { NgxTrimDirectiveModule } from 'ngx-trim-directive';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { NgApexchartsModule } from 'ng-apexcharts';
     }),
     NgbModule,
     NgApexchartsModule,
+    NgxTrimDirectiveModule,
   ],
   providers: [
     AdminService

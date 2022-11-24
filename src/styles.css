@@ -253,6 +253,16 @@ div.options > label > input:checked +img {
     border: 2px black solid;
   }
   
+  .checkmark-danger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 34px;
+    width: 34px;
+    background-color: #F2F6F9;
+    border: 2px #E81414 solid;
+  }
+  
   .checkmark-rounded-default {
     position: absolute;
     top: 0;
@@ -263,22 +273,6 @@ div.options > label > input:checked +img {
     border: 2px black solid;
     border-radius: 50%;
   }
-  
-  /* On mouse-over, add a grey background color */
-  /* .custom-check:hover input ~ .checkmark {
-    background-color: #ccc;
-  } */
-  /* .custom-check:hover input ~ .checkmark-rounded {
-    background-color: #ccc;
-  } */
-  
-  /* When the checkbox is checked, add a blue background */
-  /* .custom-check input:checked ~ .checkmark {
-    background-color: #b3e6bc;
-  } */
-  /* .custom-check input:checked ~ .checkmark-rounded {
-    background-color: #b3e6bc;
-  } */
   
   /* Create the checkmark/indicator (hidden when not checked) */
   .checkmark:after {
@@ -293,12 +287,22 @@ div.options > label > input:checked +img {
     display: none;
   }
   
+  .checkmark-red:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
   /* Show the checkmark when checked */
   .custom-check input:checked ~ .checkmark:after {
     display: block;
   }
   
   .custom-check input:checked ~ .checkmark-rounded:after {
+    display: block;
+  }
+  
+  .custom-check input:checked ~ .checkmark-red:after {
     display: block;
   }
   
@@ -326,6 +330,18 @@ div.options > label > input:checked +img {
     -ms-transform: rotate(35deg);
     transform: rotate(35deg);
   }
+  
+  .custom-check .checkmark-red:after {
+    left: 8px;
+    top: 0;
+    width: 15px;
+    height: 25px;
+    border: solid #E81414;
+    border-width: 0 5px 5px 0;
+    -webkit-transform: rotate(35deg);
+    -ms-transform: rotate(35deg);
+    transform: rotate(35deg);
+  }
 
   .cal-month-view .cal-day-cell {
     min-height: 0;
@@ -340,7 +356,7 @@ div.options > label > input:checked +img {
   }
 
   mat-list-option[aria-selected="true"] {
-    background: rgba(255, 0, 0) !important;
+    background: #DB7272 !important;
   }
 
   .mat-pseudo-checkbox {
@@ -365,4 +381,12 @@ div.options > label > input:checked +img {
   input[type=number]
   {
     -moz-appearance: textfield;
+  }
+
+  .tel-select {
+    @apply tw-h-8 !tw-w-24 btn-clck tw-text-[#3a414a] !tw-px-1 hover:tw-border-gray-400 focus:tw-outline-none tw-rounded-l-lg;
+  }
+
+  .tel-input {
+    @apply tw-h-8 tw-bg-gray-50 tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-pl-24;
   }

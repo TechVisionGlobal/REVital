@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { PairDeviceDialogComponent } from '../pair-device-dialog/pair-device-dialog.component';
 import { constants } from '../utils/consts';
+import { countries } from '../utils/countries';
 import LoadStatus from '../utils/LoadStatus';
 
 @Component({
@@ -14,6 +15,15 @@ export class NewPatientDialogComponent implements OnInit {
   page = 1;
   loadStatus: LoadStatus = 'loading';
   submitting: boolean = false;
+  patient = {
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: { code: '420', value: '' },
+    nextOfKinEmail: '',
+    nextOfKinPhone: { code: '420', value: '' },
+  }
+  countries = countries;
 
   constructor(
     public dialog: MatDialog,
@@ -52,6 +62,21 @@ export class NewPatientDialogComponent implements OnInit {
       return false;
 
     if (newValue < min || newValue > max)
+      return false;
+
+    return;
+  }
+
+  validatePhone(event: KeyboardEvent) {
+    const key = parseInt(event.key);
+
+    const isNumber = isFinite(key);
+    const isBackspace = event.key === constants.BACKSPACE;
+
+    if(isBackspace)
+      return;
+      
+    if(!isNumber)
       return false;
 
     return;
