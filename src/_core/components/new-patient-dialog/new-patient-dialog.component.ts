@@ -120,7 +120,7 @@ export class NewPatientDialogComponent implements OnInit {
   }
 
   pairDevice() {
-    this.dialog.open(PairDeviceDialogComponent, { panelClass: 'app-full-dialog'});
+    this.dialog.open(PairDeviceDialogComponent);
   }
   
   save() {

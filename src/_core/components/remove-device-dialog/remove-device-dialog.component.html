@@ -1,15 +1,17 @@
-<div class="tw-bg-[#D2DCE8]">
-    <div class="tw-bg-[#AFBDCF] tw-flex tw-flex-col">
-        <p class="tw-pt-2 tw-text-center">Remove Device</p>
+<div class="dialog-bg">
+    <div class="dialog-title-single-container">
+        <span class="dialog-title">Remove Device</span>
     </div>
 
     
-    <div class="tw-flex tw-flex-col tw-gap-4 tw-h-[10rem] tw-w-[25rem] tw-pt-10 tw-px-6">
-        <p class="tw-text-center">Are you sure?</p>
+    <div class="dialog-content">
+        <p class="dialog-message">
+            Are you sure?
+        </p>
 
         <div class="tw-flex tw-gap-5">
-            <button class="tw-w-full tw-bg-[#80D690] hover:tw-bg-green-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-sm tw-px-12 tw-py-1.5 tw-text-center tw-self-center" [ngClass]="{'btn-loading':submitting}" (click)="save()">Yes</button>
-            <button class="tw-w-full tw-bg-[#DB7272] hover:tw-bg-red-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-sm tw-px-12 tw-py-1.5 tw-text-center tw-self-center" mat-dialog-close>No</button>
+            <button class="dialog-confirm-btn" [ngClass]="{'btn-loading':submitting}" (click)="save()">Yes</button>
+            <button class="dialog-cancel-btn" mat-dialog-close>No</button>
         </div>
     </div>
 </div>

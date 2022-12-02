@@ -1,8 +1,10 @@
-<div class="tw-min-h-[764px] tw-bg-[#D2DCE8]">
-    <div class="tw-bg-[#AFBDCF] tw-flex tw-justify-between tw-w-full tw-text-center tw-items-center tw-px-4">
+<div class="dialog-new-edit-bg">
+    <div class="dialog-title-multiple-container">
         <div>&nbsp;</div>
 
-        <p class="tw-pt-2">New Patient</p>
+        <span class="dialog-title">
+            New Patient
+        </span>
 
         <div class="tw-cursor-pointer" mat-dialog-close>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" width="32" height="32">
@@ -32,8 +34,8 @@
         </div>
     </div>
 
-    <div class="lg:tw-h-full md:tw-h-[60rem] tw-h-[50rem] tw-overflow-y-scroll">
-        <div class="tw-py-4 tw-px-6 lg:tw-grid lg:tw-grid-cols-5 tw-flex tw-flex-col tw-gap-5 tw-w-full">
+    <div class="dialog-new-edit-content">
+        <div class="dialog-new-edit-subcontent">
             <form class="tw-flex tw-flex-col tw-gap-4">
                 <div>
                     <input type="text" trim="blur" name="firstName" placeholder="First Name" class="tw-h-8 tw-bg-gray-50 tw-border tw-border-[#3a414a] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5" [(ngModel)]="patient.firstName" required>
@@ -312,9 +314,9 @@
             </div>
         </div>
     
-        <div class="tw-px-6 tw-flex tw-justify-between">
-            <button class="tw-w-fit tw-bg-[#80D690] hover:tw-bg-green-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-sm tw-px-8 tw-py-1.5 tw-text-center tw-self-center" (click)="pairDevice()">Pair Device</button>
-            <button class="tw-w-fit tw-bg-[#80D690] hover:tw-bg-green-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-sm tw-px-8 tw-py-1.5 tw-text-center tw-self-center" [ngClass]="{'btn-loading':submitting}" (click)="save()">Save</button>
+        <div class="dialog-new-edit-footer">
+            <button class="dialog-new-edit-green-btn" (click)="pairDevice()">Pair Device</button>
+            <button class="dialog-new-edit-green-btn" [ngClass]="{'btn-loading':submitting}" (click)="save()">Save</button>
         </div>
     </div>
 </div>

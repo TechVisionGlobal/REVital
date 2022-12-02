@@ -126,11 +126,11 @@ export class EditPatientDialogComponent implements OnInit {
   }
 
   pairDevice() {
-    this.dialog.open(PairDeviceDialogComponent, { panelClass: 'app-full-dialog'});
+    this.dialog.open(PairDeviceDialogComponent);
   }
   
   removeDevice() {
-    this.dialog.open(RemoveDeviceDialogComponent, { panelClass: 'app-full-dialog'});
+    this.dialog.open(RemoveDeviceDialogComponent);
   }
 
   edit() {
@@ -148,11 +148,11 @@ export class EditPatientDialogComponent implements OnInit {
   }
 
   cancel() {
-    this.dialog.open(CancelDialogComponent, { panelClass: 'app-full-dialog'});
+    this.dialog.open(CancelDialogComponent);
   }
 
   deleteRecord() {
-    this.dialog.open(DeleteRecordDialogComponent, { panelClass: 'app-full-dialog'});
+    this.dialog.open(DeleteRecordDialogComponent);
   }
 
 }

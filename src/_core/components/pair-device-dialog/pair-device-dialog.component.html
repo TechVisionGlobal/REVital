@@ -1,8 +1,12 @@
-<div [ngSwitch]="loadStatus" class="tw-bg-[#D2DCE8]">
-  <div class="tw-bg-[#AFBDCF] tw-flex tw-justify-between tw-w-full tw-text-center tw-items-center tw-px-4">
+<div [ngSwitch]="loadStatus" class="dialog-bg">
+  <div class="dialog-title-multiple-container">
       <div>&nbsp;</div>
 
-      <p class="tw-pt-2">Pair Device</p>
+      <div>&nbsp;</div>
+
+      <span class="dialog-title">
+        Pair Device
+      </span>
 
       <div class="tw-cursor-pointer" mat-dialog-close>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" width="32" height="32">
@@ -33,7 +37,7 @@
   </div>
 
   
-  <div class="tw-flex tw-flex-col tw-gap-4 tw-h-[15rem] tw-w-[15rem] tw-py-6">
+  <div class="dialog-content-qrcode">
       <svg *ngSwitchCase="'loading'" role="status" class="tw-m-auto tw-h-8 tw-w-8 tw-animate-spin tw-fill-[#FAAF40] tw-text-[#F1F1F1]"
           viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path

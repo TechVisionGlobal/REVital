@@ -89,11 +89,11 @@ export class PatientsComponent implements OnInit {
   }
 
   addNewPatient() {
-    this.dialog.open(NewPatientDialogComponent, { panelClass: 'app-full-dialog'});
+    this.dialog.open(NewPatientDialogComponent);
   }
   
   editPatient(patient: any) {
-    this.dialog.open(EditPatientDialogComponent, { panelClass: 'app-full-dialog', data: patient});
+    this.dialog.open(EditPatientDialogComponent, {data: patient});
   }
 
   onDateFocus(element: HTMLInputElement) {

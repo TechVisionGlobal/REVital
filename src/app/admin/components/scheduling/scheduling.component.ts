@@ -288,6 +288,6 @@ export class SchedulingComponent implements OnInit {
   }
 
   addDate() {
-    this.dialog.open(AddDatesDialogComponent, { panelClass: 'app-full-dialog'});
+    this.dialog.open(AddDatesDialogComponent);
   }
 }

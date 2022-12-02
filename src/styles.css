@@ -11,6 +11,7 @@ body {
 body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 21px;
 }
 
 .validation-message {
@@ -50,22 +51,61 @@ body {
 
 .app-full-dialog .mat-dialog-container {
     padding: 0;
+    border: 2px solid;
 }
 
 .dialog-bg {
     @apply tw-bg-[#D2DCE8];
 }
 
-.dialog-title-container {
-    @apply tw-bg-[#AFBDCF] tw-flex tw-flex-col;
+.dialog-new-edit-bg {
+    @apply tw-max-w-[80vw] tw-min-h-[764px] tw-bg-[#D2DCE8];
+}
+
+.dialog-title-single-container {
+    @apply tw-bg-[#AFBDCF] tw-flex tw-justify-center tw-w-full tw-h-[34px] tw-text-center tw-items-center tw-px-4;
+    border-bottom: 2px solid;
+}
+
+.dialog-title-multiple-container {
+    @apply tw-bg-[#AFBDCF] tw-flex tw-justify-between tw-w-full tw-text-center tw-items-center tw-px-4;
+    border-bottom: 2px solid;
 }
 
 .dialog-title {
-    @apply dialog-title-container;
+    @apply tw-text-[21px] tw-text-[#3a414a];
 }
 
 .dialog-content {
     @apply tw-flex tw-flex-col tw-gap-4 tw-h-[12rem] tw-w-[28rem] tw-pt-10 tw-px-6;
+}
+.dialog-content-qrcode {
+    @apply tw-flex tw-flex-col tw-gap-4 tw-h-[15rem] tw-w-[15rem] tw-py-6;
+}
+
+.dialog-new-edit-content {
+    @apply lg:tw-h-full md:tw-h-[60rem] tw-h-[50rem] tw-overflow-y-scroll;
+}
+
+.dialog-new-edit-subcontent {
+    @apply tw-py-4 tw-px-6 lg:tw-grid lg:tw-grid-cols-5 tw-flex tw-flex-col tw-gap-5 tw-w-full;
+}
+
+.dialog-new-edit-footer {
+    @apply tw-px-6 tw-flex tw-justify-between;
+}
+
+.dialog-new-edit-green-btn {
+    @apply tw-w-fit tw-bg-[#80D690] hover:tw-bg-green-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-sm tw-px-8 tw-py-1.5 tw-text-center tw-self-center;
+}
+.dialog-new-edit-blue-btn {
+    @apply tw-w-fit tw-bg-[#8FDAEB] hover:tw-bg-cyan-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-sm tw-px-8 tw-py-1.5 tw-text-center tw-self-center;
+}
+.dialog-new-edit-yellow-btn {
+    @apply tw-w-fit tw-bg-[#EDB770] hover:tw-bg-amber-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-sm tw-px-8 tw-py-1.5 tw-text-center tw-self-center;
+}
+.dialog-new-edit-red-btn {
+    @apply tw-w-fit tw-bg-[#DB7272] hover:tw-bg-red-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-sm tw-px-8 tw-py-1.5 tw-text-center tw-self-center;
 }
 
 .dialog-message {
@@ -389,4 +429,8 @@ div.options > label > input:checked +img {
 
   .tel-input {
     @apply tw-h-8 tw-bg-gray-50 tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-pl-24;
+  }
+
+  .backdropBackground {
+    backdrop-filter: blur(2px);
   }
