@@ -62,7 +62,7 @@
                                 <input type="text" trim="blur" placeholder="Notification Email" class="tw-h-8 tw-bg-gray-50 tw-border tw-border-[#3a414a] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5" required>
                             </div> -->
                             <div class="tw-col-span-2">
-                                <input type="text" trim="blur" placeholder="Notification Email" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" name="email" [(ngModel)]="user.email" #email="ngModel" class="tw-h-8 tw-bg-gray-50 tw-border tw-border-[#3a414a] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5" required>
+                                <input type="text" trim="blur" placeholder="Notification Email" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" name="email" [(ngModel)]="user.email" #email="ngModel" class="tw-h-8 tw-bg-gray-50 tw-border tw-border-[#3a414a] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5 custom-input-text-color" required>
                                 <div *ngIf="email.invalid && (email.dirty || email.touched)" class="validation-message">
                                     <div *ngIf="email.errors?.['pattern']">
                                         Email is invalid.
@@ -83,13 +83,13 @@
                             <!-- <div class="tw-col-span-2">
                                 <input type="text" trim="blur" placeholder="Notification Mobile" class="tw-h-8 tw-bg-gray-50 tw-border tw-border-[#3a414a] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5" required>
                             </div> -->
-                            <div class="tw-col-span-2 tw-relative tw-divide-black tw-bg-white tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center">
+                            <div class="tw-col-span-2 tw-relative tw-divide-black tw-bg-[#f2f6f9] tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center">
                                 <div class="tw-absolute tw-inset-y-0 tw-left-0 tw-flex tw-items-center">
                                     <select class="tel-select" [ngModel]="user.phone.code" [ngModelOptions]="{standalone: true}">
                                         <option *ngFor="let country of countries" [value]="country.code">+{{country.code}}</option>
                                     </select>
                                 </div>
-                                <input type="text" trim="blur" maxlength="10" placeholder="Notification Mobile" class="tel-input" (keydown)="validatePhone($event)" required>
+                                <input type="text" trim="blur" maxlength="10" placeholder="Notification Mobile" class="tel-input custom-input-text-color" (keydown)="validatePhone($event)" required>
                             </div>
 
                             <div class="tw-flex tw-items-center tw-mr-4">
@@ -136,7 +136,7 @@
                     <div class="tw-flex tw-flex-col tw-gap-5 tw-text-center tw-items-center">
                         <button class="tw-w-[200px] tw-bg-[#8FDAEB] hover:tw-bg-cyan-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-sm tw-px-8 tw-py-1.5 tw-text-center tw-self-center" (click)="changeLogo()">Change Logo</button>
 
-                        <div class="group exmp-wrp tw-flex tw-bg-white tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center">
+                        <div class="group exmp-wrp tw-flex tw-bg-[#f2f6f9] tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center">
                             <div class="btn-wrp">
                                 <select class="tw-h-8 btn-clck tw-text-[#3a414a] tw-px-10 hover:tw-border-gray-400 focus:tw-outline-none tw-appearance-none tw-rounded-l-lg">
                                     <option>English</option>
@@ -146,7 +146,7 @@
                                 <span class="tw-m-2 tw-text-sm">▼</span>
                             </button>
                         </div>
-                        <div class="group exmp-wrp tw-flex tw-bg-white tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center">
+                        <div class="group exmp-wrp tw-flex tw-bg-[#f2f6f9] tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center">
                             <div class="btn-wrp">
                                 <select class="tw-h-8 btn-clck tw-text-[#3a414a] tw-px-10 hover:tw-border-gray-400 focus:tw-outline-none tw-appearance-none tw-rounded-l-lg">
                                     <option>Czechia</option>

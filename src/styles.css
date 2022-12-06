@@ -109,23 +109,19 @@ body {
 }
 
 .dialog-message {
-    @apply tw-text-center;
-}
-
-.dialog-message {
-    @apply tw-text-center;
+    @apply tw-text-center tw-text-[20px] tw-text-[#3a414a];
 }
 
 .dialog-footer {
-    @apply tw-flex tw-gap-5;
+    @apply tw-flex tw-gap-5 tw-px-12 tw-text-[#3a414a];
 }
 
 .dialog-confirm-btn {
-    @apply tw-w-full tw-bg-[#80D690] hover:tw-bg-green-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-sm tw-px-12 tw-py-1.5 tw-text-center tw-self-center;
+    @apply tw-w-full tw-bg-[#80D690] hover:tw-bg-green-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-[20px] tw-px-12 tw-py-1.5 tw-text-center tw-self-center;
 }
 
 .dialog-cancel-btn {
-    @apply tw-w-full tw-bg-[#DB7272] hover:tw-bg-red-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-sm tw-px-12 tw-py-1.5 tw-text-center tw-self-center;
+    @apply tw-w-full tw-bg-[#DB7272] hover:tw-bg-red-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-[20px] tw-px-12 tw-py-1.5 tw-text-center tw-self-center;
 }
 
 div.options > label > input {
@@ -462,4 +458,8 @@ div.options > label > input:checked +img {
 
   .custom-num-spinner {
     @apply tw-cursor-pointer tw-mx-2 tw-h-2;
+  }
+
+  .custom-input-text-color {
+    @apply tw-text-[#3a414a] tw-placeholder-[#3a414a];
   }

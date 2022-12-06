@@ -19,9 +19,9 @@
 
         <div class="lg:tw-grid lg:tw-grid-cols-4 tw-flex tw-flex-col tw-justify-center tw-gap-10">
             <div>
-                <div class="tw-flex tw-bg-white tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center tw-relative">
-                    <input placeholder="Patient Name" class="tw-h-8 tw-bg-gray-50 tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5 tw-text-center" [(ngModel)]="searchValue"  required>
-                    <svg *ngIf="!searchValue" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.5 25.5" class="tw-absolute tw-right-[15%] tw-w-4">
+                <div class="tw-flex tw-bg-[#f2f6f9] tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center tw-relative">
+                    <input placeholder="Patient Name" class="tw-h-8 tw-bg-gray-50 tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5 tw-text-center custom-input-text-color" [(ngModel)]="searchValue"  required>
+                    <svg *ngIf="!searchValue" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.5 25.5" class="tw-absolute tw-right-[10%] tw-w-4">
                         <defs>
                             <style>
                                 .cls-1 {
@@ -49,9 +49,9 @@
                 </div>
             </div>
             <div>
-                <div class="group tw-relative tw-w-full tw-flex tw-bg-white tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center">
+                <div class="group tw-relative tw-w-full tw-flex tw-bg-[#f2f6f9] tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center">
                     <div class="btn-wrp">
-                        <select class="tw-h-8 btn-clck tw-text-[#3a414a] tw-px-10 hover:tw-border-gray-400 focus:tw-outline-none tw-appearance-none tw-rounded-l-lg">
+                        <select class="tw-h-8 btn-clck tw-text-[#3a414a] tw-px-10 hover:tw-border-gray-400 focus:tw-outline-none tw-appearance-none tw-rounded-l-lg custom-input-text-color">
                             <option>Event Type</option>
                         </select>
                     </div>
@@ -61,7 +61,7 @@
                 </div>
             </div>
             <div>
-                <div class="group tw-relative tw-w-full tw-flex tw-bg-white tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center">
+                <div class="group tw-relative tw-w-full tw-flex tw-bg-[#f2f6f9] tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center">
                     <div class="btn-wrp">
                         <select class="tw-h-8 btn-clck tw-text-[#3a414a] tw-px-10 hover:tw-border-gray-400 focus:tw-outline-none tw-appearance-none tw-rounded-l-lg">
                             <option>Last 7 days</option>
@@ -73,9 +73,9 @@
                 </div>
             </div>
             <div class="tw-flex tw-justify-between tw-items-center">
-                <div class="exmp-wrp tw-flex tw-bg-white tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center" title="from">
+                <div class="exmp-wrp tw-flex tw-bg-[#f2f6f9] tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center" title="from">
                     <div class="btn-wrp">
-                        <input #minDate placeholder="from" (focus)="onDateFocus(minDate)" (blur)="onDateBlur(minDate)" class="tw-h-8 btn-clck">
+                        <input #minDate placeholder="from" (focus)="onDateFocus(minDate)" (blur)="onDateBlur(minDate)" class="tw-h-8 btn-clck custom-input-text-color">
                     </div>
                     <button class="tw-h-8 custom-btn">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" class="tw-h-8">
@@ -110,9 +110,9 @@
                 
                 <span>—</span>
 
-                <div class="exmp-wrp tw-flex tw-bg-white tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center" title="to">
+                <div class="exmp-wrp tw-flex tw-bg-[#f2f6f9] tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center" title="to">
                     <div class="btn-wrp">
-                        <input #maxDate placeholder="to" (focus)="onDateFocus(maxDate)" (blur)="onDateBlur(maxDate)" class="tw-h-8 btn-clck">
+                        <input #maxDate placeholder="to" (focus)="onDateFocus(maxDate)" (blur)="onDateBlur(maxDate)" class="tw-h-8 btn-clck custom-input-text-color">
                     </div>
                     <button class="tw-h-8 custom-btn">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" class="tw-h-8">
@@ -151,8 +151,8 @@
             <div class="tw-flex lg:tw-gap-4 tw-gap-0 tw-justify-between tw-items-center">
                 <span class="tw-text-sm tw-font-medium tw-text-[#3a414a]">Age</span>
 
-                <div class="tw-h-[36px] tw-flex tw-divide-x tw-divide-black tw-bg-white tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center">
-                    <input #minAge type="number" min="1" max="200" value="50" placeholder="from" class="tw-h-[34px] tw-bg-gray-50 tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5 tw-text-center" (keydown)="validateAge($event, minAge)" required>
+                <div class="tw-h-[36px] tw-flex tw-divide-x tw-divide-black tw-bg-[#f2f6f9] tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center">
+                    <input #minAge type="number" min="1" max="200" value="50" placeholder="from" class="tw-h-[34px] tw-bg-gray-50 tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5 tw-text-center custom-input-text-color" (keydown)="validateAge($event, minAge)" required>
                     <div class="custom-num-spinner-container hover">
                         <span class="custom-num-spinner noselect" (click)="increase(minAge)">▲</span>
                         <span class="custom-num-spinner noselect" (click)="decrease(minAge)">▼</span>
@@ -161,8 +161,8 @@
 
                 <span>—</span>
 
-                <div class="tw-h-[36px] tw-flex tw-divide-x tw-divide-black tw-bg-white tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center">
-                    <input #maxAge type="number" min="1" max="200" value="85" placeholder="to" class="tw-h-[34px] tw-bg-gray-50 tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5 tw-text-center" (keydown)="validateAge($event, maxAge)" required>
+                <div class="tw-h-[36px] tw-flex tw-divide-x tw-divide-black tw-bg-[#f2f6f9] tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center">
+                    <input #maxAge type="number" min="1" max="200" value="85" placeholder="to" class="tw-h-[34px] tw-bg-gray-50 tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5 tw-text-center custom-input-text-color" (keydown)="validateAge($event, maxAge)" required>
                     <div class="custom-num-spinner-container hover">
                         <span class="custom-num-spinner noselect" (click)="increase(maxAge)">▲</span>
                         <span class="custom-num-spinner noselect" (click)="decrease(maxAge)">▼</span>
@@ -203,9 +203,9 @@
                 </div>
     
                 <div class="tw-flex tw-gap-20">
-                    <button class="tw-w-[130px] tw-h-[34px] tw-truncate tw-bg-[#80D690] hover:tw-bg-green-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-sm tw-text-center tw-self-center" title="New Patient" (click)="addNewPatient()">New Patient</button>
-                    <button class="tw-w-[130px] tw-h-[34px] tw-truncate tw-bg-[#8FDAEB] hover:tw-bg-cyan-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-sm tw-text-center tw-self-center" title="Search" (click)="loadData()">Search</button>
-                    <button class="tw-w-[130px] tw-h-[34px] tw-truncate tw-bg-[#EDB770] hover:tw-bg-amber-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-sm tw-text-center tw-self-center" title="Reset" (click)="loadData()">Reset</button>
+                    <button class="tw-w-[130px] tw-h-[38px] tw-truncate tw-bg-[#80D690] hover:tw-bg-green-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-sm tw-text-center tw-self-center" title="New Patient" (click)="addNewPatient()">New Patient</button>
+                    <button class="tw-w-[130px] tw-h-[38px] tw-truncate tw-bg-[#8FDAEB] hover:tw-bg-cyan-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-sm tw-text-center tw-self-center" title="Search" (click)="loadData()">Search</button>
+                    <button class="tw-w-[130px] tw-h-[38px] tw-truncate tw-bg-[#EDB770] hover:tw-bg-amber-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-sm tw-text-center tw-self-center" title="Reset" (click)="loadData()">Reset</button>
                 </div>
             <!-- </div> -->
 
@@ -213,139 +213,139 @@
 
         <div class="tw-mt-5 tw-grid">
             <div class="tw-relative tw-h-[38rem] tw-overflow-x-auto">
-                <table class="tw-table-fixed tw-w-full tw-border tw-border-[#3a414a] tw-bg-white tw-text-sm tw-shadow-sm tw-rounded-lg">
+                <table class="tw-table-fixed tw-w-full tw-border tw-border-[#3a414a] tw-bg-[#f2f6f9] tw-text-sm tw-shadow-sm tw-rounded-lg">
                     <thead class="tw-bg-[#afbdcf]">
                         <tr>
-                            <th class="lg:tw-w-auto tw-w-80 tw-font-semibold tw-px-4 tw-py-2 tw-text-slate-900 tw-flex tw-justify-between">Full Name <span>▾</span></th>
-                            <th class="lg:tw-w-auto tw-w-80 tw-border tw-border-[#3a414a] tw-font-semibold tw-px-4 tw-py-2 tw-text-slate-900">Patient ID</th>
-                            <th class="tw-w-32 tw-border tw-border-[#3a414a] tw-font-semibold tw-px-4 tw-py-2 tw-text-slate-900">Age</th>
-                            <th class="tw-w-32 tw-border tw-border-[#3a414a] tw-font-semibold tw-px-4 tw-py-2 tw-text-slate-900">Avg. Falls</th>
-                            <th class="tw-w-32 tw-border tw-border-[#3a414a] tw-font-semibold tw-px-4 tw-py-2 tw-text-slate-900">Avg. HR</th>
-                            <th class="tw-w-32 tw-border tw-border-[#3a414a] tw-font-semibold tw-px-4 tw-py-2 tw-text-slate-900">Avg. 02Sat</th>
-                            <th class="tw-w-60 tw-border tw-border-[#3a414a] tw-font-semibold tw-px-4 tw-py-2 tw-text-slate-900 tw-bg-[#f2f6f9]">Last Event Date <span>▾</span></th>
-                            <th class="tw-w-60 tw-border tw-border-[#3a414a] tw-font-semibold tw-px-4 tw-py-2 tw-text-slate-900">Last Event Type <span>▾</span></th>
+                            <th class="lg:tw-w-auto tw-w-80 tw-font-semibold tw-px-4 tw-py-2 tw-text-[#3a414a] tw-flex tw-justify-between">Full Name <span>▾</span></th>
+                            <th class="lg:tw-w-auto tw-w-80 tw-border tw-border-[#3a414a] tw-font-semibold tw-px-4 tw-py-2 tw-text-[#3a414a]">Patient ID</th>
+                            <th class="tw-w-32 tw-border tw-border-[#3a414a] tw-font-semibold tw-px-4 tw-py-2 tw-text-[#3a414a]">Age</th>
+                            <th class="tw-w-32 tw-border tw-border-[#3a414a] tw-font-semibold tw-px-4 tw-py-2 tw-text-[#3a414a]">Avg. Falls</th>
+                            <th class="tw-w-32 tw-border tw-border-[#3a414a] tw-font-semibold tw-px-4 tw-py-2 tw-text-[#3a414a]">Avg. HR</th>
+                            <th class="tw-w-32 tw-border tw-border-[#3a414a] tw-font-semibold tw-px-4 tw-py-2 tw-text-[#3a414a]">Avg. 02Sat</th>
+                            <th class="tw-w-60 tw-border tw-border-[#3a414a] tw-font-semibold tw-px-4 tw-py-2 tw-text-[#3a414a] tw-bg-[#f2f6f9]">Last Event Date <span>▾</span></th>
+                            <th class="tw-w-60 tw-border tw-border-[#3a414a] tw-font-semibold tw-px-4 tw-py-2 tw-text-[#3a414a]">Last Event Type <span>▾</span></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr *ngFor="let patient of patients" class="tw-cursor-pointer even:tw-bg-[#F0F0F0] hover:tw-bg-gray-300" (click)="editPatient(patient)">
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500">{{patient.fullName}}</td>
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center">{{patient.patientId}}</td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center">{{patient.age}}</td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center">{{patient.avgFalls}}</td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center">{{patient.avgHR}}</td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center">{{patient.avg02}}</td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center">{{patient.lastEventDate}}</td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center">{{patient.lastEventType}}</td>
+                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a]">{{patient.fullName}}</td>
+                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">{{patient.patientId}}</td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">{{patient.age}}</td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">{{patient.avgFalls}}</td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">{{patient.avgHR}}</td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">{{patient.avg02}}</td>
+                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">{{patient.lastEventDate}}</td>
+                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">{{patient.lastEventType}}</td>
                         </tr>
                         <tr class="even:tw-bg-[#F0F0F0] hover:tw-bg-gray-300">
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500"></td>
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
+                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a]"></td>
+                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
                         </tr>
                         <tr class="even:tw-bg-[#F0F0F0] hover:tw-bg-gray-300">
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500"></td>
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
+                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a]"></td>
+                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
                         </tr>
                         <tr class="even:tw-bg-[#F0F0F0] hover:tw-bg-gray-300">
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500"></td>
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
+                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a]"></td>
+                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
                         </tr>
                         <tr class="even:tw-bg-[#F0F0F0] hover:tw-bg-gray-300">
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500"></td>
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
+                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a]"></td>
+                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
                         </tr>
                         <tr class="even:tw-bg-[#F0F0F0] hover:tw-bg-gray-300">
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500"></td>
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
+                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a]"></td>
+                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
                         </tr>
                         <tr class="even:tw-bg-[#F0F0F0] hover:tw-bg-gray-300">
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500"></td>
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
+                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a]"></td>
+                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
                         </tr>
                         <tr class="even:tw-bg-[#F0F0F0] hover:tw-bg-gray-300">
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500"></td>
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
+                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a]"></td>
+                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
                         </tr>
                         <tr class="even:tw-bg-[#F0F0F0] hover:tw-bg-gray-300">
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500"></td>
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
+                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a]"></td>
+                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
                         </tr>
                         <tr class="even:tw-bg-[#F0F0F0] hover:tw-bg-gray-300">
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500"></td>
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
+                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a]"></td>
+                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
                         </tr>
                         <tr class="even:tw-bg-[#F0F0F0] hover:tw-bg-gray-300">
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500"></td>
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
+                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a]"></td>
+                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
                         </tr>
                         <tr class="even:tw-bg-[#F0F0F0] hover:tw-bg-gray-300">
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500"></td>
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-slate-500 tw-text-center"></td>
+                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a]"></td>
+                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
                         </tr>
                     </tbody>
                 </table>
