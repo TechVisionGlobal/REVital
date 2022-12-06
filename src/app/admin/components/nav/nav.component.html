@@ -1,9 +1,9 @@
-<div class="md:flex grid gap-4">
-    <ul class="flex w-full text-sm font-medium text-center text-gray-500 rounded-lg border border-[#3a414a] divide-x divide-[#3a414a] custom-tab-parent">
-        <li class="w-full custom-tab" *ngFor="let item of items">
-            <a [routerLink]="item.routerLink" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: !!item.exactPath }" #active="routerLinkActive" class="inline-block md:p-2 p-1 w-full bg-[#afbdcf] text-[#3a414a] hover:text-gray-700 hover:bg-gray-50" aria-current="page">{{ item.text }}</a>
+<div class="md:tw-flex tw-grid tw-gap-4">
+    <ul id="navMain" class="tw-flex tw-w-full tw-text-sm tw-font-medium tw-text-center tw-text-gray-500 tw-rounded-lg tw-border tw-border-[#3a414a] tw-divide-x tw-divide-[#3a414a] custom-tab-parent">
+        <li class="tw-w-full custom-tab" *ngFor="let item of items">
+            <a [routerLink]="item.routerLink" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: !!item.exactPath }" #active="routerLinkActive" class="tw-inline-block md:tw-p-2 tw-p-1 tw-w-full tw-bg-[#afbdcf] tw-text-[#3a414a] hover:tw-text-gray-700 hover:tw-bg-gray-50 custom-tab-item" aria-current="page">{{ item.text }}</a>
         </li>
     </ul>
     
-    <button class="max-w-fit w-full bg-[#afbdcf] border border-[#3a414a] font-medium rounded-lg text-sm px-5 py-1.5 text-center self-center hover" (click)="logout()">Logout</button>
+    <button id="logOut" class="tw-max-w-fit tw-w-full tw-h-[38px] tw-bg-[#afbdcf] tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-sm tw-px-5 tw-py-1.5 tw-text-center tw-self-center hover" (click)="logout()">Logout</button>
 </div>

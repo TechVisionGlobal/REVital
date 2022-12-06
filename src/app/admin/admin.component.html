@@ -1,4 +1,4 @@
-<mat-sidenav-container autosize class="h-screen">
+<mat-sidenav-container autosize class="tw-h-screen">
   <mat-sidenav
     #sidenav
     [disableClose]="!isHandset"
@@ -9,13 +9,13 @@
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <div class="flex h-full flex-col">
+    <div class="tw-flex tw-h-full tw-flex-col">
       <!-- header -->
-      <admin-header class="z-10" (menuclick)="sidenav.toggle()"></admin-header>
+      <admin-header class="tw-z-10" (menuclick)="sidenav.toggle()"></admin-header>
       <!-- header -->
       
-      <div class="grid min-h-0 flex-1 overflow-y-scroll">
-        <router-outlet class="hidden"></router-outlet>
+      <div class="tw-grid tw-min-h-0 tw-flex-1 tw-overflow-y-scroll">
+        <router-outlet class="tw-hidden"></router-outlet>
       </div>
     </div>
   </mat-sidenav-content>

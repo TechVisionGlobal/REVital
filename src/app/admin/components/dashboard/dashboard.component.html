@@ -1,5 +1,5 @@
-<div [ngSwitch]="loadStatus" class="grid h-full bg-[#d2dce8]">
-    <svg *ngSwitchCase="'loading'" role="status" class="m-auto h-8 w-8 animate-spin fill-[#FAAF40] text-[#F1F1F1]"
+<div [ngSwitch]="loadStatus" class="tw-grid tw-h-full tw-bg-[#d2dce8]">
+    <svg *ngSwitchCase="'loading'" role="status" class="tw-m-auto tw-h-8 tw-w-8 tw-animate-spin tw-fill-[#FAAF40] tw-text-[#F1F1F1]"
         viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
             d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
@@ -9,129 +9,155 @@
             fill="currentFill" />
     </svg>
 
-    <div *ngSwitchCase="'error'" class="m-auto flex flex-col gap-4">
-        <span class="text-center text-xl">Something went wrong. Please check your internet connection and try
+    <div *ngSwitchCase="'error'" class="tw-m-auto tw-flex tw-flex-col tw-gap-4">
+        <span class="tw-text-center tw-text-xl">Something went wrong. Please check your internet connection and try
             again.</span>
-        <button class="primary mx-auto" (click)="loadData()">Retry</button>
+        <button class="primary tw-mx-auto" (click)="loadData()">Retry</button>
     </div>
 
-    <div *ngSwitchCase="'success'" class="flex h-full min-h-0 flex-col md:pt-0 pt-2 md:px-10 px-2">
+    <div *ngSwitchCase="'success'" class="tw-flex tw-h-full tw-min-h-0 tw-flex-col md:tw-pt-0 tw-pt-2 md:tw-px-10 tw-px-2">
 
-        <div class="md:grid md:grid-cols-4 flex flex-col justify-center gap-4">
+        <div class="md:tw-grid md:tw-grid-cols-4 tw-flex tw-flex-col tw-justify-center tw-gap-4">
             <div>&nbsp;</div>
-            
-            <ul class="flex text-sm font-medium text-center text-gray-500 rounded-lg border border-[#3a414a] divide-x divide-[#3a414a] custom-tab-parent">
-                <li class="w-full custom-tab" *ngFor="let range of timeRange">
-                    <a [ngClass]="{'active': activeRange.text == range.text}" class="cursor-pointer inline-block md:p-2 p-1 w-full bg-[#afbdcf] text-[#3a414a] hover" aria-current="page" (click)="changeRange(range)">{{ range.text }}</a>
+
+            <ul id="dashIntervalGroup" class="tw-flex tw-text-sm tw-font-medium tw-text-center tw-text-gray-500 tw-rounded-lg tw-border tw-border-[#3a414a] tw-divide-x tw-divide-[#3a414a] custom-tab-parent">
+                <li class="tw-w-full custom-tab" *ngFor="let range of timeRange">
+                    <a [ngClass]="{'active': activeRange.text == range.text}" class="tw-cursor-pointer tw-inline-block md:tw-p-2 tw-p-1 tw-w-full tw-bg-[#afbdcf] tw-text-[#3a414a] hover custom-tab-item" aria-current="page" (click)="changeRange(range)">{{ range.text }}</a>
                 </li>
             </ul>
 
-            <div class="flex justify-between w-full">
-                <div class="flex items-center mr-4">
-                    <input type="checkbox" class="w-7 h-7 accent-[#b3e6bc]" checked>
-                    <label class="ml-2 text-sm font-medium text-[#3a414a]">Low</label>
+            <div class="tw-flex tw-justify-between tw-w-full">
+                <div class="tw-flex tw-items-center tw-mr-4">
+                    <label class="custom-check">
+                        <input id="dashSeverityLow" name="sevLow" type="checkbox" checked>
+                        <span class="checkmark checkmark-low"></span>
+                    </label>
+                    <label class="tw-ml-2 tw-text-sm tw-font-medium tw-text-[#3a414a]">Low</label>
                 </div>
-                <div class="flex items-center mr-4">
-                    <input type="checkbox" class="w-7 h-7 accent-[#f3f3b5]" checked>
-                    <label class="ml-2 text-sm font-medium text-[#3a414a]">Med</label>
+                <div class="tw-flex tw-items-center tw-mr-4">
+                    <label class="custom-check">
+                        <input id="dashSeverityMed" name="sevMed" type="checkbox" checked>
+                        <span class="checkmark checkmark-medium"></span>
+                    </label>
+                    <label class="tw-ml-2 tw-text-sm tw-font-medium tw-text-[#3a414a]">Med</label>
                 </div>
-                <div class="flex items-center mr-4">
-                    <input type="checkbox" class="w-7 h-7 accent-[#e9aaaa]" checked>
-                    <label class="ml-2 text-sm font-medium text-[#3a414a]">High</label>
+                <div class="tw-flex tw-items-center tw-mr-4">
+                    <label class="custom-check">
+                        <input id="dashSeverityHigh" name="sevHigh" type="checkbox" checked>
+                        <span class="checkmark checkmark-high"></span>
+                    </label>
+                    <label class="tw-ml-2 tw-text-sm tw-font-medium tw-text-[#3a414a]">High</label>
                 </div>
-                <div class="flex items-center mr-4">
-                    <input type="checkbox" class="w-7 h-7 accent-slate-50" checked>
-                    <label class="ml-2 text-sm font-medium text-[#3a414a]">No Data</label>
+                <div class="tw-flex tw-items-center tw-mr-4">
+                    <label class="custom-check">
+                        <input id="dashSeverityNA" name="sevNA" type="checkbox" checked>
+                        <span class="checkmark checkmark-default"></span>
+                    </label>
+                    <label class="tw-ml-2 tw-text-sm tw-font-medium tw-text-[#3a414a]">No Data</label>
                 </div>
             </div>
         </div>
 
-        <div class="mt-5 grid">
-            <div class="relative h-[15rem] overflow-x-auto">
-                <table class="table-fixed w-full border border-[#3a414a] bg-white text-sm shadow-sm rounded-lg">
-                    <thead class="bg-[#afbdcf]">
+        <div class="tw-mt-5 tw-grid">
+            <div class="tw-relative tw-h-[15rem] tw-overflow-x-auto">
+                <table id="dashTable" class="tw-table-fixed tw-w-full tw-border tw-border-[#3a414a] tw-bg-[#f2f6f9] tw-text-sm tw-shadow-sm tw-rounded-lg">
+                    <thead class="tw-bg-[#afbdcf]">
                         <tr>
-                            <th class="lg:w-auto w-80 font-semibold px-4 py-2 text-slate-900 flex justify-between">Full Name <span>▾</span></th>
-                            <th class="lg:w-auto w-80 border border-[#3a414a] font-semibold px-4 py-2 text-slate-900">Patient ID</th>
-                            <th class="w-32 border border-[#3a414a] font-semibold px-4 py-2 text-slate-900">Age</th>
-                            <th class="w-32 border border-[#3a414a] font-semibold px-4 py-2 text-slate-900">Fall Count</th>
-                            <th class="w-60 border border-[#3a414a] font-semibold px-4 py-2 text-slate-900">Heart Event Count</th>
-                            <th class="w-60 border border-[#3a414a] font-semibold px-4 py-2 text-slate-900 bg-[#f2f6f9]">Last Event Date <span>▾</span></th>
+                            <th class="lg:tw-w-auto tw-w-80 tw-font-semibold tw-px-4 tw-py-2 tw-text-[#3a414a] tw-flex tw-justify-between">Full Name <span>▾</span></th>
+                            <th class="lg:tw-w-auto tw-w-80 tw-border tw-border-[#3a414a] tw-font-semibold tw-px-4 tw-py-2 tw-text-[#3a414a]">Patient ID</th>
+                            <th class="tw-w-32 tw-border tw-border-[#3a414a] tw-font-semibold tw-px-4 tw-py-2 tw-text-[#3a414a]">Age</th>
+                            <th class="tw-w-32 tw-border tw-border-[#3a414a] tw-font-semibold tw-px-4 tw-py-2 tw-text-[#3a414a]">Fall Count</th>
+                            <th class="tw-w-60 tw-border tw-border-[#3a414a] tw-font-semibold tw-px-4 tw-py-2 tw-text-[#3a414a]">Heart Event Count</th>
+                            <th class="tw-w-60 tw-border tw-border-[#3a414a] tw-font-semibold tw-px-4 tw-py-2 tw-text-[#3a414a] tw-bg-[#f2f6f9]">Last Event Date <span>▾</span></th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="even:bg-[#F0F0F0] hover:bg-gray-300">
-                            <td class="lg:w-auto w-80 border border-[#3a414a] px-4 py-2 text-slate-500">Karel Novak</td>
-                            <td class="lg:w-auto w-80 border border-[#3a414a] px-4 py-2 text-slate-500 text-center">655dfn4ds554</td>
-                            <td class="w-32 border border-[#3a414a] px-4 py-2 text-slate-500 text-center">69</td>
-                            <td class="w-32 border border-[#3a414a] px-4 py-2 text-slate-500 text-center">2</td>
-                            <td class="w-60 border border-[#3a414a] px-4 py-2 text-slate-500 text-center">0</td>
-                            <td class="w-60 border border-[#3a414a] px-4 py-2 text-slate-500 text-center">05.10.2022</td>
+                        <tr class="even:tw-bg-[#F0F0F0] hover:tw-bg-gray-300">
+                            <td class="lg:tw-w-auto tw-w-80 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a]">Karel Novak</td>
+                            <td class="lg:tw-w-auto tw-w-80 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">655dfn4ds554</td>
+                            <td class="tw-w-32 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">69</td>
+                            <td class="tw-w-32 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">2</td>
+                            <td class="tw-w-60 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">0</td>
+                            <td class="tw-w-60 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">05.10.2022</td>
                         </tr>
-                        <tr class="even:bg-[#F0F0F0] hover:bg-gray-300">
-                            <td class="lg:w-auto w-80 border border-[#3a414a] px-4 py-2 text-slate-500">Maria Semanova</td>
-                            <td class="lg:w-auto w-80 border border-[#3a414a] px-4 py-2 text-slate-500 text-center">354hrtd354k4g</td>
-                            <td class="w-32 border border-[#3a414a] px-4 py-2 text-slate-500 text-center">72</td>
-                            <td class="w-32 border border-[#3a414a] px-4 py-2 text-slate-500 text-center">0</td>
-                            <td class="w-60 border border-[#3a414a] px-4 py-2 text-slate-500 text-center">3</td>
-                            <td class="w-60 border border-[#3a414a] px-4 py-2 text-slate-500 text-center">04.10.2022</td>
+                        <tr class="even:tw-bg-[#F0F0F0] hover:tw-bg-gray-300">
+                            <td class="lg:tw-w-auto tw-w-80 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a]">Maria Semanova</td>
+                            <td class="lg:tw-w-auto tw-w-80 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">354hrtd354k4g</td>
+                            <td class="tw-w-32 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">72</td>
+                            <td class="tw-w-32 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">0</td>
+                            <td class="tw-w-60 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">3</td>
+                            <td class="tw-w-60 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">04.10.2022</td>
                         </tr>
-                        <tr class="even:bg-[#F0F0F0] hover:bg-gray-300">
-                            <td class="lg:w-auto w-80 border border-[#3a414a] px-4 py-2 text-slate-500">Kim Tang</td>
-                            <td class="lg:w-auto w-80 border border-[#3a414a] px-4 py-2 text-slate-500 text-center">15gfh47hgxd</td>
-                            <td class="w-32 border border-[#3a414a] px-4 py-2 text-slate-500 text-center">84</td>
-                            <td class="w-32 border border-[#3a414a] px-4 py-2 text-slate-500 text-center">1</td>
-                            <td class="w-60 border border-[#3a414a] px-4 py-2 text-slate-500 text-center">2</td>
-                            <td class="w-60 border border-[#3a414a] px-4 py-2 text-slate-500 text-center">02.10.2022</td>
+                        <tr class="even:tw-bg-[#F0F0F0] hover:tw-bg-gray-300">
+                            <td class="lg:tw-w-auto tw-w-80 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a]">Kim Tang</td>
+                            <td class="lg:tw-w-auto tw-w-80 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">15gfh47hgxd</td>
+                            <td class="tw-w-32 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">84</td>
+                            <td class="tw-w-32 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">1</td>
+                            <td class="tw-w-60 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">2</td>
+                            <td class="tw-w-60 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">02.10.2022</td>
                         </tr>
-                        <tr class="even:bg-[#F0F0F0] hover:bg-gray-300">
-                            <td class="lg:w-auto w-80 border border-[#3a414a] px-4 py-2 text-slate-500">Tara Marin</td>
-                            <td class="lg:w-auto w-80 border border-[#3a414a] px-4 py-2 text-slate-500 text-center">587gsw74erds2</td>
-                            <td class="w-32 border border-[#3a414a] px-4 py-2 text-slate-500 text-center">58</td>
-                            <td class="w-32 border border-[#3a414a] px-4 py-2 text-slate-500 text-center">-</td>
-                            <td class="w-60 border border-[#3a414a] px-4 py-2 text-slate-500 text-center">-</td>
-                            <td class="w-60 border border-[#3a414a] px-4 py-2 text-slate-500 text-center">-</td>
+                        <tr class="even:tw-bg-[#F0F0F0] hover:tw-bg-gray-300">
+                            <td class="lg:tw-w-auto tw-w-80 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a]">Tara Marin</td>
+                            <td class="lg:tw-w-auto tw-w-80 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">587gsw74erds2</td>
+                            <td class="tw-w-32 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">58</td>
+                            <td class="tw-w-32 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">-</td>
+                            <td class="tw-w-60 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">-</td>
+                            <td class="tw-w-60 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">-</td>
                         </tr>
-                        <tr class="even:bg-[#F0F0F0] hover:bg-gray-300">
-                            <td class="lg:w-auto w-80 border border-[#3a414a] px-4 py-2 text-slate-500">Oleg Markov</td>
-                            <td class="lg:w-auto w-80 border border-[#3a414a] px-4 py-2 text-slate-500 text-center">5756fdgsdgjy</td>
-                            <td class="w-32 border border-[#3a414a] px-4 py-2 text-slate-500 text-center">90</td>
-                            <td class="w-32 border border-[#3a414a] px-4 py-2 text-slate-500 text-center">-</td>
-                            <td class="w-60 border border-[#3a414a] px-4 py-2 text-slate-500 text-center">-</td>
-                            <td class="w-60 border border-[#3a414a] px-4 py-2 text-slate-500 text-center">-</td>
+                        <tr class="even:tw-bg-[#F0F0F0] hover:tw-bg-gray-300">
+                            <td class="lg:tw-w-auto tw-w-80 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a]">Oleg Markov</td>
+                            <td class="lg:tw-w-auto tw-w-80 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">5756fdgsdgjy</td>
+                            <td class="tw-w-32 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">90</td>
+                            <td class="tw-w-32 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">-</td>
+                            <td class="tw-w-60 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">-</td>
+                            <td class="tw-w-60 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">-</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         
-            <div class="flex md:flex-row md:justify-between md:gap-0 flex-col gap-4">
-                <button class="w-fit bg-[#8FDAEB] hover:bg-cyan-100 border border-[#3a414a] font-medium rounded-lg text-sm px-8 py-1.5 text-center self-center" (click)="loadData()">Refresh</button>
+            <div class="tw-flex md:tw-flex-row md:tw-justify-between md:tw-gap-0 tw-flex-col tw-gap-4">
+                <button id="dashTableRefresh" class="tw-w-fit tw-bg-[#8FDAEB] hover:tw-bg-cyan-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-sm tw-px-8 tw-py-1.5 tw-text-center tw-self-center" (click)="loadData()">Refresh</button>
                 
                 <div>
-                    <button class="paginators hover" (click)="loadData()">First</button>
-                    <button class="paginators hover" (click)="loadData()">Prev.</button>
-                    <button class="paginators hover active-paginator" (click)="loadData()">1</button>
-                    <button class="paginators hover" (click)="loadData()">2</button>
-                    <button class="paginators hover" (click)="loadData()">3</button>
-                    <button class="paginators hover" (click)="loadData()">4</button>
-                    <button class="paginators hover" (click)="loadData()">5</button>
-                    <button class="paginators hover" (click)="loadData()">Next</button>
-                    <button class="paginators hover" (click)="loadData()">Last</button>
+                    <ngb-pagination id="dashTablePgn" [collectionSize]="50" [(page)]="page" [boundaryLinks]="true" aria-label="Custom pagination">
+                        <ng-template ngbPaginationFirst>First</ng-template>
+                        <ng-template ngbPaginationLast>Last</ng-template>
+                        <ng-template ngbPaginationPrevious>Prev</ng-template>
+                        <ng-template ngbPaginationNext>Next</ng-template>
+                        <ng-template ngbPaginationNumber let-p>{{ p }}</ng-template>
+                    </ngb-pagination>
                 </div>
             </div>
         </div>
 
-        <div class="mt-5 grid md:grid-cols-2 grid-cols-1 gap-5 h-[25rem]">
-            <div class="bg-white border border-[#3a414a] h-full flex items-center justify-center rounded-lg">
-                <span class="text-center text-[#898989] text-4xl">
-                    Fall Statistics <br> Graph
-                </span>
+        <div class="tw-mt-5 tw-grid md:tw-grid-cols-2 tw-grid-cols-1 tw-gap-5 tw-h-[25rem]">
+            <div class="tw-bg-[#f2f6f9] tw-border tw-border-[#3a414a] tw-h-full tw-flex tw-items-center tw-justify-center tw-rounded-lg">
+                <div id="chart" class="tw-w-full tw-p-5">
+                    <apx-chart
+                      [series]="fallChartOptions.series"
+                      [chart]="fallChartOptions.chart"
+                      [xaxis]="fallChartOptions.xaxis"
+                      [dataLabels]="fallChartOptions.dataLabels"
+                      [grid]="fallChartOptions.grid"
+                      [stroke]="fallChartOptions.stroke"
+                      [title]="fallChartOptions.title"
+                    ></apx-chart>
+                </div>
             </div>
-
-            <div class="bg-white border border-[#3a414a] h-full flex items-center justify-center rounded-lg">
-                <span class="text-center text-[#898989] text-4xl">
-                    Heart Problems <br> Graph
-                </span>
+            
+            <div class="tw-bg-[#f2f6f9] tw-border tw-border-[#3a414a] tw-h-full tw-flex tw-items-center tw-justify-center tw-rounded-lg">
+                <div id="chart" class="tw-w-full tw-p-5">
+                    <apx-chart
+                      [series]="heartProblemsChartOptions.series"
+                      [chart]="heartProblemsChartOptions.chart"
+                      [xaxis]="heartProblemsChartOptions.xaxis"
+                      [dataLabels]="heartProblemsChartOptions.dataLabels"
+                      [grid]="heartProblemsChartOptions.grid"
+                      [stroke]="heartProblemsChartOptions.stroke"
+                      [title]="heartProblemsChartOptions.title"
+                    ></apx-chart>
+                </div>
             </div>
         </div>
     </div>

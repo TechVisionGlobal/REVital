@@ -1,20 +1,20 @@
-<div class="bg-[#D2DCE8]">
-    <div class="bg-[#AFBDCF] flex flex-col">
-        <p class="pt-2 text-center">Cancel Changes</p>
+<div class="dialog-bg">
+    <div class="dialog-title-single-container">
+        <span class="dialog-title">Cancel Changes</span>
     </div>
 
     
-    <div class="flex flex-col gap-4 h-[12rem] w-[28rem] pt-10 px-6">
-        <p class="text-center">
+    <div class="dialog-content">
+        <p class="dialog-message">
             Are you sure you want to cancel?
             <br>
             <br>
             That will clear all changes without saving.
         </p>
 
-        <div class="flex gap-5">
-            <button class="w-full bg-[#80D690] hover:bg-green-100 border border-[#3a414a] font-medium rounded-lg text-sm px-12 py-1.5 text-center self-center" [ngClass]="{'btn-loading':submitting}" (click)="save()">Yes</button>
-            <button class="w-full bg-[#DB7272] hover:bg-red-100 border border-[#3a414a] font-medium rounded-lg text-sm px-12 py-1.5 text-center self-center" mat-dialog-close>No</button>
+        <div class="dialog-footer">
+            <button class="dialog-confirm-btn" [ngClass]="{'btn-loading':submitting}" (click)="save()">Yes</button>
+            <button class="dialog-cancel-btn" mat-dialog-close>No</button>
         </div>
     </div>
 </div>

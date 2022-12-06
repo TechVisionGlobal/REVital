@@ -11,37 +11,117 @@ body {
 body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 21px;
 }
 
 .validation-message {
-    @apply text-red-500 mt-2;
+    @apply tw-text-red-500 tw-mt-2;
 }
 
 .btn-loading {
-    @apply animate-pulse;
+    @apply tw-animate-pulse;
+}
+
+.custom-tab-parent {
+    @apply tw-h-[40px];
+}
+
+.custom-tab .custom-tab-item {
+    @apply tw-h-[38px];
 }
 
 .custom-tab a.active {
-    @apply inline-block md:p-2 p-1 w-full text-[#3a414a] bg-gray-100
-    /* @apply inline-block p-4 w-full text-gray-900 bg-gray-100 rounded-l-lg focus:ring-4 focus:ring-blue-300 active focus:outline-none */
+    @apply tw-inline-block md:tw-p-2 tw-p-1 tw-w-full tw-text-[#3a414a] tw-bg-gray-100
+    /* @apply tw-inline-block tw-p-4 tw-w-full tw-text-gray-900 tw-bg-gray-100 tw-rounded-l-lg focus:tw-ring-4 focus:tw-ring-blue-300 active focus:tw-outline-none */
 }
 
 .active-paginator {
-    @apply !bg-[#F2F6F9];
+    @apply !tw-bg-[#F2F6F9];
 }
 
 /* Selects the a tag in the first li element in a the tab */
 .custom-tab-parent li:first-child a {
-    @apply rounded-l-lg;
+    @apply tw-rounded-l-lg;
 }
 
 /* Selects the a tag in the last li element in a the tab */
 .custom-tab-parent li:last-child a {
-    @apply rounded-r-lg;
+    @apply tw-rounded-r-lg;
 }
 
 .app-full-dialog .mat-dialog-container {
     padding: 0;
+    border: 2px solid;
+}
+
+.dialog-bg {
+    @apply tw-bg-[#D2DCE8];
+}
+
+.dialog-new-edit-bg {
+    @apply tw-max-w-[80vw] tw-min-h-[764px] tw-bg-[#D2DCE8];
+}
+
+.dialog-title-single-container {
+    @apply tw-bg-[#AFBDCF] tw-flex tw-justify-center tw-w-full tw-h-[34px] tw-text-center tw-items-center tw-px-4;
+    border-bottom: 2px solid;
+}
+
+.dialog-title-multiple-container {
+    @apply tw-bg-[#AFBDCF] tw-flex tw-justify-between tw-w-full tw-text-center tw-items-center tw-px-4;
+    border-bottom: 2px solid;
+}
+
+.dialog-title {
+    @apply tw-text-[21px] tw-text-[#3a414a];
+}
+
+.dialog-content {
+    @apply tw-flex tw-flex-col tw-gap-4 tw-h-[12rem] tw-w-[28rem] tw-pt-10 tw-px-6;
+}
+.dialog-content-qrcode {
+    @apply tw-flex tw-flex-col tw-gap-4 tw-h-[15rem] tw-w-[15rem] tw-py-6;
+}
+
+.dialog-new-edit-content {
+    @apply lg:tw-h-full md:tw-h-[60rem] tw-h-[50rem] tw-overflow-y-scroll;
+}
+
+.dialog-new-edit-subcontent {
+    @apply tw-py-4 tw-px-6 lg:tw-grid lg:tw-grid-cols-5 tw-flex tw-flex-col tw-gap-5 tw-w-full;
+}
+
+.dialog-new-edit-footer {
+    @apply tw-px-6 tw-flex tw-justify-between;
+}
+
+.dialog-new-edit-green-btn {
+    @apply tw-w-fit tw-bg-[#80D690] hover:tw-bg-green-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-sm tw-px-8 tw-py-1.5 tw-text-center tw-self-center;
+}
+.dialog-new-edit-blue-btn {
+    @apply tw-w-fit tw-bg-[#8FDAEB] hover:tw-bg-cyan-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-sm tw-px-8 tw-py-1.5 tw-text-center tw-self-center;
+}
+.dialog-new-edit-yellow-btn {
+    @apply tw-w-fit tw-bg-[#EDB770] hover:tw-bg-amber-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-sm tw-px-8 tw-py-1.5 tw-text-center tw-self-center;
+}
+.dialog-new-edit-red-btn {
+    @apply tw-w-fit tw-bg-[#DB7272] hover:tw-bg-red-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-sm tw-px-8 tw-py-1.5 tw-text-center tw-self-center;
+}
+
+.dialog-message {
+    @apply tw-text-center tw-text-[20px] tw-text-[#3a414a];
+}
+
+.dialog-footer {
+    @apply tw-flex tw-gap-5 tw-px-12 tw-text-[#3a414a];
+}
+
+.dialog-confirm-btn {
+    @apply tw-w-full tw-bg-[#80D690] hover:tw-bg-green-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-[20px] tw-px-12 tw-py-1.5 tw-text-center tw-self-center;
+}
+
+.dialog-cancel-btn {
+    @apply tw-w-full tw-bg-[#DB7272] hover:tw-bg-red-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-[20px] tw-px-12 tw-py-1.5 tw-text-center tw-self-center;
 }
 
 div.options > label > input {
@@ -104,6 +184,13 @@ div.options > label > input:checked +img {
     padding: 5px 10px;
 }
 
+.btn-clck-select {
+    border: none;
+    background: transparent;
+    width: 100%;
+    padding: 5px 20px 5px 0;
+}
+
 .btn-clck::-webkit-calendar-picker-indicator {
     right: -10px;
     position: absolute;
@@ -119,7 +206,7 @@ div.options > label > input:checked +img {
 .btn-clck::-webkit-clear-button {
     margin-right:75px;
  }
-.btn {
+.custom-btn {
     border: none;
     position: absolute;
     right: 0;
@@ -139,9 +226,240 @@ div.options > label > input:checked +img {
 }
 
 .hover {
-	@apply hover:text-gray-700 hover:bg-gray-50;
+	@apply hover:tw-text-gray-700 hover:tw-bg-gray-50;
 }
 
 .paginators {
-	@apply w-fit bg-[#afbdcf] border border-[#3a414a] font-medium rounded-lg text-sm px-4 py-1.5 text-center self-center;
+	@apply tw-w-fit tw-bg-[#afbdcf] tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-sm tw-px-4 tw-py-1.5 tw-text-center tw-self-center;
 }
+
+.custom-check {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 35px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .custom-check input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark-low {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 34px;
+    width: 34px;
+    background-color: #b3e6bc;
+    border: 2px black solid;
+    border-radius: 5px;
+  }
+  
+  .checkmark-medium {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 34px;
+    width: 34px;
+    background-color: #f3f3b5;
+    border: 2px black solid;
+    border-radius: 5px;
+  }
+  
+  .checkmark-high {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 34px;
+    width: 34px;
+    background-color: #e9aaaa;
+    border: 2px black solid;
+    border-radius: 5px;
+  }
+  
+  .checkmark-default {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 34px;
+    width: 34px;
+    background-color: #F2F6F9;
+    border: 2px black solid;
+    border-radius: 5px;
+  }
+  
+  .checkmark-danger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 34px;
+    width: 34px;
+    background-color: #F2F6F9;
+    border: 2px #E81414 solid;
+    border-radius: 5px;
+  }
+  
+  .checkmark-rounded-default {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 34px;
+    width: 34px;
+    background-color: #E9EFF5;
+    border: 2px black solid;
+    border-radius: 50%;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .checkmark-rounded:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .checkmark-red:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .custom-check input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .custom-check input:checked ~ .checkmark-rounded:after {
+    display: block;
+  }
+  
+  .custom-check input:checked ~ .checkmark-red:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .custom-check .checkmark:after {
+    left: 8px;
+    top: 0;
+    width: 15px;
+    height: 25px;
+    border: solid black;
+    border-width: 0 5px 5px 0;
+    -webkit-transform: rotate(35deg);
+    -ms-transform: rotate(35deg);
+    transform: rotate(35deg);
+  }
+  
+  .custom-check .checkmark-rounded:after {
+    left: 10px;
+    top: 5px;
+    width: 10px;
+    height: 20px;
+    border: solid black;
+    border-width: 0 5px 5px 0;
+    -webkit-transform: rotate(35deg);
+    -ms-transform: rotate(35deg);
+    transform: rotate(35deg);
+  }
+  
+  .custom-check .checkmark-red:after {
+    left: 8px;
+    top: 0;
+    width: 15px;
+    height: 25px;
+    border: solid #E81414;
+    border-width: 0 5px 5px 0;
+    -webkit-transform: rotate(35deg);
+    -ms-transform: rotate(35deg);
+    transform: rotate(35deg);
+  }
+
+  .cal-month-view .cal-day-cell {
+    min-height: 0;
+  }
+  
+  .cal-month-view .cal-day-cell {
+    min-height: 0; 
+  }
+
+  .cal-month-view .cal-cell-top {
+    min-height: 30px;
+  }
+
+  .cal-month-view .cal-open-day-events {
+    color: #3a414a !important;
+    background-color: #b4bcce !important;
+    box-shadow: none !important;
+  }
+
+  mat-list-option[aria-selected="true"] {
+    background: #DB7272 !important;
+  }
+
+  .mat-pseudo-checkbox {
+    display: none !important;
+  }
+
+  .holiday-text {
+    @apply tw-text-[#E88C14];
+  }
+  
+  .outOfOffice-text {
+    @apply tw-text-[#14C1E8];
+  }
+
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button
+  {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  input[type=number]
+  {
+    -moz-appearance: textfield;
+  }
+
+  .tel-select {
+    @apply tw-h-8 !tw-w-24 btn-clck tw-text-[#3a414a] !tw-px-1 hover:tw-border-gray-400 focus:tw-outline-none tw-rounded-l-lg;
+  }
+
+  .tel-input {
+    @apply tw-h-8 tw-bg-gray-50 tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-pl-24;
+  }
+
+  .backdropBackground {
+    backdrop-filter: blur(2px);
+  }
+
+  .custom-num-spinner-container {
+    @apply tw-flex tw-flex-col tw-gap-2 tw-bg-[#AFBDCF] tw-h-[34px] tw-rounded-r-lg;
+  }
+  .custom-num-spinner-container-dialog {
+    @apply tw-flex tw-flex-col tw-gap-2 tw-bg-[#AFBDCF] tw-h-8 tw-rounded-r-lg;
+  }
+
+  .custom-num-spinner {
+    @apply tw-cursor-pointer tw-mx-2 tw-h-2;
+  }
+
+  .custom-input-text-color {
+    @apply tw-text-[#3a414a] tw-placeholder-[#3a414a];
+  }

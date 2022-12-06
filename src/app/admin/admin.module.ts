@@ -13,6 +13,10 @@ import { SchedulingComponent } from './components/scheduling/scheduling.componen
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { AdminService } from './services/admin.service';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
+import { NgApexchartsModule } from 'ng-apexcharts';
+import { NgxTrimDirectiveModule } from 'ngx-trim-directive';
 
 
 @NgModule({
@@ -27,12 +31,16 @@ import { AdminService } from './services/admin.service';
   ],
   imports: [
     CommonModule,
+    FormsModule,
     AdminRoutingModule,
     MaterialModule,
     CalendarModule.forRoot({
       provide: DateAdapter,
       useFactory: adapterFactory,
     }),
+    NgbModule,
+    NgApexchartsModule,
+    NgxTrimDirectiveModule,
   ],
   providers: [
     AdminService

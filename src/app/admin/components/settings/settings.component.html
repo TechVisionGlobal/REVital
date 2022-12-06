@@ -1,5 +1,5 @@
-<div [ngSwitch]="loadStatus" class="grid h-full bg-[#d2dce8]">
-    <svg *ngSwitchCase="'loading'" role="status" class="m-auto h-8 w-8 animate-spin fill-[#FAAF40] text-[#F1F1F1]"
+<div [ngSwitch]="loadStatus" class="tw-grid tw-h-full tw-bg-[#d2dce8]">
+    <svg *ngSwitchCase="'loading'" role="status" class="tw-m-auto tw-h-8 tw-w-8 tw-animate-spin tw-fill-[#FAAF40] tw-text-[#F1F1F1]"
         viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
             d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
@@ -9,120 +9,167 @@
             fill="currentFill" />
     </svg>
 
-    <div *ngSwitchCase="'error'" class="m-auto flex flex-col gap-4">
-        <span class="text-center text-xl">Something went wrong. Please check your internet connection and try
+    <div *ngSwitchCase="'error'" class="tw-m-auto tw-flex tw-flex-col tw-gap-4">
+        <span class="tw-text-center tw-text-xl">Something went wrong. Please check your internet connection and try
             again.</span>
-        <button class="primary mx-auto" (click)="loadData()">Retry</button>
+        <button class="primary tw-mx-auto" (click)="loadData()">Retry</button>
     </div>
 
-    <div *ngSwitchCase="'success'" class="flex h-full min-h-0 flex-col md:pt-0 pt-2 md:px-10 px-2">
-        <div class="grid grid-cols-2 divide-x divide-black pt-5">
-            <div class="flex flex-col px-40 gap-20">
-                <p class="text-4xl">Communication</p>
+    <div *ngSwitchCase="'success'" class="tw-flex tw-h-full tw-min-h-0 tw-flex-col md:tw-pt-0 tw-pt-2 md:tw-px-10 tw-px-2">
+        <div class="tw-grid tw-grid-cols-2 tw-divide-x tw-divide-black tw-pt-5">
+            <div class="tw-flex tw-flex-col tw-px-40 tw-gap-20">
+                <p class="tw-text-4xl">Communication</p>
 
-                <div class="flex flex-col">
+                <div class="tw-flex tw-flex-col">
                     <p>Events Severity</p>
                     
-                    <div class="md:grid md:grid-cols-3 flex flex-col w-full space-y-2">
-                        <div class="flex items-center mr-4">
-                            <input type="checkbox" class="w-7 h-7 accent-[#b3e6bc]">
-                            <label class="ml-2 text-sm font-medium text-[#3a414a]">Low</label>
+                    <div class="md:tw-grid md:tw-grid-cols-3 tw-flex tw-flex-col tw-w-full tw-space-y-2">
+                        <div class="tw-flex tw-items-center tw-mr-4">
+                            <label class="custom-check">
+                                <input type="checkbox" checked>
+                                <span class="checkmark checkmark-low"></span>
+                            </label>
+                            <label class="tw-ml-2 tw-text-sm tw-font-medium tw-text-[#3a414a]">Low</label>
                         </div>
-                        <div class="flex items-center mr-4">
-                            <input type="checkbox" class="w-7 h-7 accent-[#f3f3b5]" checked>
-                            <label class="ml-2 text-sm font-medium text-[#3a414a]">Med</label>
+                        <div class="tw-flex tw-items-center tw-mr-4">
+                            <label class="custom-check">
+                                <input type="checkbox" checked>
+                                <span class="checkmark checkmark-medium"></span>
+                            </label>
+                            <label class="tw-ml-2 tw-text-sm tw-font-medium tw-text-[#3a414a]">Med</label>
                         </div>
-                        <div class="flex items-center mr-4">
-                            <input type="checkbox" class="w-7 h-7 accent-[#e9aaaa]" checked>
-                            <label class="ml-2 text-sm font-medium text-[#3a414a]">High</label>
+                        <div class="tw-flex tw-items-center tw-mr-4">
+                            <label class="custom-check">
+                                <input type="checkbox" checked>
+                                <span class="checkmark checkmark-high"></span>
+                            </label>
+                            <label class="tw-ml-2 tw-text-sm tw-font-medium tw-text-[#3a414a]">High</label>
                         </div>
-                        <div class="flex items-center mr-4">
-                            <input type="checkbox" class="w-7 h-7 accent-slate-50" checked>
-                            <label class="ml-2 text-sm font-medium text-[#3a414a]">No Data</label>
+                        <div class="tw-flex tw-items-center tw-mr-4">
+                            <label class="custom-check">
+                                <input type="checkbox" checked>
+                                <span class="checkmark checkmark-default"></span>
+                            </label>
+                            <label class="tw-ml-2 tw-text-sm tw-font-medium tw-text-[#3a414a]">No Data</label>
                         </div>
                     </div>
                 </div>
                 
-                <div class="flex flex-col">                    
-                    <div class="flex flex-col gap-5 w-full">
-                        <div class="grid grid-cols-3 gap-5">
-                            <div class="col-span-2">
-                                <input placeholder="Notification Email" class="h-8 bg-gray-50 border border-[#3a414a] text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" required>
+                <div class="tw-flex tw-flex-col">                    
+                    <div class="tw-flex tw-flex-col tw-gap-5 tw-w-full">
+                        <div class="tw-grid tw-grid-cols-3 tw-gap-5">
+                            <!-- <div class="tw-col-span-2">
+                                <input type="text" trim="blur" placeholder="Notification Email" class="tw-h-8 tw-bg-gray-50 tw-border tw-border-[#3a414a] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5" required>
+                            </div> -->
+                            <div class="tw-col-span-2">
+                                <input type="text" trim="blur" placeholder="Notification Email" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" name="email" [(ngModel)]="user.email" #email="ngModel" class="tw-h-8 tw-bg-gray-50 tw-border tw-border-[#3a414a] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5 custom-input-text-color" required>
+                                <div *ngIf="email.invalid && (email.dirty || email.touched)" class="validation-message">
+                                    <div *ngIf="email.errors?.['pattern']">
+                                        Email is invalid.
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="flex items-center mr-4">
-                                <input type="checkbox" class="w-7 h-7 accent-slate-50" checked>
-                                <label class="ml-2 text-sm font-medium text-[#3a414a]">Send Email</label>
+                            <div class="tw-flex tw-items-center tw-mr-4">
+                                <label class="custom-check">
+                                    <input type="checkbox" checked>
+                                    <span class="checkmark checkmark-default"></span>
+                                </label>
+                                <label class="tw-ml-2 tw-text-sm tw-font-medium tw-text-[#3a414a]">Send Email</label>
                             </div>
                         </div>
-                        <div class="grid grid-cols-3 gap-5">
-                            <div class="col-span-2">
-                                <input placeholder="Notification Mobile" class="h-8 bg-gray-50 border border-[#3a414a] text-gray-900 sm:text-sm rounded-lg block w-full p-2.5" required>
+
+                        <div class="tw-grid tw-grid-cols-3 tw-gap-5">
+                            <!-- <div class="tw-col-span-2">
+                                <input type="text" trim="blur" placeholder="Notification Mobile" class="tw-h-8 tw-bg-gray-50 tw-border tw-border-[#3a414a] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5" required>
+                            </div> -->
+                            <div class="tw-col-span-2 tw-relative tw-divide-black tw-bg-[#f2f6f9] tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center">
+                                <div class="tw-absolute tw-inset-y-0 tw-left-0 tw-flex tw-items-center">
+                                    <select class="tel-select" [ngModel]="user.phone.code" [ngModelOptions]="{standalone: true}">
+                                        <option *ngFor="let country of countries" [value]="country.code">+{{country.code}}</option>
+                                    </select>
+                                </div>
+                                <input type="text" trim="blur" maxlength="10" placeholder="Notification Mobile" class="tel-input custom-input-text-color" (keydown)="validatePhone($event)" required>
                             </div>
 
-                            <div class="flex items-center mr-4">
-                                <input type="checkbox" class="w-7 h-7 accent-slate-50" checked>
-                                <label class="ml-2 text-sm font-medium text-[#3a414a]">Send SMS</label>
+                            <div class="tw-flex tw-items-center tw-mr-4">
+                                <label class="custom-check">
+                                    <input type="checkbox" checked>
+                                    <span class="checkmark checkmark-default"></span>
+                                </label>
+                                <label class="tw-ml-2 tw-text-sm tw-font-medium tw-text-[#3a414a]">Send SMS</label>
                             </div>
                         </div>
-                        <div class="flex items-center mr-4">
-                            <input type="checkbox" class="w-7 h-7 accent-slate-50" checked>
-                            <label class="ml-2 text-sm font-medium text-[#3a414a]">Desktop Notifications</label>
+
+                        <div class="tw-flex tw-items-center tw-mr-4">
+                            <label class="custom-check">
+                                <input type="checkbox" checked>
+                                <span class="checkmark checkmark-default"></span>
+                            </label>
+                            <label class="tw-ml-2 tw-text-sm tw-font-medium tw-text-[#3a414a]">Desktop Notifications</label>
                         </div>
-                        <div class="flex items-center mr-4">
-                            <input type="checkbox" class="w-7 h-7 accent-slate-50" checked>
-                            <label class="ml-2 text-sm font-medium text-[#3a414a]">Notify Next of Kin</label>
+
+                        <div class="tw-flex tw-items-center tw-mr-4">
+                            <label class="custom-check">
+                                <input type="checkbox" checked>
+                                <span class="checkmark checkmark-default"></span>
+                            </label>
+                            <label class="tw-ml-2 tw-text-sm tw-font-medium tw-text-[#3a414a]">Notify Next of Kin</label>
                         </div>
-                        <div class="flex items-center mr-4">
-                            <input type="checkbox" class="w-7 h-7 accent-slate-50" checked>
-                            <label class="ml-2 text-sm font-medium text-[#3a414a]">Out of Office</label>
+
+                        <div class="tw-flex tw-items-center tw-mr-4">
+                            <label class="custom-check">
+                                <input type="checkbox" checked>
+                                <span class="checkmark-red checkmark-danger"></span>
+                            </label>
+                            <label class="tw-ml-2 tw-text-sm tw-font-medium tw-text-[#E81414]">Out of Office</label>
                         </div>
                     </div>
                 </div>
 
             </div>
 
-            <div class="flex flex-col gap-5 divide-y divide-black px-40">
-                <div class="flex flex-col gap-10 text-center">
-                    <p class="text-4xl">Customisation</p>
+            <div class="tw-flex tw-flex-col tw-gap-10 tw-divide-y tw-divide-black tw-px-40">
+                <div class="tw-flex tw-flex-col tw-gap-10 tw-text-center">
+                    <p class="tw-text-4xl">Customisation</p>
 
-                    <div class="flex flex-col gap-5 text-center items-center">
-                        <button class="w-[200px] bg-[#8FDAEB] hover:bg-cyan-100 border border-[#3a414a] font-medium rounded-lg text-sm px-8 py-1.5 text-center self-center" (click)="changeLogo()">Change Logo</button>
+                    <div class="tw-flex tw-flex-col tw-gap-5 tw-text-center tw-items-center">
+                        <button class="tw-w-[200px] tw-bg-[#8FDAEB] hover:tw-bg-cyan-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-sm tw-px-8 tw-py-1.5 tw-text-center tw-self-center" (click)="changeLogo()">Change Logo</button>
 
-                        <div class="group exmp-wrp flex bg-white border border-[#3a414a] rounded-lg items-center">
+                        <div class="group exmp-wrp tw-flex tw-bg-[#f2f6f9] tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center">
                             <div class="btn-wrp">
-                                <select class="h-8 btn-clck text-[#3a414a] px-10 hover:border-gray-400 focus:outline-none appearance-none rounded-l-lg">
+                                <select class="tw-h-8 btn-clck tw-text-[#3a414a] tw-px-10 hover:tw-border-gray-400 focus:tw-outline-none tw-appearance-none tw-rounded-l-lg">
                                     <option>English</option>
                                 </select>
                             </div>
-                            <button class="h-8 btn bg-[#AFBDCF] group-hover:bg-gray-300 text-lg rounded-r-lg">
-                                <span class="m-2 text-lg">▾</span>
+                            <button class="tw-h-8 custom-btn tw-bg-[#AFBDCF] group-hover:tw-bg-gray-300 tw-text-lg tw-rounded-r-lg">
+                                <span class="tw-m-2 tw-text-sm">▼</span>
                             </button>
                         </div>
-                        <div class="group exmp-wrp flex bg-white border border-[#3a414a] rounded-lg items-center">
+                        <div class="group exmp-wrp tw-flex tw-bg-[#f2f6f9] tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center">
                             <div class="btn-wrp">
-                                <select class="h-8 btn-clck text-[#3a414a] px-10 hover:border-gray-400 focus:outline-none appearance-none rounded-l-lg">
+                                <select class="tw-h-8 btn-clck tw-text-[#3a414a] tw-px-10 hover:tw-border-gray-400 focus:tw-outline-none tw-appearance-none tw-rounded-l-lg">
                                     <option>Czechia</option>
                                 </select>
                             </div>
-                            <button class="h-8 btn bg-[#AFBDCF] group-hover:bg-gray-300 text-lg rounded-r-lg">
-                                <span class="m-2 text-lg">▾</span>
+                            <button class="tw-h-8 custom-btn tw-bg-[#AFBDCF] group-hover:tw-bg-gray-300 tw-text-lg tw-rounded-r-lg">
+                                <span class="tw-m-2 tw-text-smg">▼</span>
                             </button>
                         </div>
                     </div>
                 </div>
                 
-                <div class="flex flex-col gap-10 text-center">
-                    <p class="!mt-10 text-4xl">Reports</p>
+                <div class="tw-flex tw-flex-col tw-gap-10 tw-text-center">
+                    <p class="!tw-mt-10 tw-text-4xl">Reports</p>
 
-                    <div class="flex flex-col gap-5 text-center items-center">
-                        <ul class="flex text-sm font-medium text-center text-gray-500 rounded-lg border border-[#3a414a] divide-x divide-[#3a414a] custom-tab-parent">
-                            <li class="w-fit custom-tab" *ngFor="let range of timeRange">
-                                <a [ngClass]="{'active': activeRange.text == range.text}" class="cursor-pointer inline-block md:!px-10 md:!py-2 p-1 w-full bg-[#afbdcf] text-[#3a414a] hover" aria-current="page" (click)="changeRange(range)">{{ range.text }}</a>
+                    <div class="tw-flex tw-flex-col tw-gap-5 tw-text-center tw-items-center">
+                        <ul class="tw-flex tw-text-sm tw-font-medium tw-text-center tw-text-gray-500 tw-rounded-lg tw-border tw-border-[#3a414a] tw-divide-x tw-divide-[#3a414a] custom-tab-parent">
+                            <li class="tw-w-fit custom-tab" *ngFor="let range of timeRange">
+                                <a [ngClass]="{'active': activeRange.text == range.text}" class="tw-cursor-pointer tw-inline-block md:!tw-px-10 md:!tw-py-2 tw-p-1 tw-w-full tw-bg-[#afbdcf] tw-text-[#3a414a] hover custom-tab-item" aria-current="page" (click)="changeRange(range)">{{ range.text }}</a>
                             </li>
                         </ul>
 
-                        <button class="w-[200px] bg-[#8FDAEB] hover:bg-cyan-100 border border-[#3a414a] font-medium rounded-lg text-sm px-8 py-1.5 text-center self-center" (click)="exportCSV()">Export CSV</button>
+                        <button class="tw-w-[200px] tw-bg-[#8FDAEB] hover:tw-bg-cyan-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-sm tw-px-8 tw-py-1.5 tw-text-center tw-self-center" (click)="exportCSV()">Export CSV</button>
                     </div>
                 </div>
             </div>

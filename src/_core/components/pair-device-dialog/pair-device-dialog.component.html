@@ -1,75 +1,79 @@
-<div [ngSwitch]="loadStatus" class="bg-[#D2DCE8]">
-    <div class="bg-[#AFBDCF] flex justify-between w-full text-center items-center">
-        <div>&nbsp;</div>
+<div [ngSwitch]="loadStatus" class="dialog-bg">
+  <div class="dialog-title-multiple-container">
+      <div>&nbsp;</div>
 
-        <p class="pt-2">Pair Device</p>
+      <div>&nbsp;</div>
 
-        <div class="cursor-pointer" mat-dialog-close>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" width="32" height="32">
-                <defs>
-                  <style>
-                    .cls-1-3 {
-                      stroke-linecap: round;
-                      stroke-linejoin: round;
-                      stroke-width: 4px;
-                    }
-              
-                    .cls-1-3, .cls-2-3 {
-                      fill: #edb770;
-                      stroke: #3a414a;
-                    }
-              
-                    .cls-2-3 {
-                      stroke-miterlimit: 10;
-                      stroke-width: 2px;
-                    }
-                  </style>
-                </defs>
-                <rect class="cls-2-3" x="1" y="1" width="34" height="34" rx="3" ry="3"></rect>
-                <line class="cls-1-3" x1="10.5" y1="25.5" x2="25.5" y2="10.5"></line>
-                <line class="cls-1-3" x1="10.5" y1="10.5" x2="25.5" y2="25.5"></line>
-            </svg>
-        </div>
-    </div>
+      <span class="dialog-title">
+        Pair Device
+      </span>
 
-    
-    <div class="flex flex-col gap-4 h-[15rem] w-[15rem] py-6">
-        <svg *ngSwitchCase="'loading'" role="status" class="m-auto h-8 w-8 animate-spin fill-[#FAAF40] text-[#F1F1F1]"
-            viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-                d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
-                fill="currentColor" />
-            <path
-                d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
-                fill="currentFill" />
-        </svg>
-
-        <ng-container *ngSwitchCase="'success'">
-            <svg id="_2-ABC-A_PATIENT_CARD_Pair" data-name="2-ABC-A PATIENT CARD Pair" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 136 136">
-            <defs>
+      <div class="tw-cursor-pointer" mat-dialog-close>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" width="32" height="32">
+              <defs>
                 <style>
-                .cls-1 {
-                    fill: none;
-                    stroke: #3a414a;
+                  .cls-1-3 {
                     stroke-linecap: round;
                     stroke-linejoin: round;
-                    stroke-width: 6px;
-                }
+                    stroke-width: 4px;
+                  }
+            
+                  .cls-1-3, .cls-2-3 {
+                    fill: #edb770;
+                    stroke: #3a414a;
+                  }
+            
+                  .cls-2-3 {
+                    stroke-miterlimit: 10;
+                    stroke-width: 2px;
+                  }
                 </style>
-            </defs>
-            <line class="cls-1" x1="68" y1="3" x2="68" y2="133"/>
-            <line class="cls-1" x1="133" y1="68" x2="3" y2="68"/>
-            <rect class="cls-1" x="81.45" y="3" width="51.55" height="51.55"/>
-            <rect class="cls-1" x="97.14" y="18.69" width="20.17" height="20.17"/>
-            <rect class="cls-1" x="3" y="3" width="51.55" height="51.55" transform="translate(57.55 57.55) rotate(180)"/>
-            <rect class="cls-1" x="18.69" y="18.69" width="20.17" height="20.17" transform="translate(57.55 57.55) rotate(180)"/>
-            <rect class="cls-1" x="81.45" y="81.45" width="51.55" height="51.55"/>
-            <rect class="cls-1" x="97.14" y="97.14" width="20.17" height="20.17"/>
-            <rect class="cls-1" x="3" y="81.45" width="51.55" height="51.55" transform="translate(57.55 214.45) rotate(180)"/>
-            <rect class="cls-1" x="18.69" y="97.14" width="20.17" height="20.17" transform="translate(57.55 214.45) rotate(180)"/>
-            </svg>
-    
-            <button class="w-fit bg-[#8FDAEB] hover:bg-cyan-100 border border-[#3a414a] font-medium rounded-lg text-sm px-8 py-1.5 text-center self-center" (click)="loadData()">Refresh</button>
-        </ng-container>
-    </div>
+              </defs>
+              <rect class="cls-2-3" x="1" y="1" width="34" height="34" rx="3" ry="3"></rect>
+              <line class="cls-1-3" x1="10.5" y1="25.5" x2="25.5" y2="10.5"></line>
+              <line class="cls-1-3" x1="10.5" y1="10.5" x2="25.5" y2="25.5"></line>
+          </svg>
+      </div>
+  </div>
+
+  
+  <div class="dialog-content-qrcode">
+      <svg *ngSwitchCase="'loading'" role="status" class="tw-m-auto tw-h-8 tw-w-8 tw-animate-spin tw-fill-[#FAAF40] tw-text-[#F1F1F1]"
+          viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+              d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+              fill="currentColor" />
+          <path
+              d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+              fill="currentFill" />
+      </svg>
+
+      <ng-container *ngSwitchCase="'success'">
+          <svg id="_2-ABC-A_PATIENT_CARD_Pair" data-name="2-ABC-A PATIENT CARD Pair" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 136 136">
+          <defs>
+              <style>
+              .cls-1 {
+                  fill: none;
+                  stroke: #3a414a;
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  stroke-width: 6px;
+              }
+              </style>
+          </defs>
+          <line class="cls-1" x1="68" y1="3" x2="68" y2="133"/>
+          <line class="cls-1" x1="133" y1="68" x2="3" y2="68"/>
+          <rect class="cls-1" x="81.45" y="3" width="51.55" height="51.55"/>
+          <rect class="cls-1" x="97.14" y="18.69" width="20.17" height="20.17"/>
+          <rect class="cls-1" x="3" y="3" width="51.55" height="51.55" tw-transform="translate(57.55 57.55) rotate(180)"/>
+          <rect class="cls-1" x="18.69" y="18.69" width="20.17" height="20.17" tw-transform="translate(57.55 57.55) rotate(180)"/>
+          <rect class="cls-1" x="81.45" y="81.45" width="51.55" height="51.55"/>
+          <rect class="cls-1" x="97.14" y="97.14" width="20.17" height="20.17"/>
+          <rect class="cls-1" x="3" y="81.45" width="51.55" height="51.55" tw-transform="translate(57.55 214.45) rotate(180)"/>
+          <rect class="cls-1" x="18.69" y="97.14" width="20.17" height="20.17" tw-transform="translate(57.55 214.45) rotate(180)"/>
+          </svg>
+  
+          <button class="tw-w-fit tw-bg-[#8FDAEB] hover:tw-bg-cyan-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-sm tw-px-8 tw-py-1.5 tw-text-center tw-self-center" (click)="loadData()">Refresh</button>
+      </ng-container>
+  </div>
 </div>

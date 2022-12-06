@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { PairDeviceDialogComponent } from '../pair-device-dialog/pair-device-dialog.component';
+import { constants } from '../utils/consts';
+import { countries } from '../utils/countries';
 import LoadStatus from '../utils/LoadStatus';
 
 @Component({
@@ -10,8 +12,18 @@ import LoadStatus from '../utils/LoadStatus';
   styleUrls: ['./new-patient-dialog.component.css']
 })
 export class NewPatientDialogComponent implements OnInit {
+  page = 1;
   loadStatus: LoadStatus = 'loading';
   submitting: boolean = false;
+  patient = {
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: { code: '420', value: '' },
+    nextOfKinEmail: '',
+    nextOfKinPhone: { code: '420', value: '' },
+  }
+  countries = countries;
 
   constructor(
     public dialog: MatDialog,
@@ -26,25 +38,89 @@ export class NewPatientDialogComponent implements OnInit {
 
     setTimeout(() => {
       this.loadStatus = 'success';
-    }, 2000);
+    }, 1000);
+  }
+
+  validateAge(event: KeyboardEvent, element: HTMLInputElement) {
+    const min = parseFloat(element.getAttribute('min')!.toString());
+    const max = parseFloat(element.getAttribute('max')!.toString()); 
+    const key = parseInt(event.key);
+    const value = element.value;
+    const newValue = parseFloat(`${value}${key}`);
+    
+    const isNumber = isFinite(key);
+    const isZero = event.key === constants.ZERO;
+    const isBackspace = event.key === constants.BACKSPACE;
+
+    if(isBackspace)
+      return;
+
+    if(!value.length && isZero)
+      return false;
+      
+    if(!isNumber)
+      return false;
+
+    if (newValue < min || newValue > max)
+      return false;
+
+    return;
+  }
+
+  validatePhone(event: KeyboardEvent) {
+    const key = parseInt(event.key);
+
+    const isNumber = isFinite(key);
+    const isBackspace = event.key === constants.BACKSPACE;
+
+    if(isBackspace)
+      return;
+      
+    if(!isNumber)
+      return false;
+
+    return;
   }
 
   increase(element: HTMLInputElement) {
-    if (element.valueAsNumber)
-      element.valueAsNumber = element.valueAsNumber + 1;
+    const max = parseFloat(element.getAttribute('max')!.toString());
+
+    var oldValue = element.valueAsNumber;
+
+    if (oldValue >= max)
+      var newVal = oldValue;
     else
-      element.valueAsNumber = 1;
+      var newVal = element.valueAsNumber ? element.valueAsNumber + 1 : 1;
+    
+    element.valueAsNumber = newVal;
   }
   
   decrease(element: HTMLInputElement) {
-    if (element.valueAsNumber && element.valueAsNumber > 1)
-      element.valueAsNumber = element.valueAsNumber - 1;
+    const min = parseFloat(element.getAttribute('min')!.toString());
+
+    var oldValue = element.valueAsNumber;
+    
+    if (oldValue <= min)
+      var newVal = oldValue;
     else
-      element.valueAsNumber = 1;
+      var newVal = element.valueAsNumber ? element.valueAsNumber - 1 : 1;
+    
+    element.valueAsNumber = newVal;
+  }
+
+  onDateFocus(element: HTMLInputElement) {
+    element.type ='date';
+  }
+  
+  onDateBlur(element: HTMLInputElement) {
+    if(element.value)
+      element.type ='date';
+    else
+      element.type='text';
   }
 
   pairDevice() {
-    this.dialog.open(PairDeviceDialogComponent, { panelClass: 'app-full-dialog'});
+    this.dialog.open(PairDeviceDialogComponent);
   }
   
   save() {
@@ -54,7 +130,7 @@ export class NewPatientDialogComponent implements OnInit {
       this.submitting = false;
       this.snackBar.open('Changes were saved', 'Close')
       this.dialog.closeAll();
-    }, 3000);
+    }, 1000);
   }
 
 }

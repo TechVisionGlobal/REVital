@@ -25,7 +25,7 @@ export class CancelDialogComponent implements OnInit {
       this.submitting = false;
       this.snackBar.open('Changes were saved', 'Close')
       this.dialog.closeAll();
-    }, 3000);
+    }, 1000);
   }
 
 }
