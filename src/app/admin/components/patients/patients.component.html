@@ -21,7 +21,7 @@
             <div>
                 <div class="tw-flex tw-bg-white tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center tw-relative">
                     <input placeholder="Patient Name" class="tw-h-8 tw-bg-gray-50 tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5 tw-text-center" [(ngModel)]="searchValue"  required>
-                    <svg *ngIf="!searchValue" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.5 25.5" class="tw-absolute tw-right-[35%] tw-w-4">
+                    <svg *ngIf="!searchValue" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.5 25.5" class="tw-absolute tw-right-[15%] tw-w-4">
                         <defs>
                             <style>
                                 .cls-1 {
@@ -153,9 +153,9 @@
 
                 <div class="tw-h-[36px] tw-flex tw-divide-x tw-divide-black tw-bg-white tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center">
                     <input #minAge type="number" min="1" max="200" value="50" placeholder="from" class="tw-h-[34px] tw-bg-gray-50 tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5 tw-text-center" (keydown)="validateAge($event, minAge)" required>
-                    <div class="tw-flex tw-flex-col tw-gap-1 tw-bg-[#AFBDCF] tw-h-[34px] tw-rounded-r-lg hover">
-                        <span class="tw-cursor-pointer tw-mx-2 tw-h-2 noselect" (click)="increase(minAge)">▲</span>
-                        <span class="tw-cursor-pointer tw-mx-2 tw-h-2 noselect" (click)="decrease(minAge)">▼</span>
+                    <div class="custom-num-spinner-container hover">
+                        <span class="custom-num-spinner noselect" (click)="increase(minAge)">▲</span>
+                        <span class="custom-num-spinner noselect" (click)="decrease(minAge)">▼</span>
                     </div>
                 </div>
 
@@ -163,9 +163,9 @@
 
                 <div class="tw-h-[36px] tw-flex tw-divide-x tw-divide-black tw-bg-white tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center">
                     <input #maxAge type="number" min="1" max="200" value="85" placeholder="to" class="tw-h-[34px] tw-bg-gray-50 tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5 tw-text-center" (keydown)="validateAge($event, maxAge)" required>
-                    <div class="tw-flex tw-flex-col tw-gap-1 tw-bg-[#AFBDCF] tw-h-[34px] tw-rounded-r-lg hover">
-                        <span class="tw-cursor-pointer tw-mx-2 tw-h-2 noselect" (click)="increase(maxAge)">▲</span>
-                        <span class="tw-cursor-pointer tw-mx-2 tw-h-2 noselect" (click)="decrease(maxAge)">▼</span>
+                    <div class="custom-num-spinner-container hover">
+                        <span class="custom-num-spinner noselect" (click)="increase(maxAge)">▲</span>
+                        <span class="custom-num-spinner noselect" (click)="decrease(maxAge)">▼</span>
                     </div>
                 </div>
             </div>

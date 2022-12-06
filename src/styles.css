@@ -188,6 +188,13 @@ div.options > label > input:checked +img {
     padding: 5px 10px;
 }
 
+.btn-clck-select {
+    border: none;
+    background: transparent;
+    width: 100%;
+    padding: 5px 20px 5px 0;
+}
+
 .btn-clck::-webkit-calendar-picker-indicator {
     right: -10px;
     position: absolute;
@@ -261,6 +268,7 @@ div.options > label > input:checked +img {
     width: 34px;
     background-color: #b3e6bc;
     border: 2px black solid;
+    border-radius: 5px;
   }
   
   .checkmark-medium {
@@ -271,6 +279,7 @@ div.options > label > input:checked +img {
     width: 34px;
     background-color: #f3f3b5;
     border: 2px black solid;
+    border-radius: 5px;
   }
   
   .checkmark-high {
@@ -281,6 +290,7 @@ div.options > label > input:checked +img {
     width: 34px;
     background-color: #e9aaaa;
     border: 2px black solid;
+    border-radius: 5px;
   }
   
   .checkmark-default {
@@ -291,6 +301,7 @@ div.options > label > input:checked +img {
     width: 34px;
     background-color: #F2F6F9;
     border: 2px black solid;
+    border-radius: 5px;
   }
   
   .checkmark-danger {
@@ -301,6 +312,7 @@ div.options > label > input:checked +img {
     width: 34px;
     background-color: #F2F6F9;
     border: 2px #E81414 solid;
+    border-radius: 5px;
   }
   
   .checkmark-rounded-default {
@@ -395,6 +407,12 @@ div.options > label > input:checked +img {
     min-height: 30px;
   }
 
+  .cal-month-view .cal-open-day-events {
+    color: #3a414a !important;
+    background-color: #b4bcce !important;
+    box-shadow: none !important;
+  }
+
   mat-list-option[aria-selected="true"] {
     background: #DB7272 !important;
   }
@@ -433,4 +451,15 @@ div.options > label > input:checked +img {
 
   .backdropBackground {
     backdrop-filter: blur(2px);
+  }
+
+  .custom-num-spinner-container {
+    @apply tw-flex tw-flex-col tw-gap-2 tw-bg-[#AFBDCF] tw-h-[34px] tw-rounded-r-lg;
+  }
+  .custom-num-spinner-container-dialog {
+    @apply tw-flex tw-flex-col tw-gap-2 tw-bg-[#AFBDCF] tw-h-8 tw-rounded-r-lg;
+  }
+
+  .custom-num-spinner {
+    @apply tw-cursor-pointer tw-mx-2 tw-h-2;
   }

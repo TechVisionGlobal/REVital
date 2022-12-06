@@ -3,7 +3,7 @@
         <div class="tw-self-end">
             <div class="group exmp-wrp tw-flex tw-bg-white tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center">
                 <div class="btn-wrp">
-                    <select id="loginLanguageSelect" class="tw-h-8 btn-clck tw-text-[#3a414a] tw-px-10 hover:tw-border-gray-400 focus:tw-outline-none tw-appearance-none tw-rounded-l-lg" [(ngModel)]="userLocale">
+                    <select id="loginLanguageSelect" class="tw-h-8 btn-clck-select tw-text-[#3a414a] tw-px-10 hover:tw-border-gray-400 focus:tw-outline-none tw-appearance-none tw-rounded-l-lg tw-text-center" [(ngModel)]="userLocale">
                         <option *ngFor="let language of languages" [value]="language.code">{{language.name}}</option>
                     </select>
                 </div>
