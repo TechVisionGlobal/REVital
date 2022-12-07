@@ -38,13 +38,13 @@
         <div class="dialog-new-edit-subcontent">
             <form class="tw-flex tw-flex-col tw-gap-4">
                 <div>
-                    <input type="text" trim="blur" name="firstName" placeholder="First Name" class="tw-h-8 tw-bg-gray-50 tw-border tw-border-[#3a414a] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5 custom-input-text-color" [(ngModel)]="patient.firstName" required>
+                    <input type="text" trim="blur" name="firstName" placeholder="First Name" class="tw-h-8 tw-bg-[#F0F0F0] tw-border tw-border-[#3a414a] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5 custom-input-text-color" [(ngModel)]="patient.firstName" required>
                 </div>
                 <div>
-                    <input type="text" trim="blur" placeholder="Middle Name(s)" class="tw-h-8 tw-bg-gray-50 tw-border tw-border-[#3a414a] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5 custom-input-text-color" required>
+                    <input type="text" trim="blur" placeholder="Middle Name(s)" class="tw-h-8 tw-bg-[#F0F0F0] tw-border tw-border-[#3a414a] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5 custom-input-text-color" required>
                 </div>
                 <div>
-                    <input type="text" trim="blur" placeholder="Surname" class="tw-h-8 tw-bg-gray-50 tw-border tw-border-[#3a414a] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5 custom-input-text-color" required>
+                    <input type="text" trim="blur" placeholder="Surname" class="tw-h-8 tw-bg-[#F0F0F0] tw-border tw-border-[#3a414a] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5 custom-input-text-color" required>
                 </div>
                 <div class="tw-flex tw-gap-5 options tw-h-8">
                     <label title="Male">
@@ -93,21 +93,21 @@
                     </button>
                 </div>
                 <div class="tw-flex tw-divide-x tw-divide-black tw-bg-[#f2f6f9] tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center">
-                    <input #height type="number" min="1" max="999" placeholder="Height cm" class="tw-h-8 tw-bg-gray-50 tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5 custom-input-text-color" (keydown)="validateAge($event, height)" required>
+                    <input #height type="text" min="1" max="999" pattern="^\d*(\.\d{0,1})?$" placeholder="Height cm" class="tw-h-8 tw-bg-[#F0F0F0] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5 custom-input-text-color" (keydown)="validateHW($event, height)" required>
                     <div class="custom-num-spinner-container-dialog hover">
                         <span class="custom-num-spinner noselect" (click)="increase(height)">▲</span>
                         <span class="custom-num-spinner noselect" (click)="decrease(height)">▼</span>
                     </div>
                 </div>
                 <div class="tw-flex tw-divide-x tw-divide-black tw-bg-[#f2f6f9] tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center">
-                    <input #weight type="number" min="1"  max="999" placeholder="Weight kg" class="tw-h-8 tw-bg-gray-50 tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5 custom-input-text-color" (keydown)="validateAge($event, weight)" required>
+                    <input #weight type="text" min="1"  max="999" pattern="^\d*(\.\d{0,1})?$" placeholder="Weight kg" class="tw-h-8 tw-bg-[#F0F0F0] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5 custom-input-text-color" (keydown)="validateHW($event, weight)" required>
                     <div class="custom-num-spinner-container-dialog hover">
                         <span class="custom-num-spinner noselect" (click)="increase(weight)">▲</span>
                         <span class="custom-num-spinner noselect" (click)="decrease(weight)">▼</span>
                     </div>
                 </div>
                 <div>
-                    <input type="text" trim="blur" placeholder="Email" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" name="email" [(ngModel)]="patient.email" #email="ngModel" class="tw-h-8 tw-bg-gray-50 tw-border tw-border-[#3a414a] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5 custom-input-text-color" required>
+                    <input type="text" trim="blur" placeholder="Email" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" name="email" [(ngModel)]="patient.email" #email="ngModel" class="tw-h-8 tw-bg-[#F0F0F0] tw-border tw-border-[#3a414a] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5 custom-input-text-color" required>
                     <div *ngIf="email.invalid && (email.dirty || email.touched)" class="validation-message">
                         <div *ngIf="email.errors?.['pattern']">
                             Email is invalid.
@@ -116,25 +116,29 @@
                 </div>
                 <div class="tw-relative tw-divide-black tw-bg-[#f2f6f9] tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center">
                     <div class="tw-absolute tw-inset-y-0 tw-left-0 tw-flex tw-items-center">
-                        <select class="tel-select" [ngModel]="patient.phone.code" [ngModelOptions]="{standalone: true}">
-                            <option *ngFor="let country of countries" [value]="country.code">+{{country.code}}</option>
+                        <select class="tel-select" [(ngModel)]="patient.phone.code" [ngModelOptions]="{standalone: true}">
+                            <option *ngFor="let country of (countries | slice:0:1)" [value]="country.code">+{{country.code}}</option>
+                            <option disabled>──────</option>
+                            <option *ngFor="let country of (countries | slice:1)" [value]="country.code">+{{country.code}}</option>
                         </select>
                     </div>
-                    <input type="text" trim="blur" maxlength="10" placeholder="Phone" class="tel-input custom-input-text-color" (keydown)="validatePhone($event)" required>
+                    <input #phone type="text" trim="blur" maxlength="10" pattern="^\d*$" placeholder="Phone" class="tel-input custom-input-text-color" name="phone" [(ngModel)]="patient.phone.value" (keydown)="validatePhone($event, phone)" required>
                 </div>
                 <div>
-                    <input type="text" trim="blur" placeholder="Next of Kin Name" class="tw-h-8 tw-bg-gray-50 tw-border tw-border-[#3a414a] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5" required>
+                    <input type="text" trim="blur" placeholder="Next of Kin Name" class="tw-h-8 tw-bg-[#F0F0F0] tw-border tw-border-[#3a414a] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5" required>
                 </div>
                 <div class="tw-relative tw-divide-black tw-bg-[#f2f6f9] tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center">
                     <div class="tw-absolute tw-inset-y-0 tw-left-0 tw-flex tw-items-center">
-                        <select class="tel-select" [ngModel]="patient.nextOfKinPhone.code" [ngModelOptions]="{standalone: true}">
-                            <option *ngFor="let country of countries" [value]="country.code">+{{country.code}}</option>
+                        <select class="tel-select" [(ngModel)]="patient.nextOfKinPhone.code" [ngModelOptions]="{standalone: true}">
+                            <option *ngFor="let country of (countries | slice:0:1)" [value]="country.code">+{{country.code}}</option>
+                            <option disabled>──────</option>
+                            <option *ngFor="let country of (countries | slice:1)" [value]="country.code">+{{country.code}}</option>
                         </select>
                     </div>
-                    <input type="text" trim="blur" maxlength="10" placeholder="Next of Kin Phone" class="tel-input custom-input-text-color" (keydown)="validatePhone($event)" required>
+                    <input #nextOfKinPhone type="text" trim="blur" maxlength="10" pattern="^\d*$" placeholder="Next of Kin Phone" class="tel-input custom-input-text-color" name="nextOfKinPhone" [(ngModel)]="patient.nextOfKinPhone.value" (keydown)="validatePhone($event, nextOfKinPhone)" required>
                 </div>
                 <div>
-                    <input type="text" trim="blur" placeholder="Next of Kin Email" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" name="nextOfKinEmail" [(ngModel)]="patient.nextOfKinEmail" #nextOfKinEmail="ngModel" class="tw-h-8 tw-bg-gray-50 tw-border tw-border-[#3a414a] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5 custom-input-text-color" required>
+                    <input type="text" trim="blur" placeholder="Next of Kin Email" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" name="nextOfKinEmail" [(ngModel)]="patient.nextOfKinEmail" #nextOfKinEmail="ngModel" class="tw-h-8 tw-bg-[#F0F0F0] tw-border tw-border-[#3a414a] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5 custom-input-text-color" required>
                     <div *ngIf="nextOfKinEmail.invalid && (nextOfKinEmail.dirty || nextOfKinEmail.touched)" class="validation-message">
                         <div *ngIf="nextOfKinEmail.errors?.['pattern']">
                             Email is invalid.

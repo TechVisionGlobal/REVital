@@ -207,20 +207,6 @@ export class SchedulingComponent implements OnInit {
     });
   }
 
-  increase(element: HTMLInputElement) {
-    if (element.valueAsNumber)
-      element.valueAsNumber = element.valueAsNumber + 1;
-    else
-      element.valueAsNumber = 1;
-  }
-
-  decrease(element: HTMLInputElement) {
-    if (element.valueAsNumber && element.valueAsNumber > 1)
-      element.valueAsNumber = element.valueAsNumber - 1;
-    else
-      element.valueAsNumber = 1;
-  }
-
   dayClicked({ date, events }: { date: Date; events: CalendarEvent[] }): void {
     if (isSameMonth(date, this.viewDate)) {
       if (
