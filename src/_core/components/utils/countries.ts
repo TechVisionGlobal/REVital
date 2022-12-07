@@ -10,11 +10,11 @@ export const countries: Country[] = [
         "code": "420",
         "iso": "CZ"
     },
-    {
-        "name": "Canada",
-        "code": "1",
-        "iso": "CA"
-    },
+    // {
+    //     "name": "Canada",
+    //     "code": "1",
+    //     "iso": "CA"
+    // },
     {
         "name": "United States",
         "code": "1",
@@ -150,11 +150,11 @@ export const countries: Country[] = [
         "code": "212",
         "iso": "MA"
     },
-    {
-        "name": "Western Sahara",
-        "code": "212",
-        "iso": "EH"
-    },
+    // {
+    //     "name": "Western Sahara",
+    //     "code": "212",
+    //     "iso": "EH"
+    // },
     {
         "name": "Algeria",
         "code": "213",
@@ -375,11 +375,11 @@ export const countries: Country[] = [
         "code": "262",
         "iso": "YT"
     },
-    {
-        "name": "Reunion",
-        "code": "262",
-        "iso": "RE"
-    },
+    // {
+    //     "name": "Reunion",
+    //     "code": "262",
+    //     "iso": "RE"
+    // },
     {
         "name": "Zimbabwe",
         "code": "263",
@@ -636,11 +636,6 @@ export const countries: Country[] = [
         "iso": "CZ"
     },
     {
-        "name": "Czech Republic",
-        "code": "420",
-        "iso": "CZ"
-    },
-    {
         "name": "Slovakia",
         "code": "421",
         "iso": "SK"
@@ -690,11 +685,11 @@ export const countries: Country[] = [
         "code": "47",
         "iso": "NO"
     },
-    {
-        "name": "Svalbard and Jan Mayen",
-        "code": "47",
-        "iso": "SJ"
-    },
+    // {
+    //     "name": "Svalbard and Jan Mayen",
+    //     "code": "47",
+    //     "iso": "SJ"
+    // },
     {
         "name": "Poland",
         "code": "48",
@@ -800,11 +795,11 @@ export const countries: Country[] = [
         "code": "590",
         "iso": "BL"
     },
-    {
-        "name": "Saint Martin",
-        "code": "590",
-        "iso": "MF"
-    },
+    // {
+    //     "name": "Saint Martin",
+    //     "code": "590",
+    //     "iso": "MF"
+    // },
     {
         "name": "Bolivia",
         "code": "591",
@@ -840,11 +835,11 @@ export const countries: Country[] = [
         "code": "599",
         "iso": "CW"
     },
-    {
-        "name": "Netherlands Antilles",
-        "code": "599",
-        "iso": "AN"
-    },
+    // {
+    //     "name": "Netherlands Antilles",
+    //     "code": "599",
+    //     "iso": "AN"
+    // },
     {
         "name": "Malaysia",
         "code": "60",
@@ -855,16 +850,16 @@ export const countries: Country[] = [
         "code": "61",
         "iso": "AU"
     },
-    {
-        "name": "Christmas Island",
-        "code": "61",
-        "iso": "CX"
-    },
-    {
-        "name": "Cocos Islands",
-        "code": "61",
-        "iso": "CC"
-    },
+    // {
+    //     "name": "Christmas Island",
+    //     "code": "61",
+    //     "iso": "CX"
+    // },
+    // {
+    //     "name": "Cocos Islands",
+    //     "code": "61",
+    //     "iso": "CC"
+    // },
     {
         "name": "Indonesia",
         "code": "62",
@@ -880,11 +875,11 @@ export const countries: Country[] = [
         "code": "64",
         "iso": "NZ"
     },
-    {
-        "name": "Pitcairn",
-        "code": "64",
-        "iso": "PN"
-    },
+    // {
+    //     "name": "Pitcairn",
+    //     "code": "64",
+    //     "iso": "PN"
+    // },
     {
         "name": "Singapore",
         "code": "65",
@@ -1000,11 +995,11 @@ export const countries: Country[] = [
         "code": "692",
         "iso": "MH"
     },
-    {
-        "name": "Kazakhstan",
-        "code": "7",
-        "iso": "KZ"
-    },
+    // {
+    //     "name": "Kazakhstan",
+    //     "code": "7",
+    //     "iso": "KZ"
+    // },
     {
         "name": "Russia",
         "code": "7",

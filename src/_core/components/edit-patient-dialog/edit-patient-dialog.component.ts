@@ -47,71 +47,108 @@ export class EditPatientDialogComponent implements OnInit {
     }, 1000);
   }
 
-  validateAge(event: KeyboardEvent, element: HTMLInputElement) {
-    const min = parseFloat(element.getAttribute('min')!.toString());
-    const max = parseFloat(element.getAttribute('max')!.toString()); 
-    const key = parseInt(event.key);
-    const value = element.value;
-    const newValue = parseFloat(`${value}${key}`);
+  validateHW(event: KeyboardEvent, element: HTMLInputElement) {
+    // var input = $(this);
+    // var oldVal = input.val();
+    var input = element;
+    var oldVal = element.value;
+    var pattern = input.getAttribute('pattern')!.toString();
+    var regex = new RegExp(pattern, 'g');
+    var min = parseFloat(element.getAttribute('min')!.toString());
+    var max = parseFloat(element.getAttribute('max')!.toString()); 
+
+    setTimeout(function () {
+      var newVal = input.value;
+      var newValNumber = parseFloat(input.value);
+      if (!regex.test(newVal)) {
+        input.value = oldVal;
+      }
+
+      if (newValNumber < min) {
+        input.value = min.toString();
+      }
+
+      if (newValNumber > max) {
+        input.value = max.toString();
+      }
+    }, 1);
     
-    const isNumber = isFinite(key);
-    const isZero = event.key === constants.ZERO;
-    const isBackspace = event.key === constants.BACKSPACE;
+    // const min = parseFloat(element.getAttribute('min')!.toString());
+    // const max = parseFloat(element.getAttribute('max')!.toString()); 
+    // const key = parseInt(event.key);
+    // const value = element.value;
+    // const newValue = parseFloat(`${value}${key}`);
+    
+    // const isNumber = isFinite(key);
+    // const isZero = event.key === constants.ZERO;
+    // const isBackspace = event.key === constants.BACKSPACE;
 
-    if(isBackspace)
-      return;
+    // if(isBackspace)
+    //   return;
 
-    if(!value.length && isZero)
-      return false;
+    // if(!value.length && isZero)
+    //   return false;
       
-    if(!isNumber)
-      return false;
+    // if(!isNumber)
+    //   return false;
 
-    if (newValue < min || newValue > max)
-      return false;
+    // if (newValue < min || newValue > max)
+    //   return false;
 
-    return;
+    // return;
   }
 
-  validatePhone(event: KeyboardEvent) {
-    const key = parseInt(event.key);
+  validatePhone(event: KeyboardEvent, element: HTMLInputElement) {
+    var input = element;
+    var oldVal = element.value;
+    var pattern = input.getAttribute('pattern')!.toString();
+    var regex = new RegExp(pattern, 'g');
 
-    const isNumber = isFinite(key);
-    const isBackspace = event.key === constants.BACKSPACE;
+    setTimeout(function () {
+      var newVal = input.value;
+      if (!regex.test(newVal)) {
+        input.value = oldVal;
+      }
+    }, 1);
 
-    if(isBackspace)
-      return;
+    // const key = parseInt(event.key);
+
+    // const isNumber = isFinite(key);
+    // const isBackspace = event.key === constants.BACKSPACE;
+
+    // if(isBackspace)
+    //   return;
       
-    if(!isNumber)
-      return false;
+    // if(!isNumber)
+    //   return false;
 
-    return;
+    // return;
   }
 
   increase(element: HTMLInputElement) {
     const max = parseFloat(element.getAttribute('max')!.toString());
 
-    var oldValue = element.valueAsNumber;
+    var oldValue = parseFloat(element.value);
 
     if (oldValue >= max)
       var newVal = oldValue;
     else
-      var newVal = element.valueAsNumber ? element.valueAsNumber + 1 : 1;
+      var newVal = oldValue ? oldValue + 1 : 1;
     
-    element.valueAsNumber = newVal;
+    element.value = newVal.toString();
   }
   
   decrease(element: HTMLInputElement) {
     const min = parseFloat(element.getAttribute('min')!.toString());
 
-    var oldValue = element.valueAsNumber;
-    
+    var oldValue = parseFloat(element.value);
+
     if (oldValue <= min)
       var newVal = oldValue;
     else
-      var newVal = element.valueAsNumber ? element.valueAsNumber - 1 : 1;
+      var newVal = oldValue ? oldValue - 1 : 1;
     
-    element.valueAsNumber = newVal;
+    element.value = newVal.toString();
   }
 
   onDateFocus(element: HTMLInputElement) {

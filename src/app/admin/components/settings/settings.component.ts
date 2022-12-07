@@ -52,19 +52,31 @@ export class SettingsComponent implements OnInit {
     
   }
 
-  validatePhone(event: KeyboardEvent) {
-    const key = parseInt(event.key);
+  validatePhone(event: KeyboardEvent, element: HTMLInputElement) {
+    var input = element;
+    var oldVal = element.value;
+    var pattern = input.getAttribute('pattern')!.toString();
+    var regex = new RegExp(pattern, 'g');
 
-    const isNumber = isFinite(key);
-    const isBackspace = event.key === constants.BACKSPACE;
+    setTimeout(function () {
+      var newVal = input.value;
+      if (!regex.test(newVal)) {
+        input.value = oldVal;
+      }
+    }, 1);
+    
+    // const key = parseInt(event.key);
 
-    if(isBackspace)
-      return;
+    // const isNumber = isFinite(key);
+    // const isBackspace = event.key === constants.BACKSPACE;
+
+    // if(isBackspace)
+    //   return;
       
-    if(!isNumber)
-      return false;
+    // if(!isNumber)
+    //   return false;
 
-    return;
+    // return;
   }
 
 }
