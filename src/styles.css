@@ -56,22 +56,22 @@ body {
 
 .dialog-bg {
     @apply tw-bg-[#D2DCE8];
-    border: 2px solid;
+    border: solid;
 }
 
 .dialog-new-edit-bg {
     @apply tw-max-w-[80vw] tw-min-h-[764px] tw-bg-[#D2DCE8];
-    border: 2px solid;
+    border: solid;
 }
 
 .dialog-title-single-container {
-    @apply tw-bg-[#AFBDCF] tw-flex tw-justify-center tw-w-full tw-h-[34px] tw-text-center tw-items-center tw-px-4;
-    border-bottom: 2px solid;
+    @apply tw-bg-[#AFBDCF] tw-flex tw-justify-center tw-w-full tw-h-[34px] tw-text-center tw-items-center;
+    border-bottom: solid;
 }
 
 .dialog-title-multiple-container {
-    @apply tw-bg-[#AFBDCF] tw-flex tw-justify-between tw-w-full tw-text-center tw-items-center tw-px-4;
-    border-bottom: 2px solid;
+    @apply tw-bg-[#AFBDCF] tw-flex tw-justify-between tw-w-full tw-text-center tw-items-center;
+    border-bottom: solid;
 }
 
 .dialog-title {
@@ -86,7 +86,7 @@ body {
 }
 
 .dialog-new-edit-content {
-    @apply lg:tw-h-full md:tw-h-[60rem] tw-h-[50rem] tw-overflow-y-scroll;
+    @apply lg:tw-h-full md:tw-h-[60rem] tw-h-[50rem] tw-overflow-y-auto;
 }
 
 .dialog-new-edit-subcontent {

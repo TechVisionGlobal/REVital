@@ -49,7 +49,7 @@ export class DashboardComponent implements OnInit {
         }
       ],
       chart: {
-        height: 350,
+        height: 300,
         type: "line",
         zoom: {
           enabled: false
@@ -93,7 +93,7 @@ export class DashboardComponent implements OnInit {
         }
       ],
       chart: {
-        height: 350,
+        height: 300,
         type: "line",
         zoom: {
           enabled: false

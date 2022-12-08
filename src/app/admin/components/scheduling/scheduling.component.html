@@ -44,8 +44,8 @@
                                 [view]="view"
                                 [(viewDate)]="viewDate"
                                 (viewDateChange)="closeOpenMonthViewDay()"
-                                class="tw-flex tw-flex-col tw-gap-1 tw-bg-[#AFBDCF] tw-h-8 tw-rounded-l-lg hover">
-                                <span class="tw-cursor-pointer tw-m-2 tw-h-8 noselect">◀</span>
+                                class="tw-flex tw-bg-[#AFBDCF] tw-h-8 tw-rounded-l-lg hover tw-items-center">
+                                <span class="tw-cursor-pointer tw-mx-2 tw-h-fit noselect">◀</span>
                             </div>
 
                             <span class="tw-h-8 tw-bg-[#F0F0F0] tw-text-gray-900 sm:tw-text-sm tw-block tw-w-full tw-text-center tw-py-2">{{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}</span>
@@ -55,8 +55,8 @@
                               [view]="view"
                               [(viewDate)]="viewDate"
                               (viewDateChange)="closeOpenMonthViewDay()"
-                              class="tw-flex tw-flex-col tw-gap-1 tw-bg-[#AFBDCF] tw-h-8 tw-rounded-r-lg hover">
-                                <span class="tw-cursor-pointer tw-m-2 tw-h-8 noselect">▶</span>
+                              class="tw-flex tw-bg-[#AFBDCF] tw-h-8 tw-rounded-r-lg hover tw-items-center">
+                                <span class="tw-cursor-pointer tw-mx-2 tw-h-fit noselect">▶</span>
                             </div>
                         </div>
                         <div class="tw-bg-[#F0F0F0] tw-flex tw-justify-between tw-p-2">
