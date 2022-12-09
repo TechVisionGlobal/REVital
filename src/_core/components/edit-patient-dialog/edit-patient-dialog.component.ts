@@ -16,6 +16,8 @@ import LoadStatus from '../utils/LoadStatus';
 })
 export class EditPatientDialogComponent implements OnInit {
   page = 1;
+  pageSize = 15;
+  remainder = 13;//pageSize less data from API count
   loadStatus: LoadStatus = 'loading';
   isEdit: boolean = false;
   label: string = 'Edit Patient';
@@ -72,30 +74,6 @@ export class EditPatientDialogComponent implements OnInit {
         input.value = max.toString();
       }
     }, 1);
-    
-    // const min = parseFloat(element.getAttribute('min')!.toString());
-    // const max = parseFloat(element.getAttribute('max')!.toString()); 
-    // const key = parseInt(event.key);
-    // const value = element.value;
-    // const newValue = parseFloat(`${value}${key}`);
-    
-    // const isNumber = isFinite(key);
-    // const isZero = event.key === constants.ZERO;
-    // const isBackspace = event.key === constants.BACKSPACE;
-
-    // if(isBackspace)
-    //   return;
-
-    // if(!value.length && isZero)
-    //   return false;
-      
-    // if(!isNumber)
-    //   return false;
-
-    // if (newValue < min || newValue > max)
-    //   return false;
-
-    // return;
   }
 
   validatePhone(event: KeyboardEvent, element: HTMLInputElement) {
@@ -110,19 +88,6 @@ export class EditPatientDialogComponent implements OnInit {
         input.value = oldVal;
       }
     }, 1);
-
-    // const key = parseInt(event.key);
-
-    // const isNumber = isFinite(key);
-    // const isBackspace = event.key === constants.BACKSPACE;
-
-    // if(isBackspace)
-    //   return;
-      
-    // if(!isNumber)
-    //   return false;
-
-    // return;
   }
 
   increase(element: HTMLInputElement) {

@@ -17,9 +17,9 @@
 
     <div *ngSwitchCase="'success'" class="tw-flex tw-h-full tw-min-h-0 tw-flex-col md:tw-pt-10 tw-pt-2 lg:tw-px-32 tw-px-2">
         <div class="tw-grid tw-grid-cols-6 tw-gap-20">
-            <div class="tw-col-span-2 tw-flex tw-flex-col tw-justify-between">
-                <div *ngFor="let day of days" class="tw-flex tw-justify-between tw-items-center">
-                    <div class="tw-flex tw-items-center tw-mr-4">
+            <div class="tw-col-span-2 tw-flex tw-flex-col tw-gap-2 tw-justify-between">
+                <div *ngFor="let day of days" class="tw-flex tw-gap-10 tw-items-center">
+                    <div class="tw-flex tw-w-full tw-items-center">
                         <label class="custom-check">
                             <input type="checkbox" [(ngModel)]="day.isActive">
                             <span class="checkmark-rounded checkmark-rounded-default"></span>

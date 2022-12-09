@@ -13,6 +13,8 @@ import LoadStatus from '../utils/LoadStatus';
 })
 export class NewPatientDialogComponent implements OnInit {
   page = 1;
+  pageSize = 15;
+  remainder = 15;//pageSize less data from API count
   loadStatus: LoadStatus = 'loading';
   submitting: boolean = false;
   patient = {
@@ -42,8 +44,6 @@ export class NewPatientDialogComponent implements OnInit {
   }
 
   validateHW(event: KeyboardEvent, element: HTMLInputElement) {
-    // var input = $(this);
-    // var oldVal = input.val();
     var input = element;
     var oldVal = element.value;
     var pattern = input.getAttribute('pattern')!.toString();
@@ -66,49 +66,6 @@ export class NewPatientDialogComponent implements OnInit {
         input.value = max.toString();
       }
     }, 1);
-
-    // const min = parseFloat(element.getAttribute('min')!.toString());
-    // const max = parseFloat(element.getAttribute('max')!.toString()); 
-    // const key = parseInt(event.key);
-    // const value = element.value;
-    // const newValue = parseFloat(`${value}${key}`);
-    
-    // const isNumber = isFinite(key);
-    // const isZero = event.key === constants.ZERO;
-    // const isBackspace = event.key === constants.BACKSPACE;
-    // const isDecimal = event.key === constants.DECIMAL;
-    // const isNegative = event.key === constants.NEGATIVE;
-    // const isPositive = event.key === constants.POSITIVE;
-    // const hasDecimal = value.includes('.');
-    // const isDecimalNumber = value.includes('.');
-    // console.log(event.key);
-    
-
-    // if(isBackspace)
-    //   return;
-
-    // if(isDecimal)
-    //   return;
-
-    // if(isNegative)
-    //   return false;
-
-    // if(isPositive)
-    //   return false;
-
-    // if(!value.length && isZero)
-    //   return false;
-
-    // if(!value.length && isDecimal)
-    //   return false;
-      
-    // // if(!isNumber)
-    // //   return false;
-
-    // if (newValue < min || newValue > max)
-    //   return false;
-
-    // return;
   }
 
   validatePhone(event: KeyboardEvent, element: HTMLInputElement) {
@@ -123,19 +80,6 @@ export class NewPatientDialogComponent implements OnInit {
         input.value = oldVal;
       }
     }, 1);
-
-    // const key = parseInt(event.key);
-
-    // const isNumber = isFinite(key);
-    // const isBackspace = event.key === constants.BACKSPACE;
-
-    // if(isBackspace)
-    //   return;
-      
-    // if(!isNumber)
-    //   return false;
-
-    // return;
   }
 
   increase(element: HTMLInputElement) {
