@@ -15,16 +15,17 @@
         <button class="primary tw-mx-auto" (click)="loadData()">Retry</button>
     </div>
 
-    <div *ngSwitchCase="'success'" class="tw-flex tw-h-full tw-min-h-0 tw-flex-col md:tw-pt-10 tw-pt-2 lg:tw-px-32 tw-px-2">
+    <div *ngSwitchCase="'success'" class="tw-flex tw-h-full tw-min-h-0 tw-flex-col md:tw-pt-10 tw-pt-2 lg:tw-pl-16 lg:tw-pr-32 tw-px-2">
         <div class="tw-grid tw-grid-cols-6 tw-gap-20">
             <div class="tw-col-span-2 tw-flex tw-flex-col tw-gap-2 tw-justify-between">
                 <div *ngFor="let day of days" class="tw-flex tw-gap-10 tw-items-center">
-                    <div class="tw-flex tw-w-full tw-items-center">
+                <!-- <div *ngFor="let day of days" class="tw-flex tw-gap-2 tw-justify-between tw-items-center"> -->
+                    <div class="tw-flex tw-mr-4 tw-w-full tw-items-center">
                         <label class="custom-check">
                             <input type="checkbox" [(ngModel)]="day.isActive">
                             <span class="checkmark-rounded checkmark-rounded-default"></span>
                         </label>
-                        <label class="tw-ml-2 tw-text-sm tw-font-medium tw-text-[#3a414a]">{{day.name}}</label>
+                        <label class="tw-ml-2  tw-font-medium tw-text-[#3a414a]">{{day.name}}</label>
                     </div>
     
                     <ngb-timepicker [(ngModel)]="day.start" [size]="size" [disabled]="!day.isActive"></ngb-timepicker>
@@ -48,7 +49,7 @@
                                 <span class="tw-cursor-pointer tw-mx-2 tw-h-fit noselect">◀</span>
                             </div>
 
-                            <span class="tw-h-8 tw-bg-[#F0F0F0] tw-text-gray-900 sm:tw-text-sm tw-block tw-w-full tw-text-center tw-py-2">{{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}</span>
+                            <span class="tw-h-8 tw-bg-[#F0F0F0] tw-text-gray-900  tw-block tw-w-full tw-text-center tw-py-2">{{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}</span>
 
                             <div 
                               mwlCalendarNextView
