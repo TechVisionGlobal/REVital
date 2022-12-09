@@ -212,134 +212,96 @@
         </div>
 
         <div class="tw-mt-5 tw-grid">
-            <div class="tw-relative tw-h-[38rem] tw-overflow-x-auto">
-                <table class="tw-table-fixed tw-w-full tw-border tw-border-[#3a414a] tw-bg-[#f2f6f9] tw-text-sm tw-shadow-sm tw-rounded-lg">
-                    <thead class="tw-bg-[#afbdcf]">
+            <div class="tw-overflow-x-auto tw-relative tw-shadow-md">
+                <table class="tw-w-full tw-text-sm tw-text-center tw-shadow-sm tw-rounded-lg tw-border-collapse tw-border tw-border-[#3a414a]">
+                    <thead class="tw-text-[#3a414a] tw-bg-[#afbdcf]">
                         <tr>
-                            <th class="lg:tw-w-auto tw-w-80 tw-font-semibold tw-px-4 tw-py-2 tw-text-[#3a414a] tw-flex tw-justify-between">Full Name <span>▾</span></th>
-                            <th class="lg:tw-w-auto tw-w-80 tw-border tw-border-[#3a414a] tw-font-semibold tw-px-4 tw-py-2 tw-text-[#3a414a]">Patient ID</th>
-                            <th class="tw-w-32 tw-border tw-border-[#3a414a] tw-font-semibold tw-px-4 tw-py-2 tw-text-[#3a414a]">Age</th>
-                            <th class="tw-w-32 tw-border tw-border-[#3a414a] tw-font-semibold tw-px-4 tw-py-2 tw-text-[#3a414a]">Avg. Falls</th>
-                            <th class="tw-w-32 tw-border tw-border-[#3a414a] tw-font-semibold tw-px-4 tw-py-2 tw-text-[#3a414a]">Avg. HR</th>
-                            <th class="tw-w-32 tw-border tw-border-[#3a414a] tw-font-semibold tw-px-4 tw-py-2 tw-text-[#3a414a]">Avg. 02Sat</th>
-                            <th class="tw-w-60 tw-border tw-border-[#3a414a] tw-font-semibold tw-px-4 tw-py-2 tw-text-[#3a414a] tw-bg-[#f2f6f9]">Last Event Date <span>▾</span></th>
-                            <th class="tw-w-60 tw-border tw-border-[#3a414a] tw-font-semibold tw-px-4 tw-py-2 tw-text-[#3a414a]">Last Event Type <span>▾</span></th>
+                            <th scope="col" class="tw-py-2 tw-px-6 tw-border tw-border-[#3a414a]">
+                                <div class="tw-flex tw-items-center tw-justify-between">
+                                    Full Name
+                                    <a href="javascript:;"><svg xmlns="http://www.w3.org/2000/svg" class="tw-ml-1 tw-w-3 tw-h-3" aria-hidden="true" fill="currentColor" viewBox="0 0 320 512"><path d="M27.66 224h264.7c24.6 0 36.89-29.78 19.54-47.12l-132.3-136.8c-5.406-5.406-12.47-8.107-19.53-8.107c-7.055 0-14.09 2.701-19.45 8.107L8.119 176.9C-9.229 194.2 3.055 224 27.66 224zM292.3 288H27.66c-24.6 0-36.89 29.77-19.54 47.12l132.5 136.8C145.9 477.3 152.1 480 160 480c7.053 0 14.12-2.703 19.53-8.109l132.3-136.8C329.2 317.8 316.9 288 292.3 288z"/></svg></a>
+                                </div>
+                            </th>
+                            <th scope="col" class="tw-py-2 tw-px-6 tw-border tw-border-[#3a414a]">
+                                Patient ID
+                            </th>
+                            <th scope="col" class="tw-py-2 tw-px-6 tw-border tw-border-[#3a414a]">
+                                Age
+                            </th>
+                            <th scope="col" class="tw-py-2 tw-px-6 tw-border tw-border-[#3a414a]">
+                                Avg. Falls
+                            </th>
+                            <th scope="col" class="tw-py-2 tw-px-6 tw-border tw-border-[#3a414a]">
+                                Avg. HR
+                            </th>
+                            <th scope="col" class="tw-py-2 tw-px-6 tw-border tw-border-[#3a414a]">
+                                Avg. 02Sat
+                            </th>
+                            <th scope="col" class="tw-py-2 tw-px-6 tw-border tw-border-[#3a414a] tw-bg-[#f2f6f9]">
+                                <div class="tw-flex tw-items-center tw-justify-between">
+                                    Last Event Date
+                                    <a href="javascript:;"><svg xmlns="http://www.w3.org/2000/svg" class="tw-ml-1 tw-w-3 tw-h-3" aria-hidden="true" fill="currentColor" viewBox="0 0 320 512"><path d="M27.66 224h264.7c24.6 0 36.89-29.78 19.54-47.12l-132.3-136.8c-5.406-5.406-12.47-8.107-19.53-8.107c-7.055 0-14.09 2.701-19.45 8.107L8.119 176.9C-9.229 194.2 3.055 224 27.66 224zM292.3 288H27.66c-24.6 0-36.89 29.77-19.54 47.12l132.5 136.8C145.9 477.3 152.1 480 160 480c7.053 0 14.12-2.703 19.53-8.109l132.3-136.8C329.2 317.8 316.9 288 292.3 288z"/></svg></a>
+                                </div>
+                            </th>
+                            <th scope="col" class="tw-py-2 tw-px-6 tw-border tw-border-[#3a414a]">
+                                <div class="tw-flex tw-items-center tw-justify-between">
+                                    Last Event Type
+                                    <a href="javascript:;"><svg xmlns="http://www.w3.org/2000/svg" class="tw-ml-1 tw-w-3 tw-h-3" aria-hidden="true" fill="currentColor" viewBox="0 0 320 512"><path d="M27.66 224h264.7c24.6 0 36.89-29.78 19.54-47.12l-132.3-136.8c-5.406-5.406-12.47-8.107-19.53-8.107c-7.055 0-14.09 2.701-19.45 8.107L8.119 176.9C-9.229 194.2 3.055 224 27.66 224zM292.3 288H27.66c-24.6 0-36.89 29.77-19.54 47.12l132.5 136.8C145.9 477.3 152.1 480 160 480c7.053 0 14.12-2.703 19.53-8.109l132.3-136.8C329.2 317.8 316.9 288 292.3 288z"/></svg></a>
+                                </div>
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let patient of patients" class="tw-cursor-pointer even:tw-bg-[#F0F0F0] hover:tw-bg-gray-300" (click)="editPatient(patient)">
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a]">{{patient.fullName}}</td>
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">{{patient.patientId}}</td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">{{patient.age}}</td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">{{patient.avgFalls}}</td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">{{patient.avgHR}}</td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">{{patient.avg02}}</td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">{{patient.lastEventDate}}</td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">{{patient.lastEventType}}</td>
+                        <tr *ngFor="let patient of patients" class="odd:tw-bg-white even:tw-bg-[#F0F0F0] hover:tw-bg-gray-300 tw-cursor-pointer" (click)="editPatient(patient)">
+                            <th scope="row" class="tw-text-left tw-py-2 tw-px-6 tw-font-medium tw-whitespace-nowrap tw-border-r tw-border-[#3a414a]">
+                                {{patient.fullName ? patient.fullName : '-'}}
+                            </th>
+                            <td class="tw-py-2 tw-px-6 tw-border-r tw-border-[#3a414a]">
+                                {{patient.patientId ? patient.patientId : '-'}}
+                            </td>
+                            <td class="tw-py-2 tw-px-6 tw-border-r tw-border-[#3a414a]">
+                                {{patient.age ? patient.age : '-'}}
+                            </td>
+                            <td class="tw-py-2 tw-px-6 tw-border-r tw-border-[#3a414a]">
+                                {{patient.avgFalls ? patient.avgFalls : '-'}}
+                            </td>
+                            <td class="tw-py-2 tw-px-6 tw-border-r tw-border-[#3a414a]">
+                                {{patient.avgHR ? patient.avgHR : '-'}}
+                            </td>
+                            <td class="tw-py-2 tw-px-6 tw-border-r tw-border-[#3a414a]">
+                                {{patient.avg02 ? patient.avg02 : '-'}}
+                            </td>
+                            <td class="tw-py-2 tw-px-6 tw-border-r tw-border-[#3a414a]">
+                                {{patient.lastEventDate ? patient.lastEventDate : '-'}}
+                            </td>
+                            <td class="tw-py-2 tw-px-6">
+                                {{patient.lastEventType ? patient.lastEventType : '-'}}
+                            </td>
                         </tr>
-                        <tr class="even:tw-bg-[#F0F0F0] hover:tw-bg-gray-300">
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a]"></td>
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                        </tr>
-                        <tr class="even:tw-bg-[#F0F0F0] hover:tw-bg-gray-300">
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a]"></td>
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                        </tr>
-                        <tr class="even:tw-bg-[#F0F0F0] hover:tw-bg-gray-300">
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a]"></td>
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                        </tr>
-                        <tr class="even:tw-bg-[#F0F0F0] hover:tw-bg-gray-300">
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a]"></td>
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                        </tr>
-                        <tr class="even:tw-bg-[#F0F0F0] hover:tw-bg-gray-300">
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a]"></td>
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                        </tr>
-                        <tr class="even:tw-bg-[#F0F0F0] hover:tw-bg-gray-300">
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a]"></td>
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                        </tr>
-                        <tr class="even:tw-bg-[#F0F0F0] hover:tw-bg-gray-300">
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a]"></td>
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                        </tr>
-                        <tr class="even:tw-bg-[#F0F0F0] hover:tw-bg-gray-300">
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a]"></td>
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                        </tr>
-                        <tr class="even:tw-bg-[#F0F0F0] hover:tw-bg-gray-300">
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a]"></td>
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                        </tr>
-                        <tr class="even:tw-bg-[#F0F0F0] hover:tw-bg-gray-300">
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a]"></td>
-                            <td class="tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-32 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
-                            <td class="tw-w-60 tw-h-8 tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center"></td>
+                        <tr *ngFor="let item of [].constructor(remainder)" class="odd:tw-bg-white even:tw-bg-[#F0F0F0] hover:tw-bg-gray-300">
+                            <th scope="row" class="tw-text-left tw-py-2 tw-px-6 tw-font-medium tw-whitespace-nowrap tw-border-r tw-border-[#3a414a]">
+                                &nbsp;
+                            </th>
+                            <td class="tw-py-2 tw-px-6 tw-border-r tw-border-[#3a414a]">
+                            </td>
+                            <td class="tw-py-2 tw-px-6 tw-border-r tw-border-[#3a414a]">
+                            </td>
+                            <td class="tw-py-2 tw-px-6 tw-border-r tw-border-[#3a414a]">
+                            </td>
+                            <td class="tw-py-2 tw-px-6 tw-border-r tw-border-[#3a414a]">
+                            </td>
+                            <td class="tw-py-2 tw-px-6 tw-border-r tw-border-[#3a414a]">
+                            </td>
+                            <td class="tw-py-2 tw-px-6 tw-border-r tw-border-[#3a414a]">
+                            </td>
+                            <td class="tw-py-2 tw-px-6">
+                            </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
+
+            <br>
         
             <div class="tw-flex tw-justify-end">
                 <div>

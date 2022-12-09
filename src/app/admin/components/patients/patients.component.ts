@@ -12,13 +12,15 @@ import LoadStatus from 'src/_core/components/utils/LoadStatus';
 })
 export class PatientsComponent implements OnInit {
   page = 1;
+  pageSize = 15;
+  remainder = 10;//pageSize less data from API count
   loadStatus: LoadStatus = 'loading';
   patients = [
-    {fullName: 'Karel Novak', firstName: 'Karel', middleName: null, surName: 'Novak', patientId: '655dfn4ds554', age: 69, avgFalls: 1, avgHR: 68, avg02: 98, lastEventDate: '05.10.2022', lastEventType: 'Fall'  },
-    {fullName: 'Maria Semanova', firstName: 'Maria', middleName: null, surName: 'Semanova', patientId: '354hrtd354k4g', age: 69, avgFalls: 1, avgHR: 68, avg02: 98, lastEventDate: '05.10.2022', lastEventType: 'Fall'  },
-    {fullName: 'Kim Tang', firstName: 'Kim', middleName: null, surName: 'Tang', patientId: '15gfh47hgxd', age: 69, avgFalls: 1, avgHR: 68, avg02: 98, lastEventDate: '05.10.2022', lastEventType: 'Fall'  },
-    {fullName: 'Tara Marin', firstName: 'Tara', middleName: null, surName: 'Marin', patientId: '587gsw74erds2', age: 69, avgFalls: 1, avgHR: 68, avg02: 98, lastEventDate: '05.10.2022', lastEventType: 'Fall'  },
-    {fullName: 'Oleg Markov', firstName: 'Oleg', middleName: null, surName: 'Markov', patientId: '5756fdgsdgjy', age: 69, avgFalls: 1, avgHR: 68, avg02: 98, lastEventDate: '05.10.2022', lastEventType: 'Fall'  },
+    { fullName: 'Karel Novak', firstName: 'Karel', middleName: null, surName: 'Novak', patientId: '655dfn4ds554', age: '69', avgFalls: '1', avgHR: '68', avg02: '98', lastEventDate: '05.10.2022', lastEventType: 'Fall' },
+    { fullName: 'Maria Semanova', firstName: 'Maria', middleName: null, surName: 'Semanova', patientId: '354hrtd354k4g', age: '72', avgFalls: '0', avgHR: '71', avg02: '96', lastEventDate: '04.10.2022', lastEventType: 'Tachycardy' },
+    { fullName: 'Kim Tang', firstName: 'Kim', middleName: null, surName: 'Tang', patientId: '15gfh47hgxd', age: '84', avgFalls: '1', avgHR: '63', avg02: '97', lastEventDate: '02.10.2022', lastEventType: 'O2Sat Drop' },
+    { fullName: 'Tara Marin', firstName: 'Tara', middleName: null, surName: 'Marin', patientId: '587gsw74erds2', age: '58', avgFalls: null, avgHR: null, avg02: null, lastEventDate: null, lastEventType: null },
+    { fullName: 'Oleg Markov', firstName: 'Oleg', middleName: null, surName: 'Markov', patientId: '5756fdgsdgjy', age: '85', avgFalls: null, avgHR: null, avg02: null, lastEventDate: null, lastEventType: null },
   ]
   searchValue: string = '';
 
