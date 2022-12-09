@@ -38,13 +38,13 @@
         <div class="dialog-new-edit-subcontent">
             <form class="tw-flex tw-flex-col tw-gap-4">
                 <div>
-                    <input type="text" trim="blur" placeholder="First Name" class="tw-h-8 tw-bg-[#F0F0F0] tw-border tw-border-[#3a414a] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5 custom-input-text-color" required>
+                    <input type="text" trim="blur" placeholder="First Name" class="tw-h-8 tw-bg-[#F0F0F0] tw-border tw-border-[#3a414a] tw-text-gray-900  md:tw-text- tw-rounded-lg tw-block tw-w-full tw-p-2.5 custom-input-text-color" required>
                 </div>
                 <div>
-                    <input type="text" trim="blur" placeholder="Middle Name(s)" class="tw-h-8 tw-bg-[#F0F0F0] tw-border tw-border-[#3a414a] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5 custom-input-text-color" required>
+                    <input type="text" trim="blur" placeholder="Middle Name(s)" class="tw-h-8 tw-bg-[#F0F0F0] tw-border tw-border-[#3a414a] tw-text-gray-900  tw-rounded-lg tw-block tw-w-full tw-p-2.5 custom-input-text-color" required>
                 </div>
                 <div>
-                    <input type="text" trim="blur" placeholder="Surname" class="tw-h-8 tw-bg-[#F0F0F0] tw-border tw-border-[#3a414a] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5 custom-input-text-color" required>
+                    <input type="text" trim="blur" placeholder="Surname" class="tw-h-8 tw-bg-[#F0F0F0] tw-border tw-border-[#3a414a] tw-text-gray-900  tw-rounded-lg tw-block tw-w-full tw-p-2.5 custom-input-text-color" required>
                 </div>
                 <div class="tw-flex tw-gap-5 options tw-h-8">
                     <label title="Male">
@@ -93,21 +93,21 @@
                     </button>
                 </div>
                 <div class="tw-flex tw-divide-x tw-divide-black tw-bg-[#f2f6f9] tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center">
-                    <input #height type="number" min="1" max="999" pattern="^\d*(\.\d{0,1})?$" placeholder="Height cm" class="tw-h-8 tw-bg-[#F0F0F0] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5 custom-input-text-color" (keydown)="validateHW($event, height)" required>
+                    <input #height type="number" min="1" max="999" pattern="^\d*(\.\d{0,1})?$" placeholder="Height cm" class="tw-h-8 tw-bg-[#F0F0F0] tw-text-gray-900  tw-rounded-lg tw-block tw-w-full tw-p-2.5 custom-input-text-color" (keydown)="validateHW($event, height)" required>
                     <div class="custom-num-spinner-container-dialog hover">
                         <span class="custom-num-spinner noselect" (click)="increase(height)">▲</span>
                         <span class="custom-num-spinner noselect" (click)="decrease(height)">▼</span>
                     </div>
                 </div>
                 <div class="tw-flex tw-divide-x tw-divide-black tw-bg-[#f2f6f9] tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center">
-                    <input #weight type="number" min="1" max="999" pattern="^\d*(\.\d{0,1})?$" placeholder="Weight kg" class="tw-h-8 tw-bg-[#F0F0F0] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5 custom-input-text-color" (keydown)="validateHW($event, weight)" required>
+                    <input #weight type="number" min="1" max="999" pattern="^\d*(\.\d{0,1})?$" placeholder="Weight kg" class="tw-h-8 tw-bg-[#F0F0F0] tw-text-gray-900  tw-rounded-lg tw-block tw-w-full tw-p-2.5 custom-input-text-color" (keydown)="validateHW($event, weight)" required>
                     <div class="custom-num-spinner-container-dialog hover">
                         <span class="custom-num-spinner noselect" (click)="increase(weight)">▲</span>
                         <span class="custom-num-spinner noselect" (click)="decrease(weight)">▼</span>
                     </div>
                 </div>
                 <div>
-                    <input type="text" trim="blur" placeholder="Email" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" name="email" [(ngModel)]="patient.email" #email="ngModel" class="tw-h-8 tw-bg-[#F0F0F0] tw-border tw-border-[#3a414a] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5 custom-input-text-color" required>
+                    <input type="text" trim="blur" placeholder="Email" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" name="email" [(ngModel)]="patient.email" #email="ngModel" class="tw-h-8 tw-bg-[#F0F0F0] tw-border tw-border-[#3a414a] tw-text-gray-900  tw-rounded-lg tw-block tw-w-full tw-p-2.5 custom-input-text-color" required>
                     <div *ngIf="email.invalid && (email.dirty || email.touched)" class="validation-message">
                         <div *ngIf="email.errors?.['pattern']">
                             Email is invalid.
@@ -125,7 +125,7 @@
                     <input #phone type="text" trim="blur" maxlength="10" pattern="^\d*$" placeholder="Phone" class="tel-input custom-input-text-color" (keydown)="validatePhone($event, phone)" required>
                 </div>
                 <div>
-                    <input type="text" trim="blur" placeholder="Next of Kin Name" class="tw-h-8 tw-bg-[#F0F0F0] tw-border tw-border-[#3a414a] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5 custom-input-text-color" required>
+                    <input type="text" trim="blur" placeholder="Next of Kin Name" class="tw-h-8 tw-bg-[#F0F0F0] tw-border tw-border-[#3a414a] tw-text-gray-900  tw-rounded-lg tw-block tw-w-full tw-p-2.5 custom-input-text-color" required>
                 </div>
                 <div class="tw-relative tw-divide-black tw-bg-[#f2f6f9] tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center">
                     <div class="tw-absolute tw-inset-y-0 tw-left-0 tw-flex tw-items-center">
@@ -138,7 +138,7 @@
                     <input #nextOfKinPhone type="text" trim="blur" maxlength="10" pattern="^\d*$" placeholder="Next of Kin Phone" class="tel-input custom-input-text-color" (keydown)="validatePhone($event, nextOfKinPhone)" required>
                 </div>
                 <div>
-                    <input type="text" trim="blur" placeholder="Next of Kin Email" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" name="nextOfKinEmail" [(ngModel)]="patient.nextOfKinEmail" #nextOfKinEmail="ngModel" class="tw-h-8 tw-bg-[#F0F0F0] tw-border tw-border-[#3a414a] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5 custom-input-text-color" required>
+                    <input type="text" trim="blur" placeholder="Next of Kin Email" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" name="nextOfKinEmail" [(ngModel)]="patient.nextOfKinEmail" #nextOfKinEmail="ngModel" class="tw-h-8 tw-bg-[#F0F0F0] tw-border tw-border-[#3a414a] tw-text-gray-900  tw-rounded-lg tw-block tw-w-full tw-p-2.5 custom-input-text-color" required>
                     <div *ngIf="nextOfKinEmail.invalid && (nextOfKinEmail.dirty || nextOfKinEmail.touched)" class="validation-message">
                         <div *ngIf="nextOfKinEmail.errors?.['pattern']">
                             Email is invalid.
@@ -151,37 +151,37 @@
     
                 <div class="tw-mt-2 tw-grid">
                     <div class="tw-overflow-x-auto tw-relative tw-shadow-md">
-                        <table class="tw-w-full tw-text-sm tw-text-center tw-shadow-sm tw-rounded-lg tw-border-collapse tw-border tw-border-[#3a414a]">
+                        <table class="tw-w-full tw-text-center tw-shadow-sm tw-rounded-lg tw-border-collapse tw-border tw-border-[#3a414a]">
                             <thead class="tw-text-[#3a414a] tw-bg-[#afbdcf]">
                                 <tr>
-                                    <th scope="col" class="tw-py-2 tw-px-6 tw-border tw-border-[#3a414a]">
+                                    <th scope="col" class="tw-py-2 tw-px-6 tw-border tw-border-[#3a414a] tw-font-medium">
                                         <div class="tw-flex tw-items-center tw-justify-between">
                                             Event Type
                                             <a href="javascript:;"><svg xmlns="http://www.w3.org/2000/svg" class="tw-ml-1 tw-w-3 tw-h-3" aria-hidden="true" fill="currentColor" viewBox="0 0 320 512"><path d="M27.66 224h264.7c24.6 0 36.89-29.78 19.54-47.12l-132.3-136.8c-5.406-5.406-12.47-8.107-19.53-8.107c-7.055 0-14.09 2.701-19.45 8.107L8.119 176.9C-9.229 194.2 3.055 224 27.66 224zM292.3 288H27.66c-24.6 0-36.89 29.77-19.54 47.12l132.5 136.8C145.9 477.3 152.1 480 160 480c7.053 0 14.12-2.703 19.53-8.109l132.3-136.8C329.2 317.8 316.9 288 292.3 288z"/></svg></a>
                                         </div>
                                     </th>
-                                    <th scope="col" class="tw-py-2 tw-px-6 tw-border tw-border-[#3a414a] tw-bg-[#f2f6f9]">
+                                    <th scope="col" class="tw-py-2 tw-px-6 tw-border tw-border-[#3a414a] tw-bg-[#f2f6f9] tw-font-medium">
                                         <div class="tw-flex tw-items-center tw-justify-between">
                                             Severity
                                             <a href="javascript:;"><svg xmlns="http://www.w3.org/2000/svg" class="tw-ml-1 tw-w-3 tw-h-3" aria-hidden="true" fill="currentColor" viewBox="0 0 320 512"><path d="M27.66 224h264.7c24.6 0 36.89-29.78 19.54-47.12l-132.3-136.8c-5.406-5.406-12.47-8.107-19.53-8.107c-7.055 0-14.09 2.701-19.45 8.107L8.119 176.9C-9.229 194.2 3.055 224 27.66 224zM292.3 288H27.66c-24.6 0-36.89 29.77-19.54 47.12l132.5 136.8C145.9 477.3 152.1 480 160 480c7.053 0 14.12-2.703 19.53-8.109l132.3-136.8C329.2 317.8 316.9 288 292.3 288z"/></svg></a>
                                         </div>
                                     </th>
-                                    <th scope="col" class="tw-py-2 tw-px-6 tw-border tw-border-[#3a414a]">
+                                    <th scope="col" class="tw-py-2 tw-px-6 tw-border tw-border-[#3a414a] tw-font-medium">
                                         <div class="tw-flex tw-items-center tw-justify-between">
                                             Date
                                             <a href="javascript:;"><svg xmlns="http://www.w3.org/2000/svg" class="tw-ml-1 tw-w-3 tw-h-3" aria-hidden="true" fill="currentColor" viewBox="0 0 320 512"><path d="M27.66 224h264.7c24.6 0 36.89-29.78 19.54-47.12l-132.3-136.8c-5.406-5.406-12.47-8.107-19.53-8.107c-7.055 0-14.09 2.701-19.45 8.107L8.119 176.9C-9.229 194.2 3.055 224 27.66 224zM292.3 288H27.66c-24.6 0-36.89 29.77-19.54 47.12l132.5 136.8C145.9 477.3 152.1 480 160 480c7.053 0 14.12-2.703 19.53-8.109l132.3-136.8C329.2 317.8 316.9 288 292.3 288z"/></svg></a>
                                         </div>
                                     </th>
-                                    <th scope="col" class="tw-py-2 tw-px-6 tw-border tw-border-[#3a414a]">
+                                    <th scope="col" class="tw-py-2 tw-px-6 tw-border tw-border-[#3a414a] tw-font-medium">
                                         Start Time
                                     </th>
-                                    <th scope="col" class="tw-py-2 tw-px-6 tw-border tw-border-[#3a414a]">
+                                    <th scope="col" class="tw-py-2 tw-px-6 tw-border tw-border-[#3a414a] tw-font-medium">
                                         End Time
                                     </th>
-                                    <th scope="col" class="tw-py-2 tw-px-6 tw-border tw-border-[#3a414a]">
+                                    <th scope="col" class="tw-py-2 tw-px-6 tw-border tw-border-[#3a414a] tw-font-medium">
                                         HR
                                     </th>
-                                    <th scope="col" class="tw-py-2 tw-px-6 tw-border tw-border-[#3a414a]">
+                                    <th scope="col" class="tw-py-2 tw-px-6 tw-border tw-border-[#3a414a] tw-font-medium">
                                         02Sat
                                     </th>
                                 </tr>
@@ -273,18 +273,18 @@
     
         <div class="dialog-new-edit-footer">
             <div class="tw-flex tw-gap-4">
-                <button class="tw-w-fit tw-bg-[#80D690] hover:tw-bg-green-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-sm tw-px-8 tw-py-1.5 tw-text-center tw-self-center" (click)="pairDevice()">Pair Device</button>
-                <button *ngIf="isEdit" class="tw-w-fit tw-bg-[#DB7272] hover:tw-bg-red-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-sm tw-px-8 tw-py-1.5 tw-text-center tw-self-center" (click)="removeDevice()">Remove Device</button>
+                <button class="tw-w-fit tw-bg-[#80D690] hover:tw-bg-green-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-px-8 tw-py-1.5 tw-text-center tw-self-center" (click)="pairDevice()">Pair Device</button>
+                <button *ngIf="isEdit" class="tw-w-fit tw-bg-[#DB7272] hover:tw-bg-red-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-px-8 tw-py-1.5 tw-text-center tw-self-center" (click)="removeDevice()">Remove Device</button>
             </div>
             
             <div *ngIf="!isEdit" class="tw-flex tw-gap-4">
-                <button class="tw-w-fit tw-bg-[#8FDAEB] hover:tw-bg-cyan-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-sm tw-px-8 tw-py-1.5 tw-text-center tw-self-center" (click)="edit()">Edit</button>
+                <button class="tw-w-fit tw-bg-[#8FDAEB] hover:tw-bg-cyan-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-px-8 tw-py-1.5 tw-text-center tw-self-center" (click)="edit()">Edit</button>
             </div>
 
             <div *ngIf="isEdit" class="tw-flex tw-gap-4">
                 <button class="dialog-new-edit-green-btn" [ngClass]="{'btn-loading':submitting}" (click)="save()">Save</button>
-                <button class="tw-w-fit tw-bg-[#EDB770] hover:tw-bg-amber-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-sm tw-px-8 tw-py-1.5 tw-text-center tw-self-center" (click)="cancel()">Cancel</button>
-                <button class="tw-w-fit tw-bg-[#DB7272] hover:tw-bg-red-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-sm tw-px-8 tw-py-1.5 tw-text-center tw-self-center" (click)="deleteRecord()">Delete</button>
+                <button class="tw-w-fit tw-bg-[#EDB770] hover:tw-bg-amber-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-px-8 tw-py-1.5 tw-text-center tw-self-center" (click)="cancel()">Cancel</button>
+                <button class="tw-w-fit tw-bg-[#DB7272] hover:tw-bg-red-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-px-8 tw-py-1.5 tw-text-center tw-self-center" (click)="deleteRecord()">Delete</button>
             </div>
         </div>
     </div>

@@ -39,7 +39,7 @@
                 <input type="checkbox" [(ngModel)]="isRange">
                 <span class="checkmark checkmark-default"></span>
             </label>
-            <label class="tw-ml-2 tw-text-sm tw-font-medium tw-text-[#3a414a]">Range</label>
+            <label class="tw-ml-2 tw-font-medium tw-text-[#3a414a]">Range</label>
         </div>
 
         <div *ngIf="!isRange">
@@ -153,6 +153,6 @@
             </div>
         </div>
 
-        <button class="tw-w-[150px] tw-bg-[#80D690] hover:tw-bg-green-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-sm tw-px-8 tw-py-1.5 tw-text-center tw-self-center" [ngClass]="{'btn-loading':submitting}" (click)="save()">Save</button>
+        <button class="tw-w-[150px] tw-bg-[#80D690] hover:tw-bg-green-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-px-8 tw-py-1.5 tw-text-center tw-self-center" [ngClass]="{'btn-loading':submitting}" (click)="save()">Save</button>
     </div>
   </div>

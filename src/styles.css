@@ -11,7 +11,7 @@ body {
 body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
-    font-size: 21px;
+    font-size: 21px !important;
 }
 
 .validation-message {
@@ -104,16 +104,16 @@ body {
 }
 
 .dialog-new-edit-green-btn {
-    @apply tw-w-fit tw-bg-[#80D690] hover:tw-bg-green-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-sm tw-px-8 tw-py-1.5 tw-text-center tw-self-center;
+    @apply tw-w-fit tw-bg-[#80D690] hover:tw-bg-green-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-px-8 tw-py-1.5 tw-text-center tw-self-center;
 }
 .dialog-new-edit-blue-btn {
-    @apply tw-w-fit tw-bg-[#8FDAEB] hover:tw-bg-cyan-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-sm tw-px-8 tw-py-1.5 tw-text-center tw-self-center;
+    @apply tw-w-fit tw-bg-[#8FDAEB] hover:tw-bg-cyan-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-px-8 tw-py-1.5 tw-text-center tw-self-center;
 }
 .dialog-new-edit-yellow-btn {
-    @apply tw-w-fit tw-bg-[#EDB770] hover:tw-bg-amber-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-sm tw-px-8 tw-py-1.5 tw-text-center tw-self-center;
+    @apply tw-w-fit tw-bg-[#EDB770] hover:tw-bg-amber-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-px-8 tw-py-1.5 tw-text-center tw-self-center;
 }
 .dialog-new-edit-red-btn {
-    @apply tw-w-fit tw-bg-[#DB7272] hover:tw-bg-red-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-sm tw-px-8 tw-py-1.5 tw-text-center tw-self-center;
+    @apply tw-w-fit tw-bg-[#DB7272] hover:tw-bg-red-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-px-8 tw-py-1.5 tw-text-center tw-self-center;
 }
 
 .dialog-message {
@@ -131,7 +131,7 @@ body {
     @apply tw-w-full tw-bg-[#DB7272] hover:tw-bg-red-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-[20px] tw-px-12 tw-py-1.5 tw-text-center tw-self-center;
 }
 .dialog-refresh-btn {
-    @apply tw-w-fit tw-bg-[#8FDAEB] hover:tw-bg-cyan-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-sm tw-px-8 tw-py-1.5 tw-text-center tw-self-center tw-my-10;
+    @apply tw-w-fit tw-bg-[#8FDAEB] hover:tw-bg-cyan-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-px-8 tw-py-1.5 tw-text-center tw-self-center tw-my-10;
 }
 
 div.options > label > input {
@@ -240,7 +240,7 @@ div.options > label > input:checked +img {
 }
 
 .paginators {
-	@apply tw-w-fit tw-bg-[#afbdcf] tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-sm tw-px-4 tw-py-1.5 tw-text-center tw-self-center;
+	@apply tw-w-fit tw-bg-[#afbdcf] tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-px-4 tw-py-1.5 tw-text-center tw-self-center;
 }
 
 .custom-check {
@@ -452,7 +452,7 @@ div.options > label > input:checked +img {
   }
 
   .tel-input {
-    @apply tw-h-8 tw-bg-[#F0F0F0] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-pl-24;
+    @apply tw-h-8 tw-bg-[#F0F0F0] tw-text-gray-900  tw-rounded-lg tw-block tw-w-full tw-pl-24;
   }
 
   .backdropBackground {

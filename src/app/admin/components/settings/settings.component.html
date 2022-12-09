@@ -29,28 +29,28 @@
                                 <input type="checkbox" checked>
                                 <span class="checkmark checkmark-low"></span>
                             </label>
-                            <label class="tw-ml-2 tw-text-sm tw-font-medium tw-text-[#3a414a]">Low</label>
+                            <label class="tw-ml-2  tw-font-medium tw-text-[#3a414a]">Low</label>
                         </div>
                         <div class="tw-flex tw-items-center tw-mr-4">
                             <label class="custom-check">
                                 <input type="checkbox" checked>
                                 <span class="checkmark checkmark-medium"></span>
                             </label>
-                            <label class="tw-ml-2 tw-text-sm tw-font-medium tw-text-[#3a414a]">Med</label>
+                            <label class="tw-ml-2  tw-font-medium tw-text-[#3a414a]">Med</label>
                         </div>
                         <div class="tw-flex tw-items-center tw-mr-4">
                             <label class="custom-check">
                                 <input type="checkbox" checked>
                                 <span class="checkmark checkmark-high"></span>
                             </label>
-                            <label class="tw-ml-2 tw-text-sm tw-font-medium tw-text-[#3a414a]">High</label>
+                            <label class="tw-ml-2  tw-font-medium tw-text-[#3a414a]">High</label>
                         </div>
                         <div class="tw-flex tw-items-center tw-mr-4">
                             <label class="custom-check">
                                 <input type="checkbox" checked>
                                 <span class="checkmark checkmark-default"></span>
                             </label>
-                            <label class="tw-ml-2 tw-text-sm tw-font-medium tw-text-[#3a414a]">No Data</label>
+                            <label class="tw-ml-2  tw-font-medium tw-text-[#3a414a]">No Data</label>
                         </div>
                     </div>
                 </div>
@@ -59,10 +59,10 @@
                     <div class="tw-flex tw-flex-col tw-gap-5 tw-w-full">
                         <div class="tw-grid tw-grid-cols-3 tw-gap-5">
                             <!-- <div class="tw-col-span-2">
-                                <input type="text" trim="blur" placeholder="Notification Email" class="tw-h-8 tw-bg-[#F0F0F0] tw-border tw-border-[#3a414a] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5" required>
+                                <input type="text" trim="blur" placeholder="Notification Email" class="tw-h-8 tw-bg-[#F0F0F0] tw-border tw-border-[#3a414a] tw-text-gray-900  tw-rounded-lg tw-block tw-w-full tw-p-2.5" required>
                             </div> -->
                             <div class="tw-col-span-2">
-                                <input type="text" trim="blur" placeholder="Notification Email" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" name="email" [(ngModel)]="user.email" #email="ngModel" class="tw-h-8 tw-bg-[#F0F0F0] tw-border tw-border-[#3a414a] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5 custom-input-text-color" required>
+                                <input type="text" trim="blur" placeholder="Notification Email" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" name="email" [(ngModel)]="user.email" #email="ngModel" class="tw-h-8 tw-bg-[#F0F0F0] tw-border tw-border-[#3a414a] tw-text-gray-900  tw-rounded-lg tw-block tw-w-full tw-p-2.5 custom-input-text-color" required>
                                 <div *ngIf="email.invalid && (email.dirty || email.touched)" class="validation-message">
                                     <div *ngIf="email.errors?.['pattern']">
                                         Email is invalid.
@@ -75,13 +75,13 @@
                                     <input type="checkbox" checked>
                                     <span class="checkmark checkmark-default"></span>
                                 </label>
-                                <label class="tw-ml-2 tw-text-sm tw-font-medium tw-text-[#3a414a]">Send Email</label>
+                                <label class="tw-ml-2  tw-font-medium tw-text-[#3a414a]">Send Email</label>
                             </div>
                         </div>
 
                         <div class="tw-grid tw-grid-cols-3 tw-gap-5">
                             <!-- <div class="tw-col-span-2">
-                                <input type="text" trim="blur" placeholder="Notification Mobile" class="tw-h-8 tw-bg-[#F0F0F0] tw-border tw-border-[#3a414a] tw-text-gray-900 sm:tw-text-sm tw-rounded-lg tw-block tw-w-full tw-p-2.5" required>
+                                <input type="text" trim="blur" placeholder="Notification Mobile" class="tw-h-8 tw-bg-[#F0F0F0] tw-border tw-border-[#3a414a] tw-text-gray-900  tw-rounded-lg tw-block tw-w-full tw-p-2.5" required>
                             </div> -->
                             <div class="tw-col-span-2 tw-relative tw-divide-black tw-bg-[#f2f6f9] tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center">
                                 <div class="tw-absolute tw-inset-y-0 tw-left-0 tw-flex tw-items-center">
@@ -99,7 +99,7 @@
                                     <input type="checkbox" checked>
                                     <span class="checkmark checkmark-default"></span>
                                 </label>
-                                <label class="tw-ml-2 tw-text-sm tw-font-medium tw-text-[#3a414a]">Send SMS</label>
+                                <label class="tw-ml-2  tw-font-medium tw-text-[#3a414a]">Send SMS</label>
                             </div>
                         </div>
 
@@ -108,7 +108,7 @@
                                 <input type="checkbox" checked>
                                 <span class="checkmark checkmark-default"></span>
                             </label>
-                            <label class="tw-ml-2 tw-text-sm tw-font-medium tw-text-[#3a414a]">Desktop Notifications</label>
+                            <label class="tw-ml-2  tw-font-medium tw-text-[#3a414a]">Desktop Notifications</label>
                         </div>
 
                         <div class="tw-flex tw-items-center tw-mr-4">
@@ -116,7 +116,7 @@
                                 <input type="checkbox" checked>
                                 <span class="checkmark checkmark-default"></span>
                             </label>
-                            <label class="tw-ml-2 tw-text-sm tw-font-medium tw-text-[#3a414a]">Notify Next of Kin</label>
+                            <label class="tw-ml-2  tw-font-medium tw-text-[#3a414a]">Notify Next of Kin</label>
                         </div>
 
                         <div class="tw-flex tw-items-center tw-mr-4">
@@ -124,7 +124,7 @@
                                 <input type="checkbox" checked>
                                 <span class="checkmark-red checkmark-danger"></span>
                             </label>
-                            <label class="tw-ml-2 tw-text-sm tw-font-medium tw-text-[#E81414]">Out of Office</label>
+                            <label class="tw-ml-2  tw-font-medium tw-text-[#E81414]">Out of Office</label>
                         </div>
                     </div>
                 </div>
@@ -136,7 +136,7 @@
                     <p class="tw-text-4xl">Customisation</p>
 
                     <div class="tw-flex tw-flex-col tw-gap-5 tw-text-center tw-items-center">
-                        <button class="tw-w-[200px] tw-bg-[#8FDAEB] hover:tw-bg-cyan-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-sm tw-px-8 tw-py-1.5 tw-text-center tw-self-center" (click)="changeLogo()">Change Logo</button>
+                        <button class="tw-w-[200px] tw-bg-[#8FDAEB] hover:tw-bg-cyan-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg  tw-px-8 tw-py-1.5 tw-text-center tw-self-center" (click)="changeLogo()">Change Logo</button>
 
                         <div class="group exmp-wrp tw-flex tw-bg-[#f2f6f9] tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center">
                             <div class="btn-wrp">
@@ -144,8 +144,8 @@
                                     <option>English</option>
                                 </select>
                             </div>
-                            <button class="tw-h-8 custom-btn tw-bg-[#AFBDCF] group-hover:tw-bg-gray-300 tw-text-lg tw-rounded-r-lg">
-                                <span class="tw-m-2 tw-text-sm">▼</span>
+                            <button class="tw-h-8 custom-btn tw-bg-[#AFBDCF] group-hover:tw-bg-gray-300  tw-rounded-r-lg">
+                                <span class="tw-m-2 ">▼</span>
                             </button>
                         </div>
                         <div class="group exmp-wrp tw-flex tw-bg-[#f2f6f9] tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center">
@@ -154,8 +154,8 @@
                                     <option>Czechia</option>
                                 </select>
                             </div>
-                            <button class="tw-h-8 custom-btn tw-bg-[#AFBDCF] group-hover:tw-bg-gray-300 tw-text-lg tw-rounded-r-lg">
-                                <span class="tw-m-2 tw-text-smg">▼</span>
+                            <button class="tw-h-8 custom-btn tw-bg-[#AFBDCF] group-hover:tw-bg-gray-300  tw-rounded-r-lg">
+                                <span class="tw-m-2 g">▼</span>
                             </button>
                         </div>
                     </div>
@@ -165,13 +165,13 @@
                     <p class="!tw-mt-8 tw-text-4xl">Reports</p>
 
                     <div class="tw-flex tw-flex-col tw-gap-5 tw-text-center tw-items-center">
-                        <ul class="tw-flex tw-text-sm tw-font-medium tw-text-center tw-text-gray-500 tw-rounded-lg tw-border tw-border-[#3a414a] tw-divide-x tw-divide-[#3a414a] custom-tab-parent">
+                        <ul class="tw-flex  tw-font-medium tw-text-center tw-text-gray-500 tw-rounded-lg tw-border tw-border-[#3a414a] tw-divide-x tw-divide-[#3a414a] custom-tab-parent">
                             <li class="tw-w-fit custom-tab" *ngFor="let range of timeRange">
                                 <a [ngClass]="{'active': activeRange.text == range.text}" class="tw-cursor-pointer tw-inline-block md:!tw-px-10 md:!tw-py-2 tw-p-1 tw-w-full tw-bg-[#afbdcf] tw-text-[#3a414a] hover custom-tab-item" aria-current="page" (click)="changeRange(range)">{{ range.text }}</a>
                             </li>
                         </ul>
 
-                        <button class="tw-w-[200px] tw-bg-[#8FDAEB] hover:tw-bg-cyan-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-sm tw-px-8 tw-py-1.5 tw-text-center tw-self-center" (click)="exportCSV()">Export CSV</button>
+                        <button class="tw-w-[200px] tw-bg-[#8FDAEB] hover:tw-bg-cyan-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg  tw-px-8 tw-py-1.5 tw-text-center tw-self-center" (click)="exportCSV()">Export CSV</button>
                     </div>
                 </div>
             </div>

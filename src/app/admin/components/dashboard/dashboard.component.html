@@ -20,7 +20,7 @@
         <div class="md:tw-grid md:tw-grid-cols-4 tw-flex tw-flex-col tw-justify-center tw-gap-4">
             <div>&nbsp;</div>
 
-            <ul id="dashIntervalGroup" class="tw-flex tw-text-sm tw-font-medium tw-text-center tw-text-gray-500 tw-rounded-lg tw-border tw-border-[#3a414a] tw-divide-x tw-divide-[#3a414a] custom-tab-parent">
+            <ul id="dashIntervalGroup" class="tw-flex  tw-font-medium tw-text-center tw-text-gray-500 tw-rounded-lg tw-border tw-border-[#3a414a] tw-divide-x tw-divide-[#3a414a] custom-tab-parent">
                 <li class="tw-w-full custom-tab" *ngFor="let range of timeRange">
                     <a [ngClass]="{'active': activeRange.text == range.text}" class="tw-cursor-pointer tw-inline-block md:tw-p-2 tw-p-1 tw-w-full tw-bg-[#afbdcf] tw-text-[#3a414a] hover custom-tab-item" aria-current="page" (click)="changeRange(range)">{{ range.text }}</a>
                 </li>
@@ -32,174 +32,56 @@
                         <input id="dashSeverityLow" name="sevLow" type="checkbox" checked>
                         <span class="checkmark checkmark-low"></span>
                     </label>
-                    <label class="tw-ml-2 tw-text-sm tw-font-medium tw-text-[#3a414a]">Low</label>
+                    <label class="tw-ml-2  tw-font-medium tw-text-[#3a414a]">Low</label>
                 </div>
                 <div class="tw-flex tw-items-center tw-mr-4">
                     <label class="custom-check">
                         <input id="dashSeverityMed" name="sevMed" type="checkbox" checked>
                         <span class="checkmark checkmark-medium"></span>
                     </label>
-                    <label class="tw-ml-2 tw-text-sm tw-font-medium tw-text-[#3a414a]">Med</label>
+                    <label class="tw-ml-2  tw-font-medium tw-text-[#3a414a]">Med</label>
                 </div>
                 <div class="tw-flex tw-items-center tw-mr-4">
                     <label class="custom-check">
                         <input id="dashSeverityHigh" name="sevHigh" type="checkbox" checked>
                         <span class="checkmark checkmark-high"></span>
                     </label>
-                    <label class="tw-ml-2 tw-text-sm tw-font-medium tw-text-[#3a414a]">High</label>
+                    <label class="tw-ml-2  tw-font-medium tw-text-[#3a414a]">High</label>
                 </div>
                 <div class="tw-flex tw-items-center tw-mr-4">
                     <label class="custom-check">
                         <input id="dashSeverityNA" name="sevNA" type="checkbox" checked>
                         <span class="checkmark checkmark-default"></span>
                     </label>
-                    <label class="tw-ml-2 tw-text-sm tw-font-medium tw-text-[#3a414a]">No Data</label>
+                    <label class="tw-ml-2  tw-font-medium tw-text-[#3a414a]">No Data</label>
                 </div>
             </div>
         </div>
 
         <div class="tw-mt-5 tw-grid">
-            <!-- <div class="tw-relative tw-h-[15rem] tw-overflow-x-auto">
-                <table id="dashTable" class="tw-table-fixed tw-w-full tw-border tw-border-[#3a414a] tw-bg-[#f2f6f9] tw-text-sm tw-shadow-sm tw-rounded-lg">
-                    <thead class="tw-bg-[#afbdcf]">
-                        <tr>
-                            <th class="lg:tw-w-auto tw-w-80 tw-font-semibold tw-px-4 tw-py-2 tw-text-[#3a414a] tw-flex tw-justify-between">Full Name <span>▾</span></th>
-                            <th class="lg:tw-w-auto tw-w-80 tw-border tw-border-[#3a414a] tw-font-semibold tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">Patient ID</th>
-                            <th class="tw-w-32 tw-border tw-border-[#3a414a] tw-font-semibold tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">Age</th>
-                            <th class="tw-w-32 tw-border tw-border-[#3a414a] tw-font-semibold tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">Fall Count</th>
-                            <th class="tw-w-60 tw-border tw-border-[#3a414a] tw-font-semibold tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">Heart Event Count</th>
-                            <th class="tw-w-60 tw-border tw-border-[#3a414a] tw-font-semibold tw-px-4 tw-py-2 tw-text-[#3a414a] tw-bg-[#f2f6f9] tw-flex tw-justify-between">Last Event Date <span>▾</span></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="even:tw-bg-[#F0F0F0] hover:tw-bg-gray-300">
-                            <td class="tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a]">
-                                Karel Novak
-                            </td>
-                            <td class="tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">
-                                655dfn4ds554
-                            </td>
-                            <td class="tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">
-                                69
-                            </td>
-                            <td class="tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">
-                                2
-                            </td>
-                            <td class="tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">
-                                0
-                            </td>
-                            <td class="tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">
-                                05.10.2022
-                            </td>
-                        </tr>
-                        <tr class="even:tw-bg-[#F0F0F0] hover:tw-bg-gray-300">
-                            <td class="tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a]">
-                                Maria Semanova
-                            </td>
-                            <td class="tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">
-                                354hrtd354k4g
-                            </td>
-                            <td class="tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">
-                                72
-                            </td>
-                            <td class="tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">
-                                0
-                            </td>
-                            <td class="tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">
-                                3
-                            </td>
-                            <td class="tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">
-                                04.10.2022
-                            </td>
-                        </tr>
-                        <tr class="even:tw-bg-[#F0F0F0] hover:tw-bg-gray-300">
-                            <td class="tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a]">
-                                Kim Tang
-                            </td>
-                            <td class="tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">
-                                15gfh47hgxd
-                            </td>
-                            <td class="tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">
-                                84
-                            </td>
-                            <td class="tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">
-                                1
-                            </td>
-                            <td class="tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">
-                                2
-                            </td>
-                            <td class="tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">
-                                02.10.2022
-                            </td>
-                        </tr>
-                        <tr class="even:tw-bg-[#F0F0F0] hover:tw-bg-gray-300">
-                            <td class="tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a]">
-                                Tara Marin
-                            </td>
-                            <td class="tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">
-                                587gsw74erds2
-                            </td>
-                            <td class="tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">
-                                58
-                            </td>
-                            <td class="tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">
-                                -
-                            </td>
-                            <td class="tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">
-                                -
-                            </td>
-                            <td class="tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">
-                                -
-                            </td>
-                        </tr>
-                        <tr class="even:tw-bg-[#F0F0F0] hover:tw-bg-gray-300">
-                            <td class="tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a]">
-                                Oleg Markov
-                            </td>
-                            <td class="tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">
-                                5756fdgsdgjy
-                            </td>
-                            <td class="tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">
-                                90
-                            </td>
-                            <td class="tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">
-                                -
-                            </td>
-                            <td class="tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">
-                                -
-                            </td>
-                            <td class="tw-border tw-border-[#3a414a] tw-px-4 tw-py-2 tw-text-[#3a414a] tw-text-center">
-                                -
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div> -->
-
-            
             <div class="tw-overflow-x-auto tw-relative tw-shadow-md">
-                <table class="tw-w-full tw-text-sm tw-text-center tw-shadow-sm tw-rounded-lg tw-border-collapse tw-border tw-border-[#3a414a]">
+                <table class="tw-w-full  tw-text-center tw-shadow-sm tw-rounded-lg tw-border-collapse tw-border tw-border-[#3a414a]">
                     <thead class="tw-text-[#3a414a] tw-bg-[#afbdcf]">
                         <tr>
-                            <th scope="col" class="tw-py-2 tw-px-6 tw-border tw-border-[#3a414a]">
+                            <th scope="col" class="tw-py-2 tw-px-6 tw-border tw-border-[#3a414a] tw-font-medium">
                                 <div class="tw-flex tw-items-center tw-justify-between">
                                     Full Name
                                     <a href="javascript:;"><svg xmlns="http://www.w3.org/2000/svg" class="tw-ml-1 tw-w-3 tw-h-3" aria-hidden="true" fill="currentColor" viewBox="0 0 320 512"><path d="M27.66 224h264.7c24.6 0 36.89-29.78 19.54-47.12l-132.3-136.8c-5.406-5.406-12.47-8.107-19.53-8.107c-7.055 0-14.09 2.701-19.45 8.107L8.119 176.9C-9.229 194.2 3.055 224 27.66 224zM292.3 288H27.66c-24.6 0-36.89 29.77-19.54 47.12l132.5 136.8C145.9 477.3 152.1 480 160 480c7.053 0 14.12-2.703 19.53-8.109l132.3-136.8C329.2 317.8 316.9 288 292.3 288z"/></svg></a>
                                 </div>
                             </th>
-                            <th scope="col" class="tw-py-2 tw-px-6 tw-border tw-border-[#3a414a]">
+                            <th scope="col" class="tw-py-2 tw-px-6 tw-border tw-border-[#3a414a] tw-font-medium">
                                 Patient ID
                             </th>
-                            <th scope="col" class="tw-py-2 tw-px-6 tw-border tw-border-[#3a414a]">
+                            <th scope="col" class="tw-py-2 tw-px-6 tw-border tw-border-[#3a414a] tw-font-medium">
                                 Age
                             </th>
-                            <th scope="col" class="tw-py-2 tw-px-6 tw-border tw-border-[#3a414a]">
+                            <th scope="col" class="tw-py-2 tw-px-6 tw-border tw-border-[#3a414a] tw-font-medium">
                                 Fall Count
                             </th>
-                            <th scope="col" class="tw-py-2 tw-px-6 tw-border tw-border-[#3a414a]">
+                            <th scope="col" class="tw-py-2 tw-px-6 tw-border tw-border-[#3a414a] tw-font-medium">
                                 Heart Event Count
                             </th>
-                            <th scope="col" class="tw-py-2 tw-px-6 tw-border tw-border-[#3a414a] tw-bg-[#f2f6f9]">
+                            <th scope="col" class="tw-py-2 tw-px-6 tw-border tw-border-[#3a414a] tw-bg-[#f2f6f9] tw-font-medium">
                                 <div class="tw-flex tw-items-center tw-justify-between">
                                     Last Event Date
                                     <a href="javascript:;"><svg xmlns="http://www.w3.org/2000/svg" class="tw-ml-1 tw-w-3 tw-h-3" aria-hidden="true" fill="currentColor" viewBox="0 0 320 512"><path d="M27.66 224h264.7c24.6 0 36.89-29.78 19.54-47.12l-132.3-136.8c-5.406-5.406-12.47-8.107-19.53-8.107c-7.055 0-14.09 2.701-19.45 8.107L8.119 176.9C-9.229 194.2 3.055 224 27.66 224zM292.3 288H27.66c-24.6 0-36.89 29.77-19.54 47.12l132.5 136.8C145.9 477.3 152.1 480 160 480c7.053 0 14.12-2.703 19.53-8.109l132.3-136.8C329.2 317.8 316.9 288 292.3 288z"/></svg></a>
@@ -314,7 +196,7 @@
 
         
             <div class="tw-mt-2 tw-flex md:tw-flex-row md:tw-justify-between md:tw-gap-0 tw-flex-col tw-gap-4">
-                <button id="dashTableRefresh" class="tw-w-fit tw-bg-[#8FDAEB] hover:tw-bg-cyan-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg tw-text-sm tw-px-8 tw-py-1.5 tw-text-center tw-self-center" (click)="loadData()">Refresh</button>
+                <button id="dashTableRefresh" class="tw-w-fit tw-bg-[#8FDAEB] hover:tw-bg-cyan-100 tw-border tw-border-[#3a414a] tw-font-medium tw-rounded-lg  tw-px-8 tw-py-1.5 tw-text-center tw-self-center" (click)="loadData()">Refresh</button>
                 
                 <div>
                     <ngb-pagination id="dashTablePgn" [collectionSize]="50" [(page)]="page" [boundaryLinks]="true" aria-label="Custom pagination">
@@ -328,7 +210,7 @@
             </div>
         </div>
 
-        <div class="tw-mt-5 tw-grid md:tw-grid-cols-2 tw-grid-cols-1 tw-gap-5 tw-h-[25rem]">
+        <div class="tw-mt-5 tw-grid md:tw-grid-cols-2 tw-grid-cols-1 tw-gap-5">
             <div class="tw-bg-[#f2f6f9] tw-border tw-border-[#3a414a] tw-h-full tw-flex tw-items-center tw-justify-center tw-rounded-lg">
                 <div id="chart" class="tw-w-full tw-p-5">
                     <apx-chart
