@@ -152,7 +152,7 @@
                 <span class=" tw-font-medium tw-text-[#3a414a]">Age</span>
 
                 <div class="tw-h-[36px] tw-flex tw-divide-x tw-divide-black tw-bg-[#f2f6f9] tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center">
-                    <input #minAge type="text" min="1" max="200" value="50" pattern="^\d*$" placeholder="from" class="tw-h-[34px] tw-bg-[#F0F0F0] tw-text-gray-900  tw-rounded-lg tw-block tw-w-full tw-p-2.5 tw-text-center custom-input-text-color" (keydown)="validateAge($event, minAge)" required>
+                    <input #minAge type="text" min="1" max="200" value="50" pattern="^\d*$" placeholder="from" class="tw-h-full tw-bg-[#F0F0F0] tw-text-gray-900  tw-rounded-lg tw-block tw-w-full tw-p-2.5 tw-text-center custom-input-text-color" (keydown)="validateAge($event, minAge)" required>
                     <div class="custom-num-spinner-container hover">
                         <span class="custom-num-spinner noselect" (click)="increase(minAge)">▲</span>
                         <span class="custom-num-spinner noselect" (click)="decrease(minAge)">▼</span>
@@ -162,7 +162,7 @@
                 <span>—</span>
 
                 <div class="tw-h-[36px] tw-flex tw-divide-x tw-divide-black tw-bg-[#f2f6f9] tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center">
-                    <input #maxAge type="text" min="1" max="200" value="85" pattern="^\d*$" placeholder="to" class="tw-h-[34px] tw-bg-[#F0F0F0] tw-text-gray-900  tw-rounded-lg tw-block tw-w-full tw-p-2.5 tw-text-center custom-input-text-color" (keydown)="validateAge($event, maxAge)" required>
+                    <input #maxAge type="text" min="1" max="200" value="85" pattern="^\d*$" placeholder="to" class="tw-h-full tw-bg-[#F0F0F0] tw-text-gray-900  tw-rounded-lg tw-block tw-w-full tw-p-2.5 tw-text-center custom-input-text-color" (keydown)="validateAge($event, maxAge)" required>
                     <div class="custom-num-spinner-container hover">
                         <span class="custom-num-spinner noselect" (click)="increase(maxAge)">▲</span>
                         <span class="custom-num-spinner noselect" (click)="decrease(maxAge)">▼</span>
