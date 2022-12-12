@@ -27,7 +27,7 @@ body {
 }
 
 .custom-tab .custom-tab-item {
-    @apply tw-h-[38px];
+    @apply tw-h-full;
 }
 
 .custom-tab a.active {
@@ -460,7 +460,7 @@ div.options > label > input:checked +img {
   }
 
   .custom-num-spinner-container {
-    @apply tw-flex tw-flex-col tw-gap-2 tw-bg-[#AFBDCF] tw-h-[34px] tw-rounded-r-lg;
+    @apply tw-flex tw-flex-col tw-gap-2 tw-bg-[#AFBDCF] tw-h-full tw-rounded-r-lg;
   }
   .custom-num-spinner-container-dialog {
     @apply tw-flex tw-flex-col tw-gap-2 tw-bg-[#AFBDCF] tw-h-8 tw-rounded-r-lg;
