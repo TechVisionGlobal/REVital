@@ -15,12 +15,11 @@
         <button class="primary tw-mx-auto" (click)="loadData()">Retry</button>
     </div>
 
-    <div *ngSwitchCase="'success'" class="tw-flex tw-h-full tw-min-h-0 tw-flex-col md:tw-pt-10 tw-pt-2 lg:tw-pl-16 lg:tw-pr-32 tw-px-2">
-        <div class="tw-grid tw-grid-cols-6 tw-gap-20">
-            <div class="tw-col-span-2 tw-flex tw-flex-col tw-gap-2 tw-justify-between">
-                <div *ngFor="let day of days" class="tw-flex tw-gap-10 tw-items-center">
-                <!-- <div *ngFor="let day of days" class="tw-flex tw-gap-2 tw-justify-between tw-items-center"> -->
-                    <div class="tw-flex tw-mr-4 tw-w-full tw-items-center">
+    <div *ngSwitchCase="'success'" class="tw-flex tw-flex-col md:tw-pt-10 tw-pt-2 tw-mx-5">
+        <div class="tw-grid tw-grid-cols-6 tw-gap-10">
+            <div class="tw-col-span-2 tw-flex tw-flex-col tw-gap-2">
+                <div *ngFor="let day of days" class="tw-grid tw-grid-cols-4 tw-gap-2 tw-items-center tw-text-center">
+                    <div class="tw-flex tw-w-full tw-items-center">
                         <label class="custom-check">
                             <input type="checkbox" [(ngModel)]="day.isActive">
                             <span class="checkmark-rounded checkmark-rounded-default"></span>
@@ -36,7 +35,7 @@
                 </div>
             </div>
 
-            <div class="tw-col-span-3 tw-flex tw-gap-20 tw-items-center">
+            <div class="tw-col-span-3 tw-flex tw-gap-10 tw-items-center">
                 <div class="tw-h-fit tw-border tw-border-[#3a414a] tw-rounded-lg tw-w-full">
                     <div class="tw-flex tw-flex-col">
                         <div class="tw-flex tw-divide-x tw-divide-black tw-bg-[#f2f6f9] tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center">
@@ -135,7 +134,7 @@
                 </div>
             </div>
             
-            <div class="tw-flex tw-gap-10">
+            <div class="tw-flex">
                 <div class="tw-bg-[#FFFFFF] tw-border tw-border-[#3a414a] tw-rounded-lg tw-w-full">
                     <div class="tw-bg-[#F2F6F9] tw-flex tw-flex-col tw-rounded-t-lg">
                         <p class="tw-pt-2 tw-text-center">Out of Office</p>
