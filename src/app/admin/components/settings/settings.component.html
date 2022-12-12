@@ -167,7 +167,7 @@
                     <div class="tw-flex tw-flex-col tw-gap-5 tw-text-center tw-items-center">
                         <ul class="tw-flex  tw-font-medium tw-text-center tw-text-gray-500 tw-rounded-lg tw-border tw-border-[#3a414a] tw-divide-x tw-divide-[#3a414a] custom-tab-parent">
                             <li class="tw-w-fit custom-tab" *ngFor="let range of timeRange">
-                                <a [ngClass]="{'active': activeRange.text == range.text}" class="tw-cursor-pointer tw-inline-block md:!tw-px-10 md:!tw-py-2 tw-p-1 tw-w-full tw-bg-[#afbdcf] tw-text-[#3a414a] hover custom-tab-item" aria-current="page" (click)="changeRange(range)">{{ range.text }}</a>
+                                <a [ngClass]="{'active': activeRange.text == range.text}" class="tw-cursor-pointer tw-inline-block md:tw-p-2 tw-p-1 tw-w-full tw-bg-[#afbdcf] tw-text-[#3a414a] hover:tw-text-gray-700 hover:tw-bg-[#F0F0F0] custom-tab-item" aria-current="page" (click)="changeRange(range)">{{ range.text }}</a>
                             </li>
                         </ul>
 

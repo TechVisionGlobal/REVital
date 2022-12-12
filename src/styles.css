@@ -60,7 +60,7 @@ body {
 }
 
 .dialog-new-edit-bg {
-    @apply tw-max-w-[80vw] tw-min-h-[764px] tw-bg-[#D2DCE8];
+    @apply tw-max-w-[90vw] tw-min-h-[764px] tw-bg-[#D2DCE8];
     border: solid;
 }
 
@@ -487,6 +487,8 @@ div.options > label > input:checked +img {
   ngb-pagination .page-item .page-link {
     background-color: #AFBDCF;
     border-color: #3a414a;
+    border-width: 2px;
+    font-size: 21px;
     color: #3a414a;
   }
   
@@ -505,7 +507,60 @@ div.options > label > input:checked +img {
     border-style: none !important;
     border-width: unset !important;
     transform: rotate(0deg) !important;
+    top: -5px !important;
   }
   .ngb-tp-chevron.bottom:before {
     transform: rotate(180deg) !important;
+  }
+
+  ngb-timepicker .ngb-tp-input-container.ngb-tp-hour input {
+    border-radius: 0;
+    border-right: 0;
+    width: 100%;
+  }
+  ngb-timepicker .ngb-tp-input-container.ngb-tp-minute input {
+    border-radius: 0;
+    border-left: 0;
+    width: 100%;
+  }
+  
+  ngb-timepicker .ngb-tp-input-container.ngb-tp-hour button {
+    align-self: flex-start;
+    width: 40px;
+    height: 20px;
+  }
+  ngb-timepicker .ngb-tp-input-container.ngb-tp-minute button {
+    align-self: flex-end;
+    width: 40px;
+    height: 20px;
+  }
+
+  ngb-timepicker .ngb-tp-input-container.ngb-tp-hour button:first-child {
+    border-bottom: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  ngb-timepicker .ngb-tp-input-container.ngb-tp-hour button:last-child {
+    border-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  
+  ngb-timepicker .ngb-tp-input-container.ngb-tp-minute button:first-child {
+    border-bottom: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  ngb-timepicker .ngb-tp-input-container.ngb-tp-minute button:last-child {
+    border-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  
+  ngb-timepicker .ngb-tp {
+    position: relative;
+  }
+  ngb-timepicker .ngb-tp-spacer {
+    position: absolute;
+    left: 40%;
   }
