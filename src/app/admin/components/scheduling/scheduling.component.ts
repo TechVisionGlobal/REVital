@@ -76,7 +76,7 @@ export class SchedulingComponent implements OnInit {
     { dateString: '28/12/2022', selected: false, isHoliday: false },
     { dateString: '29/12/2022', selected: false, isHoliday: false },
     { dateString: '01/01/2023', selected: false, isHoliday: true },
-    { dateString: '02/01/2023', selected: false, isHoliday: false },
+    // { dateString: '02/01/2023', selected: false, isHoliday: false },
   ]
   days = [
     { name: 'Mon', start: { hour: 8, minute: 0 }, end: { hour: 16, minute: 0 }, isActive: true },

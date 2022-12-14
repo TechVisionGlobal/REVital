@@ -36,7 +36,7 @@
             </div>
 
             <div class="tw-col-span-3 tw-flex tw-gap-10 tw-items-center">
-                <div class="tw-h-fit tw-border tw-border-[#3a414a] tw-rounded-lg tw-w-full">
+                <div class="tw-h-fit tw-border tw-border-[#3a414a] tw-rounded-lg tw-w-full tw-self-start">
                     <div class="tw-flex tw-flex-col">
                         <div class="tw-flex tw-divide-x tw-divide-black tw-bg-[#f2f6f9] tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center">
                             <div 
@@ -145,7 +145,7 @@
                         <mat-selection-list>
                             <mat-list-option class="even:tw-bg-[#F0F0F0] hover:tw-bg-gray-300 tw-mb-1 tw-w-full custom-list-option" *ngFor="let date of dates">
                                 <div class="tw-w-full">
-                                    <div class="tw-text-center tw-py-2" [ngClass]="date.isHoliday ? 'holiday-text': 'outOfOffice-text'">{{date.dateString}}</div>
+                                    <div class="tw-text-center" [ngClass]="date.isHoliday ? 'holiday-text': 'outOfOffice-text'">{{date.dateString}}</div>
                                 </div>
                             </mat-list-option>
                         </mat-selection-list>

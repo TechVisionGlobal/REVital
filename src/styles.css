@@ -489,6 +489,7 @@ div.options > label > input:checked +img {
     border-color: #3a414a;
     border-width: 2px;
     font-size: 21px;
+    font-weight: 500;
     color: #3a414a;
   }
   
