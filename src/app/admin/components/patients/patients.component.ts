@@ -13,7 +13,7 @@ import LoadStatus from 'src/_core/components/utils/LoadStatus';
 export class PatientsComponent implements OnInit {
   page = 1;
   pageSize = 15;
-  remainder = 10;//pageSize less data from API count
+  remainder = 6;//empty rows
   loadStatus: LoadStatus = 'loading';
   patients = [
     { fullName: 'Karel Novak', firstName: 'Karel', middleName: null, surName: 'Novak', patientId: '655dfn4ds554', age: '69', avgFalls: '1', avgHR: '68', avg02: '98', lastEventDate: '05.10.2022', lastEventType: 'Fall' },
