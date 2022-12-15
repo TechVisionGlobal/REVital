@@ -24,7 +24,7 @@
                             <input type="checkbox" [(ngModel)]="day.isActive">
                             <span class="checkmark-rounded checkmark-rounded-default"></span>
                         </label>
-                        <label class="tw-ml-2  tw-font-medium tw-text-[#3a414a]">{{day.name}}</label>
+                        <label class="custom-check-label">{{day.name}}</label>
                     </div>
     
                     <ngb-timepicker [(ngModel)]="day.start" [size]="size" [disabled]="!day.isActive"></ngb-timepicker>

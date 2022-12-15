@@ -17,7 +17,7 @@
 
     <div *ngSwitchCase="'success'" class="tw-flex tw-h-full tw-min-h-0 tw-flex-col md:tw-pt-0 tw-pt-2 md:tw-px-10 tw-px-2">
         <div class="tw-grid tw-grid-cols-2 tw-divide-x tw-divide-black tw-pt-5">
-            <div class="tw-flex tw-flex-col tw-px-40 tw-gap-20">
+            <div class="tw-flex tw-flex-col tw-px-20 tw-gap-20">
                 <p class="tw-text-4xl">Communication</p>
 
                 <div class="tw-flex tw-flex-col">
@@ -29,39 +29,36 @@
                                 <input type="checkbox" checked>
                                 <span class="checkmark checkmark-low"></span>
                             </label>
-                            <label class="tw-ml-2  tw-font-medium tw-text-[#3a414a]">Low</label>
+                            <label class="custom-check-label">Low</label>
                         </div>
                         <div class="tw-flex tw-items-center tw-mr-4">
                             <label class="custom-check">
                                 <input type="checkbox" checked>
                                 <span class="checkmark checkmark-medium"></span>
                             </label>
-                            <label class="tw-ml-2  tw-font-medium tw-text-[#3a414a]">Med</label>
+                            <label class="custom-check-label">Med</label>
                         </div>
                         <div class="tw-flex tw-items-center tw-mr-4">
                             <label class="custom-check">
                                 <input type="checkbox" checked>
                                 <span class="checkmark checkmark-high"></span>
                             </label>
-                            <label class="tw-ml-2  tw-font-medium tw-text-[#3a414a]">High</label>
+                            <label class="custom-check-label">High</label>
                         </div>
                         <div class="tw-flex tw-items-center tw-mr-4">
                             <label class="custom-check">
                                 <input type="checkbox" checked>
                                 <span class="checkmark checkmark-default"></span>
                             </label>
-                            <label class="tw-ml-2  tw-font-medium tw-text-[#3a414a]">No Data</label>
+                            <label class="custom-check-label">No Data</label>
                         </div>
                     </div>
                 </div>
                 
                 <div class="tw-flex tw-flex-col">                    
                     <div class="tw-flex tw-flex-col tw-gap-5 tw-w-full">
-                        <div class="tw-grid tw-grid-cols-3 tw-gap-5">
-                            <!-- <div class="tw-col-span-2">
-                                <input type="text" trim="blur" placeholder="Notification Email" class="tw-h-8 tw-bg-[#F0F0F0] tw-border tw-border-[#3a414a] tw-text-gray-900  tw-rounded-lg tw-block tw-w-full tw-p-2.5" required>
-                            </div> -->
-                            <div class="tw-col-span-2">
+                        <div class="tw-grid tw-grid-cols-5 tw-gap-5">
+                            <div class="tw-col-span-3">
                                 <input type="text" trim="blur" placeholder="Notification Email" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" name="email" [(ngModel)]="user.email" #email="ngModel" class="tw-h-8 tw-bg-[#F0F0F0] tw-border tw-border-[#3a414a] tw-text-gray-900  tw-rounded-lg tw-block tw-w-full tw-p-2.5 custom-input-text-color" required>
                                 <div *ngIf="email.invalid && (email.dirty || email.touched)" class="validation-message">
                                     <div *ngIf="email.errors?.['pattern']">
@@ -70,20 +67,17 @@
                                 </div>
                             </div>
 
-                            <div class="tw-flex tw-items-center tw-mr-4">
+                            <div class="tw-col-span-2 tw-flex tw-items-center tw-ml-4">
                                 <label class="custom-check">
                                     <input type="checkbox" checked>
                                     <span class="checkmark checkmark-default"></span>
                                 </label>
-                                <label class="tw-ml-2  tw-font-medium tw-text-[#3a414a]">Send Email</label>
+                                <label class="custom-check-label">Send Email</label>
                             </div>
                         </div>
 
-                        <div class="tw-grid tw-grid-cols-3 tw-gap-5">
-                            <!-- <div class="tw-col-span-2">
-                                <input type="text" trim="blur" placeholder="Notification Mobile" class="tw-h-8 tw-bg-[#F0F0F0] tw-border tw-border-[#3a414a] tw-text-gray-900  tw-rounded-lg tw-block tw-w-full tw-p-2.5" required>
-                            </div> -->
-                            <div class="tw-col-span-2 tw-relative tw-divide-black tw-bg-[#f2f6f9] tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center">
+                        <div class="tw-grid tw-grid-cols-5 tw-gap-5">
+                            <div class="tw-h-8 tw-col-span-3 tw-relative tw-divide-black tw-bg-[#f2f6f9] tw-border tw-border-[#3a414a] tw-rounded-lg tw-items-center">
                                 <div class="tw-absolute tw-inset-y-0 tw-left-0 tw-flex tw-items-center">
                                     <select class="tel-select" [ngModel]="user.phone.code" [ngModelOptions]="{standalone: true}">
                                         <option *ngFor="let country of (countries | slice:0:1)" [value]="country.code">+{{country.code}}</option>
@@ -94,12 +88,12 @@
                                 <input #phone type="text" trim="blur" maxlength="10" pattern="^\d*$" placeholder="Notification Mobile" class="tel-input custom-input-text-color" (keydown)="validatePhone($event, phone)" required>
                             </div>
 
-                            <div class="tw-flex tw-items-center tw-mr-4">
+                            <div class="tw-col-span-2 tw-flex tw-items-center tw-ml-4">
                                 <label class="custom-check">
                                     <input type="checkbox" checked>
                                     <span class="checkmark checkmark-default"></span>
                                 </label>
-                                <label class="tw-ml-2  tw-font-medium tw-text-[#3a414a]">Send SMS</label>
+                                <label class="custom-check-label">Send SMS</label>
                             </div>
                         </div>
 
@@ -108,7 +102,7 @@
                                 <input type="checkbox" checked>
                                 <span class="checkmark checkmark-default"></span>
                             </label>
-                            <label class="tw-ml-2  tw-font-medium tw-text-[#3a414a]">Desktop Notifications</label>
+                            <label class="custom-check-label">Desktop Notifications</label>
                         </div>
 
                         <div class="tw-flex tw-items-center tw-mr-4">
@@ -116,7 +110,7 @@
                                 <input type="checkbox" checked>
                                 <span class="checkmark checkmark-default"></span>
                             </label>
-                            <label class="tw-ml-2  tw-font-medium tw-text-[#3a414a]">Notify Next of Kin</label>
+                            <label class="custom-check-label">Notify Next of Kin</label>
                         </div>
 
                         <div class="tw-flex tw-items-center tw-mr-4">
