@@ -171,34 +171,34 @@
             </div>
 
             <!-- <div class="tw-col-span-2 lg:tw-grid lg:tw-grid-cols-2 lg:tw-gap-0 tw-flex tw-flex-col tw-gap-4"> -->
-                <div class="tw-flex tw-justify-between tw-w-full tw-px-5">
+                <div class="tw-flex tw-justify-between tw-w-full">
                     <div class="tw-flex tw-items-center tw-mr-4">
                         <label class="custom-check">
                             <input type="checkbox" checked>
                             <span class="checkmark checkmark-low"></span>
                         </label>
-                        <label class="tw-ml-2  tw-font-medium tw-text-[#3a414a]">Low</label>
+                        <label class="custom-check-label">Low</label>
                     </div>
                     <div class="tw-flex tw-items-center tw-mr-4">
                         <label class="custom-check">
                             <input type="checkbox" checked>
                             <span class="checkmark checkmark-medium"></span>
                         </label>
-                        <label class="tw-ml-2  tw-font-medium tw-text-[#3a414a]">Med</label>
+                        <label class="custom-check-label">Med</label>
                     </div>
                     <div class="tw-flex tw-items-center tw-mr-4">
                         <label class="custom-check">
                             <input type="checkbox" checked>
                             <span class="checkmark checkmark-high"></span>
                         </label>
-                        <label class="tw-ml-2  tw-font-medium tw-text-[#3a414a]">High</label>
+                        <label class="custom-check-label">High</label>
                     </div>
                     <div class="tw-flex tw-items-center tw-mr-4">
                         <label class="custom-check">
                             <input type="checkbox" checked>
                             <span class="checkmark checkmark-default"></span>
                         </label>
-                        <label class="tw-ml-2  tw-font-medium tw-text-[#3a414a]">No Data</label>
+                        <label class="custom-check-label">No Data</label>
                     </div>
                 </div>
     
@@ -303,7 +303,7 @@
 
             <br>
         
-            <div class="tw-flex tw-justify-end">
+            <div class="tw-mt-2 tw-flex tw-justify-end">
                 <div>
                     <ngb-pagination [collectionSize]="50" [(page)]="page" [boundaryLinks]="true" aria-label="Custom pagination">
                         <ng-template ngbPaginationFirst>First</ng-template>

@@ -254,7 +254,11 @@ div.options > label > input:checked +img {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-  }
+}
+
+.custom-check-label {
+  @apply tw-ml-2  tw-font-medium tw-text-[#3a414a] tw-w-max;
+}
   
   /* Hide the browser's default checkbox */
   .custom-check input {
@@ -448,11 +452,11 @@ div.options > label > input:checked +img {
   }
 
   .tel-select {
-    @apply tw-h-8 !tw-w-24 btn-clck tw-text-[#3a414a] !tw-px-1 hover:tw-border-gray-400 focus:tw-outline-none tw-rounded-l-lg;
+    @apply !tw-w-24 btn-clck tw-text-[#3a414a] !tw-px-1 hover:tw-border-gray-400 focus:tw-outline-none tw-rounded-l-lg;
   }
 
   .tel-input {
-    @apply tw-h-8 tw-bg-[#F0F0F0] tw-text-gray-900  tw-rounded-lg tw-block tw-w-full tw-pl-24;
+    @apply tw-h-full tw-bg-[#F0F0F0] tw-text-gray-900  tw-rounded-lg tw-block tw-w-full tw-pl-24;
   }
 
   .backdropBackground {
